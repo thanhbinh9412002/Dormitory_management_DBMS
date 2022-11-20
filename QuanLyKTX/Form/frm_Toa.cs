@@ -16,9 +16,11 @@ namespace QuanLyKTX
         public frm_TrangChu fmTrangChu;
         private Toa_BUS ToaBus;
         public frm_Phong frmPhong;
+        public frm_XemPhong fmXemPhong;
         public string tentoa = null;
         private string user;
         private string role;
+        public int sk;
         public frm_Toa(string user = "", string role = "")
         {
             InitializeComponent();
@@ -72,7 +74,9 @@ namespace QuanLyKTX
 
             int r = dgvToa.CurrentCell.RowIndex;
             txtTenToa.Text = dgvToa.Rows[r].Cells[0].Value.ToString();
+            txtTenToa.Enabled = false;
             txtSoPhong.Text = dgvToa.Rows[r].Cells[1].Value.ToString();
+            txtSoPhong.Enabled = false;
             txtMaNQL.Text = dgvToa.Rows[r].Cells[2].Value.ToString();
         }
         private void dgvToa_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -80,6 +84,7 @@ namespace QuanLyKTX
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 tentoa = Convert.ToString(dgvToa.CurrentRow.Cells["TenToa"].Value);
+                sk = 1;
             }
         }
         private void btnXoa_Click(object sender, EventArgs e)
@@ -87,7 +92,7 @@ namespace QuanLyKTX
             int r = dgvToa.CurrentCell.RowIndex;
             string TenToa = dgvToa.Rows[r].Cells[0].Value.ToString();
             int sophongsd = ToaBus.CountPhong(TenToa);
-            DialogResult h = MessageBox.Show("Bạn có chắc muốn thoát không?", "Error", MessageBoxButtons.OKCancel);
+            DialogResult h = MessageBox.Show("Bạn có chắc muốn xóa không?", "Error", MessageBoxButtons.OKCancel);
             if (h == DialogResult.OK)
             {
                 if (sophongsd == 0)
@@ -122,13 +127,32 @@ namespace QuanLyKTX
 
         private void btnChiTietToa_Click(object sender, EventArgs e)
         {
+            if (sk == 1)
+            {
+                this.Hide();
+                frmPhong = new frm_Phong(user, role);
+                frmPhong.matoa = tentoa;
+                frmPhong.ShowDialog();
+                this.Show();
+            }
+        }
+
+        private void btnPhongConCho_Click(object sender, EventArgs e)
+        {
             this.Hide();
-            frmPhong = new frm_Phong(user, role);
-            frmPhong.matoa = tentoa;
-            frmPhong.ShowDialog();
+            fmXemPhong = new frm_XemPhong();
+            fmXemPhong.sukien = 0;
+            fmXemPhong.ShowDialog();
             this.Show();
         }
 
-
+        private void btnPhongDay_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fmXemPhong = new frm_XemPhong();
+            fmXemPhong.sukien1 = 1;
+            fmXemPhong.ShowDialog();
+            this.Show();
+        }
     }
 }

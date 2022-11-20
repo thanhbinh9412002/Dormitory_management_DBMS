@@ -68,6 +68,7 @@
     <Compile Include="Bus\SinhVien_BUS.cs" />
     <Compile Include="Bus\ThietBiTrongPhong_BUS.cs" />
     <Compile Include="Bus\Toa_BUS.cs" />
+    <Compile Include="Bus\XemPhong_BUS.cs" />
     <Compile Include="Dao\ChiTietPhong_DAO.cs" />
     <Compile Include="Dao\HoaDon_DAO.cs" />
     <Compile Include="Dao\Phong_DAO.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Dao\Toa_DAO.cs" />
     <Compile Include="Bus\DoiMatKhau_BUS.cs" />
     <Compile Include="Dao\DoiMatKhau_DAO.cs" />
+    <Compile Include="Dao\XemPhong_DAO.cs" />
     <Compile Include="Form\frm_CapNhatNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +159,12 @@
     <Compile Include="Form\frm_TrangThietBi.Designer.cs">
       <DependentUpon>frm_TrangThietBi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\frm_XemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_XemPhong.Designer.cs">
+      <DependentUpon>frm_XemPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\Program.cs" />
     <Compile Include="Dao\NhanVien_DAO.cs" />
     <Compile Include="Class\NhanVien_Class.cs" />
@@ -206,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_TrangThietBi.resx">
       <DependentUpon>frm_TrangThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_XemPhong.resx">
+      <DependentUpon>frm_XemPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

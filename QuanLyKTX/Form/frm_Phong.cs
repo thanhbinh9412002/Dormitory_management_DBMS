@@ -22,6 +22,7 @@ namespace QuanLyKTX
         private string role;
         public string mp;
         public string manv;
+        public int sk;
         public frm_Phong(string user = "", string role = "")
         {
             InitializeComponent();
@@ -94,7 +95,7 @@ namespace QuanLyKTX
         {
             string MaPhong = Convert.ToString(dgvPhong.CurrentRow.Cells["MaPhong"].Value);
             int svhientai = Convert.ToInt32(dgvPhong.CurrentRow.Cells["SoLuongSinhVienHienTai"].Value);
-            DialogResult h = MessageBox.Show("Bạn có chắc muốn thoát không?", "Error", MessageBoxButtons.OKCancel);
+            DialogResult h = MessageBox.Show("Bạn có chắc muốn xóa không?", "Error", MessageBoxButtons.OKCancel);
             if (h == DialogResult.OK)
             {
                 if (svhientai == 0)
@@ -176,28 +177,35 @@ namespace QuanLyKTX
             {
                 mp = Convert.ToString(dgvPhong.CurrentRow.Cells["MaPhong"].Value);
                 matoa = Convert.ToString(dgvPhong.CurrentRow.Cells["Toa"].Value);
+                sk = 1;
             }
         }
         private void btnChiTietPhong_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            fmChiTietPhong = new frm_ChiTietPhong();
-            fmChiTietPhong.maphong = mp;
-            fmChiTietPhong.manql = manv;
-            fmChiTietPhong.toa = matoa;
-            fmChiTietPhong.ShowDialog();
-            this.Show();
+            if (sk == 1)
+            {
+                this.Hide();
+                fmChiTietPhong = new frm_ChiTietPhong();
+                fmChiTietPhong.maphong = mp;
+                fmChiTietPhong.manql = manv;
+                fmChiTietPhong.toa = matoa;
+                fmChiTietPhong.ShowDialog();
+                this.Show();
+            }
         }
 
         private void btnThietBiTrongPhong_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            fmThietBiTrongPhong = new frm_ThietBiTrongPhong();
-            fmThietBiTrongPhong.maphong = mp;
-            fmThietBiTrongPhong.manql = manv;
-            fmThietBiTrongPhong.toa = matoa;
-            fmThietBiTrongPhong.ShowDialog();
-            this.Show();
+            if (sk == 1)
+            {
+                this.Hide();
+                fmThietBiTrongPhong = new frm_ThietBiTrongPhong();
+                fmThietBiTrongPhong.maphong = mp;
+                fmThietBiTrongPhong.manql = manv;
+                fmThietBiTrongPhong.toa = matoa;
+                fmThietBiTrongPhong.ShowDialog();
+                this.Show();
+            }
         }
     }
 }
