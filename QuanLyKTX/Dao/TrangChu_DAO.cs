@@ -28,9 +28,7 @@ namespace QuanLyKTX.DAO
         public int TimSoLuongNhanVienTheoGioiTinh(string gioitinh)
         {
             string spName = "[dbo].[func_SoLuongNhanVienTheoGioiTinh]"; // Tên hàm
-            // Tên các tham số trong thủ tục
             string[] pNames = { "@gioitinh"};
-            // Giá trị tương ứng muốn gán cho từng tham số trên
             object[] pValues = {gioitinh};
             int count = cnn.ExecuteStoredProcedure(spName, pNames, pValues);
             return count;
@@ -43,15 +41,14 @@ namespace QuanLyKTX.DAO
             int count = cnn.ExecuteStoredProcedure(spName, pNames, pValues);
             return count;
         }
-        public int TimSoLuongSinhVienTheoGioiTinh(string gioitinh)
+        public int TimSoLuongSinhVienTheoGioiTinh(string manv,string gioitinh)
         {
-            string spName = "[dbo].[func_SoLuongSinhVienTheoGioiTinh_Admin]"; // Tên hàm
-            // Tên các tham số trong thủ tục
-            string[] pNames = { "@gioitinh" };
-            // Giá trị tương ứng muốn gán cho từng tham số trên
-            object[] pValues = { gioitinh };
-            int count = cnn.ExecuteStoredProcedure(spName, pNames, pValues);
-            return count;
+            int newProdID = 0;
+            string sql = "[dbo].[func_SoLuongSinhVienTheoGioiTinh]";
+            string[] pNames = { "@MaNQL", "@gioitinh" };
+            object[] pvalues = { manv, gioitinh };
+            newProdID = cnn.ExecuteStoredProcedure(sql, pNames, pvalues);
+            return newProdID;
         }
         public int TongSoSinhVien()
         {

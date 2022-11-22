@@ -31,27 +31,6 @@ namespace QuanLyKTX.DataProvider
             return connection;
         }
 
-        /* public void executeInsertQuery(String query, SqlParameter[] sqlParameter)
-         {
-             using (SqlCommand sqlCommand = new SqlCommand(query, openConnection()))
-             {
-                 sqlCommand.CommandType = CommandType.Text;
-                 sqlCommand.Parameters.AddRange(sqlParameter);
-                 try
-                 {
-                     sqlCommand.ExecuteNonQuery();
-                 }
-                 catch (Exception ex)
-                 {
-                     MessageBox.Show(ex.Message);
-                 }
-                 finally
-                 {
-                     connection.Close();
-                 }
-             }
-         }*/
-
         public object executeScalar(String query, SqlParameter[] sqlParameter)
         {
             using (SqlCommand sqlCommand = new SqlCommand(query, openConnection()))

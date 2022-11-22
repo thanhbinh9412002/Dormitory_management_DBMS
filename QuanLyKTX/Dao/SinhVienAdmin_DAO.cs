@@ -17,9 +17,8 @@ namespace QuanLyKTX.Dao
         }
         public DataTable GetAllInformationSV()
         {
-            string sql = "SELECT * FROM [dbo].[view_SinhVien]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return cnn.executeReader(sql, sqlParameters);
+            return cnn.executeReader("SELECT * FROM [dbo].[func_DanhSachSinhVien]()", sqlParameters);
         }
         public DataTable FillterStudentMale()
         {

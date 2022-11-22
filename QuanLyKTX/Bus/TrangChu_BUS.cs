@@ -28,9 +28,9 @@ namespace QuanLyKTX.BUS
         {
             return tcDAO.TongSoNhanVien();
         }
-        public int TimSoLuongSinhVienTheoGioiTinh(string gioitinh)
+        public int TimSoLuongSinhVienTheoGioiTinh(string manv,string gioitinh)
         {
-            return tcDAO.TimSoLuongSinhVienTheoGioiTinh(gioitinh);
+            return tcDAO.TimSoLuongSinhVienTheoGioiTinh(manv,gioitinh);
         }
         public int TongSoSinhVien()
         {

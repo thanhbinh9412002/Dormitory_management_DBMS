@@ -116,8 +116,8 @@ namespace QuanLyKTX
                     lb_nvnam.Text = Convert.ToString(tcBUS.TimSoLuongNhanVienTheoGioiTinh("Nam"));
                     lb_nvnu.Text = Convert.ToString(tcBUS.TimSoLuongNhanVienTheoGioiTinh("Nữ"));
                     lb_nvtong.Text = tcBUS.TongSoNhanVien().ToString();
-                    lb_svnam.Text = Convert.ToString(tcBUS.TimSoLuongSinhVienTheoGioiTinh("Nam"));
-                    lb_svnu.Text = Convert.ToString(tcBUS.TimSoLuongSinhVienTheoGioiTinh("Nữ"));
+                    lb_svnam.Text = Convert.ToString(tcBUS.TimSoLuongSinhVienTheoGioiTinh(role,"Nam"));
+                    lb_svnu.Text = Convert.ToString(tcBUS.TimSoLuongSinhVienTheoGioiTinh(role,"Nữ"));
                     lb_svtong.Text = tcBUS.TongSoSinhVien().ToString();
                     lb_soluongtk.Text = tcBUS.TongSoTaiKhoan().ToString();
                     lb_soluongtoa.Text = tcBUS.TongSoToa().ToString();

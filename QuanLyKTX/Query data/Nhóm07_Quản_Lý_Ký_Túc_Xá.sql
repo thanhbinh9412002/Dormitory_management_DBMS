@@ -370,7 +370,8 @@ BEGIN
 	where MaNguoiQuanLy is null
 END
 GO
---														Thêm dữ liệu
+
+												--Thêm dữ liệu
 
 insert into NhanVien Values('NV01',N'Nguyễn Thị Thương','0367064835', N'Nữ',N'Không',N'Việt Nam','221502791',N'Quản lý','NV01')
 insert into NhanVien Values('NV02',N'Lương Hoàng','0312452124', N'Nam',N'Không',N'Việt Nam','221531242',N'Bảo vệ','NV01')
@@ -383,61 +384,60 @@ insert into NhanVien Values('NV08',N'Nguyễn Thị Hoài','0367053413', N'Nữ'
 insert into NhanVien Values('NV09',N'Nguyễn Tuyến','0322275423', N'Nam',N'Không',N'Việt Nam','221591249',N'Bảo vệ','NV07')
 insert into NhanVien Values('NV10',N'Nguyễn Thị Duyên','0367842103', N'Nữ',N'Không',N'Việt Nam','221531558',N'Giữ xe','NV07')
 insert into NhanVien Values('NV11',N'Nguyễn Thị Tuyến','0322864192', N'Nữ',N'Không',N'Việt Nam','221537249',N'Giữ xe','NV07')
+insert into NhanVien Values('NV012',N'Huỳnh Hạo Nhị','0367987562', N'Nam',N'Không',N'Việt Nam','221574778',N'Quản lý','NV012')
 GO
 
 
-insert into Toa Values('A', 21, 'NV03')
-insert into Toa Values('B', 22 ,'NV11')
-insert into Toa Values('C', 23 ,'NV10')
+insert into Toa Values('A', 21, 'NV01')
+insert into Toa Values('B', 22 ,'NV07')
+insert into Toa Values('C', 22 ,'NV012')
+/*insert into Toa Values('C', 23 ,'NV10')
 insert into Toa Values('D', 24 ,'NV08')
-insert into Toa Values('E', 25, 'NV09')
+insert into Toa Values('E', 25, 'NV09')*/
 GO
 
-insert into Phong Values('P101','A', 0 , 8)
-insert into Phong Values('P402','E', 0 , 6)
-insert into Phong Values('P711','B', 0 , 8)
-insert into Phong Values('P310','A', 0 , 4)
-insert into Phong Values('P405','C', 0 , 6)
-insert into Phong Values('P103','B', 0 , 8)
-insert into Phong Values('P204','A', 0 , 4)
-insert into Phong Values('P602','D', 0 , 8)
-insert into Phong Values('P802','C', 0 , 6)
-insert into Phong Values('P508','E', 0 , 8)
+insert into Phong Values('A101','A', 0 , 8)
+insert into Phong Values('B101','B', 0 , 8)
+insert into Phong Values('B102','B', 0 , 4)
+insert into Phong Values('C101','C', 0 , 8)
+insert into Phong Values('C102','C', 0 , 4)
+insert into Phong Values('A102','A', 0 , 4)
+insert into Phong Values('B103','B', 0 , 4)
 GO
 
 -- Tòa B, C là nữ, còn A, D, E là nam
 
-insert into SinhVien Values('20133104',N'Nguyễn Văn Thanh','0367064834', N'Nam',3,N'Không',N'Việt Nam','221502781','P101')
-insert into SinhVien Values('22133102',N'Lương Sĩ Hoàng','0312452123', N'Nam',1,N'Không',N'Việt Nam','221531232','P101')
-insert into SinhVien Values('21133101',N'Trần Thái Tú','0364412341', N'Nam',2,N'Không',N'Việt Nam','221512453','P101')
-insert into SinhVien Values('22133133',N'Cao Tuấn Tú','0367125212', N'Nam',3,N'Không',N'Việt Nam','221512654','P101')
+insert into SinhVien Values('20133104',N'Nguyễn Văn Thanh','0367064834', N'Nam',3,N'Không',N'Việt Nam','221502781','A101')
+insert into SinhVien Values('22133102',N'Lương Sĩ Hoàng','0312452123', N'Nam',1,N'Không',N'Việt Nam','221531232','A101')
+insert into SinhVien Values('21133101',N'Trần Thái Tú','0364412341', N'Nam',2,N'Không',N'Việt Nam','221512453','A101')
+insert into SinhVien Values('22133133',N'Cao Tuấn Tú','0367125212', N'Nam',3,N'Không',N'Việt Nam','221512654','A101')
 
-insert into SinhVien Values('21133122',N'Nguyễn Phước Ninh','0367784321', N'Nam',2,N'Không',N'Việt Nam','221586215','P402')
-insert into SinhVien Values('22412122',N'Nguyễn Thanh Tuấn ','0367095412', N'Nam',1,N'Không',N'Việt Nam','221587656','P402')
-insert into SinhVien Values('21133166',N'Huỳnh Công Hậu','0367987431', N'Nam',2,N'Không',N'Việt Nam','221574767','P402')
-insert into SinhVien Values('20133123',N'Nguyễn Sĩ','0367053412', N'Nam',3,N'Không',N'Việt Nam','221534548','P402')
-insert into SinhVien Values('20133111',N'Nguyễn Tuyên','0322234123', N'Nam',3,N'Không',N'Việt Nam','221521239','P402')
-insert into SinhVien Values('21147523',N'Nguyễn Phước Minh','0367784375', N'Nam',2,N'Không',N'Việt Nam','221586215','P402')
+insert into SinhVien Values('21133122',N'Nguyễn Phước Ninh','0367784321', N'Nam',2,N'Không',N'Việt Nam','221586215','A102')
+insert into SinhVien Values('22412122',N'Nguyễn Thanh Tuấn ','0367095412', N'Nam',1,N'Không',N'Việt Nam','221587656','A102')
+insert into SinhVien Values('21133166',N'Huỳnh Công Hậu','0367987431', N'Nam',2,N'Không',N'Việt Nam','221574767','B101')
+insert into SinhVien Values('20133123',N'Nguyễn Sĩ','0367053412', N'Nam',3,N'Không',N'Việt Nam','221534548','B101')
+insert into SinhVien Values('20133111',N'Nguyễn Tuyên','0322234123', N'Nam',3,N'Không',N'Việt Nam','221521239','B101')
+insert into SinhVien Values('21147523',N'Nguyễn Phước Minh','0367784375', N'Nam',2,N'Không',N'Việt Nam','221586215','B102')
 
-insert into SinhVien Values('22133752',N'Nguyễn Thị Thanh ','0372403491', N'Nữ',1,N'Không',N'Việt Nam','221543157','P711')
-insert into SinhVien Values('21241242',N'Huỳnh Lê Vân','0367784295', N'Nữ',2,N'Không',N'Việt Nam','221521232','P711')
-insert into SinhVien Values('20196542',N'Nguyễn Thị Thùy','0367823472', N'Nữ',3,N'Không',N'Việt Nam','221551921','P711')
+insert into SinhVien Values('22133752',N'Nguyễn Thị Thanh ','0372403491', N'Nữ',1,N'Không',N'Việt Nam','221543157','B102')
+insert into SinhVien Values('21241242',N'Huỳnh Lê Vân','0367784295', N'Nữ',2,N'Không',N'Việt Nam','221521232','B102')
+insert into SinhVien Values('20196542',N'Nguyễn Thị Thùy','0367823472', N'Nữ',3,N'Không',N'Việt Nam','221551921','B103')
 
-insert into SinhVien Values('20423224',N'Nguyễn Tuấn Tú','0367054212', N'Nam',3,N'Không',N'Việt Nam','221508753','P310')
-insert into SinhVien Values('22214252',N'Lương Huy Hoàng','0312476542', N'Nam',1,N'Không',N'Việt Nam','221587632','P310')
-insert into SinhVien Values('21242152',N'Trần Công Tú','0364412342', N'Nam',2,N'Không',N'Việt Nam','221509533','P310')
-insert into SinhVien Values('20133133',N'Cao Văn Tú','0367187421', N'Nam',3,N'Không',N'Việt Nam','221574263','P310')
+insert into SinhVien Values('20423224',N'Nguyễn Tuấn Tú','0367054212', N'Nam',3,N'Không',N'Việt Nam','221508753','B103')
+insert into SinhVien Values('22214252',N'Lương Huy Hoàng','0312476542', N'Nam',1,N'Không',N'Việt Nam','221587632','B103')
+insert into SinhVien Values('21242152',N'Trần Công Tú','0364412342', N'Nam',2,N'Không',N'Việt Nam','221509533','C101')
+insert into SinhVien Values('20133133',N'Cao Văn Tú','0367187421', N'Nam',3,N'Không',N'Việt Nam','221574263','C102')
 
-insert into SinhVien Values('20122123',N'Cao Ngọc Trinh','0322265322', N'Nữ',3,N'Không',N'Việt Nam','221528532','P103')
-insert into SinhVien Values('21452323',N'Nguyễn Hoàng Linh','0322974256', N'Nữ',2,N'Không',N'Việt Nam','221528533','P103')
-insert into SinhVien Values('22141414',N'Bùi Thị Xuân','0322298532', N'Nữ',1,N'Không',N'Việt Nam','221597422','P103')
+insert into SinhVien Values('20122123',N'Cao Ngọc Trinh','0322265322', N'Nữ',3,N'Không',N'Việt Nam','221528532','C102')
+insert into SinhVien Values('21452323',N'Nguyễn Hoàng Linh','0322974256', N'Nữ',2,N'Không',N'Việt Nam','221528533','C101')
+insert into SinhVien Values('22141414',N'Bùi Thị Xuân','0322298532', N'Nữ',1,N'Không',N'Việt Nam','221597422','C102')
 
-insert into SinhVien Values('21241415',N'Lê Thị Vân','0367784872', N'Nữ',2,N'Không',N'Việt Nam','221527423','P405')
-insert into SinhVien Values('20197413',N'Nguyễn Thy','0367842138', N'Nữ',3,N'Không',N'Việt Nam','221554219','P405')
+insert into SinhVien Values('21241415',N'Lê Thị Vân','0367784872', N'Nữ',2,N'Không',N'Việt Nam','221527423','C102')
+insert into SinhVien Values('20197413',N'Nguyễn Thy','0367842138', N'Nữ',3,N'Không',N'Việt Nam','221554219','C101')
 
-insert into SinhVien Values('20112563',N'Hứa Tấn Đạt','0362853234', N'Nam',3,N'Không',N'Việt Nam','221590876','P204')
+insert into SinhVien Values('20112563',N'Hứa Tấn Đạt','0362853234', N'Nam',3,N'Không',N'Việt Nam','221590876','C101')
 
-insert into SinhVien Values('22112311',N'Nguyễn Hải Đăng','0917243432', N'Nam',1,N'Không',N'Việt Nam','221541995','P602')
+/*insert into SinhVien Values('22112311',N'Nguyễn Hải Đăng','0917243432', N'Nam',1,N'Không',N'Việt Nam','221541995','P602')
 insert into SinhVien Values('21124133',N'Trần Tiến Dũng','0397294885', N'Nam',2,N'Không',N'Việt Nam','221517453','P602')
 insert into SinhVien Values('20087612',N'Phan Anh Dũng','0309764789', N'Nam',3,N'Không',N'Việt Nam','221568477','P602')
 insert into SinhVien Values('20567821',N'Nguyễn Bảo Đức','0336579432', N'Nam',3,N'Không',N'Việt Nam','221588133','P602')
@@ -456,19 +456,20 @@ insert into SinhVien Values('19573222',N'Nguyễn Phúc Lâm','0366873638', N'Na
 insert into SinhVien Values('20124631',N'Lê Quang Lộc','0312545295', N'Nam',3,N'Không',N'Việt Nam','221516358','P508')
 insert into SinhVien Values('21242412',N'Nguyễn Duy Luận','0367725757', N'Nam',2,N'Không',N'Việt Nam','221585483','P508')
 insert into SinhVien Values('22151512',N'Trần Gia Long','0385174102', N'Nam',1,N'Không',N'Việt Nam','221562595','P508')
-insert into SinhVien Values('21168595',N'Lê Hoàng Nam','0326767932', N'Nam',2,N'Không',N'Việt Nam','221537782','P508')
+insert into SinhVien Values('21168595',N'Lê Hoàng Nam','0326767932', N'Nam',2,N'Không',N'Việt Nam','221537782','P508')*/
 GO
 
-insert into HoaDonDienNuoc Values('HD1','P101', N'Đã đóng',150 , 300, '2020-07-31')
-insert into HoaDonDienNuoc Values('HD2','P402', N'Chưa đóng', 500, 200,  '2021-08-31')
-insert into HoaDonDienNuoc Values('HD3','P711', N'Đã đóng', 200, 350,  '2019-01-31')
-insert into HoaDonDienNuoc Values('HD4','P310', N'Chưa đóng',200, 300,  '2022-01-31')
-insert into HoaDonDienNuoc Values('HD5','P405', N'Đã đóng', 150, 140,  '2020-05-31')
-insert into HoaDonDienNuoc Values('HD6','P103', N'Chưa đóng',300, 450,  '2021-01-31')
-insert into HoaDonDienNuoc Values('HD7','P204', N'Đã đóng',120, 140,  '2021-05-31')
-insert into HoaDonDienNuoc Values('HD8','P602', N'Đã đóng', 70, 90, '2021-07-31')
-insert into HoaDonDienNuoc Values('HD9','P802', N'Chưa đóng',200, 390,  '2022-08-31')
-insert into HoaDonDienNuoc Values('HD10','P508', N'Đã đóng',150, 300 ,  '2021-10-31')
+insert into HoaDonDienNuoc Values('HD1','A101', N'Đã thanh toán',150 , 300, '2020-07-31')
+insert into HoaDonDienNuoc Values('HD2','A101', N'Chưa thanh toán', 500, 200,  '2021-08-31')
+insert into HoaDonDienNuoc Values('HD3','A102', N'Đã thanh toán', 200, 350,  '2019-01-31')
+insert into HoaDonDienNuoc Values('HD4','A102', N'Chưa thanh toán',200, 300,  '2022-01-31')
+insert into HoaDonDienNuoc Values('HD5','A102', N'Đã thanh toán', 150, 140,  '2020-05-31')
+insert into HoaDonDienNuoc Values('HD6','B101', N'Chưa thanh toán',300, 450,  '2021-01-31')
+insert into HoaDonDienNuoc Values('HD7','B101', N'Đã thanh toán',120, 140,  '2021-05-31')
+insert into HoaDonDienNuoc Values('HD8','B101', N'Đã thanh toán', 70, 90, '2021-07-31')
+insert into HoaDonDienNuoc Values('HD9','C102', N'Chưa thanh toán',200, 390,  '2022-08-31')
+insert into HoaDonDienNuoc Values('HD10','C102', N'Đã thanh toán',150, 300 ,  '2021-10-31')
+insert into HoaDonDienNuoc Values('HD11','C101', N'Chưa thanh toán',100, 300 ,  '2021-10-31')
 GO
 
 insert into TrangThietBi Values('TB1', N'Bóng đèn',800)
@@ -479,20 +480,20 @@ insert into TrangThietBi Values('TB5', N'Sào phơi đồ',100)
 GO
 
 
-insert into ThietBiTrongPhong Values('TB1','P101', 2 , 2, 4)
-insert into ThietBiTrongPhong Values('TB2','P402', 0 , 2, 2)
-insert into ThietBiTrongPhong Values('TB3','P711', 0 , 1, 1)
-insert into ThietBiTrongPhong Values('TB4','P310', 1 , 1, 2)
-insert into ThietBiTrongPhong Values('TB1','P405', 1 , 3, 4)
-insert into ThietBiTrongPhong Values('TB2','P103', 2 , 0, 2)
-insert into ThietBiTrongPhong Values('TB3','P204', 0 , 1, 1)
-insert into ThietBiTrongPhong Values('TB4','P602', 2 , 0, 2)
-insert into ThietBiTrongPhong Values('TB5','P802', 0 , 1, 1)
-insert into ThietBiTrongPhong Values('TB2','P508', 1 , 1, 2)
+insert into ThietBiTrongPhong Values('TB1','A101', 2 , 2, 4)
+insert into ThietBiTrongPhong Values('TB2','A101', 0 , 2, 2)
+insert into ThietBiTrongPhong Values('TB3','A102', 0 , 1, 1)
+insert into ThietBiTrongPhong Values('TB4','A102', 1 , 1, 2)
+insert into ThietBiTrongPhong Values('TB1','B101', 1 , 3, 4)
+insert into ThietBiTrongPhong Values('TB2','B101', 2 , 0, 2)
+insert into ThietBiTrongPhong Values('TB3','C102', 0 , 1, 1)
+insert into ThietBiTrongPhong Values('TB4','C102', 2 , 0, 2)
+insert into ThietBiTrongPhong Values('TB5','C101', 0 , 1, 1)
+insert into ThietBiTrongPhong Values('TB2','C101', 1 , 1, 2)
 GO
 
-
-
+insert into TaiKhoan Values ('111111111','111111111','Admin')
+GO
 --															 View 
 -- Done
 -- sử dụng view lọc ra những phòng cần sửa chữa vật dụng cho admin hoặc quản lý xem
@@ -545,53 +546,27 @@ as
 	from NhanVien 
 	where ChucVu = N'Quản lý'
 go
-
 -- Done
--- Sử dụng view lọc ra tổng các phòng còn trống của các tòa cho admin xem
-CREATE VIEW view_PhongTrong
-as
-	select b.TenToa as N'Tên tòa', c.TenNhanVien as N'Tên người quản lý', count(a.MaPhong) as N'Tổng số lượng phòng còn trống'
-	from Phong as a, Toa as b, NhanVien as c
-	where a.Toa = b.TenToa and b.MaNguoiQuanLy = c.MaNhanVien and a.SoLuongSinhVienHienTai =  0
-	group by b.TenToa, c.TenNhanVien
-go
-
--- Done
--- Sử dụng view lọc ra các phòng còn trống chỗ trong 1 tòa cho người quản lý (hoặc admin ) xem
+-- Sử dụng view lọc ra các phòng còn trống chỗ trong các tòa cho admin xem
 CREATE VIEW view_PhongConCho
 as
-	select b.TenToa as N'Tên tòa', a.MaPhong as N'Số phòng', c.TenNhanVien as N'Tên người quản lý', 
-	(a.SoLuongSinhVienToiDa - a.SoLuongSinhVienHienTai) as N'Số lượng chỗ còn trống'
-	from Phong as a, Toa as b, NhanVien as c
-	where a.Toa = b.TenToa and b.MaNguoiQuanLy = c.MaNhanVien and a.SoLuongSinhVienHienTai < a.SoLuongSinhVienToiDa
+		SELECT b.TenToa AS N'Tên tòa', a.MaPhong AS N'Số phòng', a.SoLuongSinhVienHienTai AS N'Số lượng sinh viên hiện tại', a.SoLuongSinhVienToiDa AS N'Số lượng sinh viên tối đa'
+		FROM Phong AS a, Toa AS b
+		WHERE a.Toa = b.TenToa AND a.SoLuongSinhVienHienTai < a.SoLuongSinhVienToiDa
 go
 -- Done
--- Sử dụng view lọc ra các phòng trống trong 1 tòa cho người quản lý (hoặc admin ) xem
-CREATE VIEW view_PhongTrongToa
+-- Sử dụng view lọc ra các phòng còn đầy trong các tòa cho admin xem
+CREATE VIEW view_PhongDay
 as
-	select b.TenToa as N'Tên tòa', a.MaPhong as N'Số phòng', c.TenNhanVien as N'Tên người quản lý', 
-	a.SoLuongSinhVienHienTai as N'Số lượng sinh viên hiện tại' , a.SoLuongSinhVienHienTai as N'Số lượng sinh viên tối đa'
-	from Phong as a, Toa as b, NhanVien as c
-	where a.Toa = b.TenToa and b.MaNguoiQuanLy = c.MaNhanVien and a.SoLuongSinhVienHienTai =  0
-go
-
+		SELECT b.TenToa AS N'Tên tòa', a.MaPhong AS N'Số phòng', a.SoLuongSinhVienHienTai AS N'Số lượng sinh viên hiện tại', a.SoLuongSinhVienToiDa AS N'Số lượng sinh viên tối đa'
+		FROM   Phong AS a, Toa AS b
+		WHERE  a.Toa = b.TenToa AND a.SoLuongSinhVienHienTai = a.SoLuongSinhVienToiDa
 
 --															 View
---Done
--- View lọc các hóa đơn lệ phí chưa thanh toán 
-CREATE VIEW [view_HoaDonDienNuocChuaThanhToan] AS
-select HD.MaHoaDon as [Mã Hóa Đơn],
-	   HD.MaPhong as [Mã Phòng],
-	   HD.TienDien as [Tiền Điện],
-	   HD.TienNuoc as [Tiền Nước],
-	   HD.NgayTao as [Ngày Tạo],
-	   HD.TrangThai as [Trạng Thái]
-from HoaDonDienNuoc as HD 
-where HD.TrangThai = N'Chưa Thanh Toán'
-GO
 
 --DONE
 -- View lọc sinh viên nam  
+go
 CREATE VIEW [view_SinhVienNam] AS
 select SV.MaSinhVien as [Mã Sinh Viên],
 	   SV.HoTen as [Họ Tên],
@@ -600,7 +575,8 @@ select SV.MaSinhVien as [Mã Sinh Viên],
 	   SV.NamHoc as [Năm Học],
 	   SV.TonGiao as [Tôn Giáo],
 	   SV.QuocTich as [Quốc Tịch],
-	   SV.CMND_CCCD as [CMND/CCCD]
+	   SV.CMND_CCCD as [CMND/CCCD],
+	   SV.MaPhong as[Mã Phòng]
 from SinhVien as SV
 	where SV.GioiTinh = N'Nam'
 GO
@@ -614,40 +590,61 @@ select SV.MaSinhVien as [Mã Sinh Viên],
 	   SV.NamHoc as [Năm Học],
 	   SV.TonGiao as [Tôn Giáo],
 	   SV.QuocTich as [Quốc Tịch],
-	   SV.CMND_CCCD as [CMND/CCCD]
+	   SV.CMND_CCCD as [CMND/CCCD],
+	   SV.MaPhong as[Mã Phòng]
 from SinhVien as SV
 	where SV.GioiTinh = N'Nữ'
 go
 
-	--							Thủ tục
-	------------
---- Thiết bị
-create procedure [dbo].[proc_ThemThietBi] (@matb char(10), @tentb nvarchar(20), @tongsl int)
-as insert into TrangThietBi values(@matb, @tentb, @tongsl );
-go
 
-create procedure [dbo].[proc_XoaThietBi] (@matb char(10) )
-as delete TrangThietBi where MaThietBi = @matb;
-go
 
-create procedure [dbo].[proc_SuaThietBi] (@matb char(10), @tentb nvarchar(50), @tongsl int)
-as update TrangThietBi
-set MaThietBi = @matb,
-	TenThietBi = @tentb,
-	TongSoLuong = @tongsl
-where MaThietBi = @matb;
-go
---- Sinh viên
+-- Thủ tục
+-- Hóa đơn
+create procedure [dbo].[proc_ThemHoaDonDienNuoc]
+(	@mahd char(10),
+	@maphong char(10),
+	@trangthai nvarchar(20),
+	@td float,
+	@tn float,
+	@ngaytao Date)
+as insert into HoaDonDienNuoc Values(@mahd, @maphong, @trangthai, @td, @tn, @ngaytao);
+GO
+
+create procedure [dbo].[proc_SuaHoaDonDienNuoc] (@mahd char(10), @maphong char(10), @trangthai nvarchar(20), @td float, @tn float, @ngaytao Date)
+as 
+begin tran
+if(@td is null and @tn is null)
+begin
+	raiserror('Tien dien va tien nuoc khong duoc de trong',16,1)
+	rollback
+	return
+end
+update HoaDonDienNuoc set MaHoaDon = @mahd,
+						  MaPhong = @maphong,
+						  TrangThai = @trangthai,
+						  TienDien = @td,
+						  TienNuoc = @tn,
+						  NgayTao = @ngaytao
+where MaHoaDon = @mahd
+if(@@ERROR <> 0)
+begin
+	raiserror('Error',16,1)
+	rollback
+	return 
+end
+commit tran
+GO
+-- Sinh viên
 create procedure [dbo].[proc_ThemSinhVien]
 (@masv char(10), @tensv nvarchar(50), @sdt nchar(50), @gioitinh nvarchar(10),
  @namhoc int, @tongiao nvarchar(10), @quoctich nvarchar(10), @cmnd_cccd char(15), @maphong char(10) )
 as insert into SinhVien values(@masv, @tensv, @sdt, @gioitinh, @namhoc, @tongiao, @quoctich, @cmnd_cccd, @maphong);
-go
+GO
 
 create procedure [dbo].[proc_XoaSinhVien]
 ( @masv char(10) )
 as delete SinhVien where MaSinhVien = @masv;
-go 
+GO
 
 create procedure [dbo].[proc_SuaSinhVien]
 (	@masv char(10) ,
@@ -670,54 +667,48 @@ set MaSinhVien = @masv,
 	CMND_CCCD = @cmnd_cccd,
 	MaPhong = @maphong
 where MaSinhVien = @masv
-go
----   Hóa đơn điện nước
-create procedure [dbo].[proc_ThemHoaDonDienNuoc]
-(	@mahd char(10),
+GO
+-- Thiết bị trong phòng
+create procedure [dbo].[proc_ThemThietBiTrongPhong]
+(	@matb char(10),
 	@maphong char(10),
-	@trangthai nvarchar(20),
-	@td float,
-	@tn float,
-	@ngaytao Date)
-as insert into HoaDonDienNuoc Values(@mahd, @maphong, @trangthai, @td, @tn, @ngaytao);
-go
+	@soluonghong int,
+	@soluongtot int,
+	@soluongtoida int
+	)
+as insert into ThietBiTrongPhong Values(@matb, @maphong, @soluonghong, @soluongtot, @soluongtoida);
+GO
 
-create procedure [dbo].[proc_XoaHoaDonDienNuoc]
-(	@mahd char(10)	)
-as delete HoaDonDienNuoc where MaHoaDon = @mahd
-go
-
-create procedure [dbo].[proc_SuaHoaDonDienNuoc] (@mahd char(10), @maphong char(10), @trangthai nvarchar(20), @td float,
-						@tn float,@ngaytao Date)
-as update HoaDonDienNuoc 
-set MaHoaDon = @mahd,
+create procedure [dbo].[proc_SuaThietBiTrongPhong]
+(	@matb char(10),
+	@maphong char(10),
+	@soluonghong int,
+	@soluongtot int,
+	@soluongtoida int
+	)
+as update ThietBiTrongPhong
+set MaThietBiTrongPhong = @matb,
 	MaPhong = @maphong,
-	TrangThai = @trangthai,
-	TienDien = @td,
-	TienNuoc = @tn,
-	NgayTao = @ngaytao
-where MaHoaDon = @mahd
-go
---- nhân viên
-create procedure [dbo].[proc_ThemNhanVien]
-(	@manv char(10),
-	@tennv nvarchar(50),
-	@sdtnv char(15),
-	@gioitinhnv nvarchar(10),
-	@tongiaonv nvarchar(10),
-	@quoctichnv nvarchar(10),
-	@cmnd_cccd_nv char(20),
-	@cv nvarchar(20),
-	@manql char(10)
-)
-as insert into NhanVien Values(@manv, @tennv, @sdtnv, @gioitinhnv, @tongiaonv, @quoctichnv, @cmnd_cccd_nv, @cv, @manql);
-go
+	SoLuongHong = @soluonghong,
+	SoLuongTot = @soluongtot,
+	SoLuongToiDa = @soluongtoida
+where MaThietBiTrongPhong = @matb and MaPhong = @maphong;
+GO
 
-create procedure [dbo].[proc_XoaNhanVien] (@manv char(10))
-as delete NhanVien where MaNhanVien = @manv;
-go
+create procedure [dbo].[proc_XoaThietBiTrongPhong] (@matb char(10), @maphong char(10))
+as delete ThietBiTrongPhong where MaThietBiTrongPhong = @matb and MaPhong = @maphong
+GO
 
-
+-- Đăng nhập , mật khẩu
+create procedure [dbo].[proc_DoiMatKhau] (@tentk char(15), @mk char(20) )
+as begin
+	set nocount on;
+	update TaiKhoan
+	set MatKhau = @mk
+	where TenTaiKhoan = @tentk
+end
+GO
+-- Nhân viên
 create procedure [dbo].[proc_SuaNhanVien] (@manv char(10), @tennv nvarchar(50), @sdtnv char(15), @gioitinhnv nvarchar(10),
 @tongiaonv nvarchar(10), @quoctichnv nvarchar(10), @cmnd_cccd_nv char(20), @cv nvarchar(20), @manql char(10))
 as update NhanVien
@@ -731,77 +722,229 @@ set MaNhanVien = @manv,
 	ChucVu = @cv,
 	MaNQL = @manql
 where MaNhanVien = @manv
-go
+GO
 
--- đổi mật khẩu
+create procedure [dbo].[proc_ThemNhanVien]
+(	@manv char(10),
+	@tennv nvarchar(50),
+	@sdtnv char(15),
+	@gioitinhnv nvarchar(10),
+	@tongiaonv nvarchar(10),
+	@quoctichnv nvarchar(10),
+	@cmnd_cccd_nv char(20),
+	@cv nvarchar(20),
+	@manql char(10)
+)
+as insert into NhanVien Values(@manv, @tennv, @sdtnv, @gioitinhnv, @tongiaonv, @quoctichnv, @cmnd_cccd_nv, @cv, @manql);
+GO
 
-create procedure [dbo].[proc_DoiMatKhau] (@tentk char(15), @mk char(20) )
-as begin
-	set nocount on;
-	update TaiKhoan
-	set MatKhau = @mk
-	where TenTaiKhoan = @tentk
+create procedure [dbo].[proc_XoaNhanVien] (@manv char(10))
+as delete NhanVien where MaNhanVien = @manv;
+GO
+
+create function [dbo].[func_TimKiemNhanVien_CMND] (@CMND_CCCD char(20))
+returns varchar(10)
+AS 
+BEGIN 
+    DECLARE @soNV varchar(10) 
+    SELECT @soNV = MaNhanVien
+	from NhanVien
+	Where CMND_CCCD=@CMND_CCCD
+    RETURN @soNV
+END
+GO
+
+create procedure [dbo].[proc_LayMaNGQL]
+as
+	select MaNhanVien from NhanVien where ChucVu = N'Quản lý'
+GO
+
+create procedure [dbo].[proc_LayChucVu]
+as
+	select distinct ChucVu from NhanVien
+GO
+--Phòng
+--Procedure Danh sách phòng theo tòa--
+create procedure [dbo].[pro_DanhSachPhongTheoToa] (@matoa nvarchar(5))
+as
+begin 
+	SET NOCOUNT ON;
+	select MaPhong,Toa,SoLuongSinhVienHienTai,SoLuongSinhVienToiDa
+	From Phong
+	Where Toa=@matoa
 end
-go
+GO
+--Procedure Thêm Phòng trong 1 Tòa--
+create procedure [dbo].[proc_ThemPhong1Toa]
+(@MaPhong char(10),@Toa nvarchar(5),@SoLuongSinhVienHienTai int , @SoLuongSinhVienToiDa int )
+as
+insert into Phong values(@MaPhong,@Toa,@SoLuongSinhVienHienTai,@SoLuongSinhVienToiDa);
+GO
+--Procedure Xóa phòng--
+create procedure [dbo].[proc_XoaPhong] (@MaPhong char(10))
+as delete Phong where MaPhong = @MaPhong;
+GO
 
+--Procedure Danh Sách Phòng Còn Chỗ--
+create procedure [dbo].[pro_DanhSachPhongConCho](@TenToa nvarchar(5))
+as
+SELECT MaPhong,Toa as[Tòa],SoLuongSinhVienHienTai, SoLuongSinhVienToiDa
+  FROM Phong
+  WHERE  Toa = @TenToa and SoLuongSinhVienHienTai < SoLuongSinhVienToiDa
+GO
+
+--Procedure Danh Sách Phòng Đầy--
+create procedure [dbo].[pro_DanhSachPhongDay](@TenToa nvarchar(5))
+as
+SELECT MaPhong,Toa as [Tòa],SoLuongSinhVienHienTai, SoLuongSinhVienToiDa
+  FROM Phong
+  WHERE  Toa = @TenToa and SoLuongSinhVienHienTai = SoLuongSinhVienToiDa
+GO
+  --Procedure Danh sách phòng Theo Tòa Lấy Mã phòng--
+create procedure [dbo].[pro_DanhSachPhongTheoToa_MaPhong] (@matoa nvarchar(5))
+as
+begin 
+	SET NOCOUNT ON;
+	select MaPhong
+	From Phong
+	where Toa=@matoa
+end
+GO
 -- Tòa
+create procedure [dbo].[pro_DanhSachToa]
+as
+SELECT * FROM Toa
+GO
+--Procedure Thêm Tòa--
 create procedure [dbo].[proc_ThemToa] (@TenToa nvarchar(5), @SoPhong int, @MaNguoiQuanLy char(10))
 as insert into Toa values(@TenToa, @SoPhong, @MaNguoiQuanLy );
-go
-
+GO
+--Procedure Sửa Tòa --
 create procedure [dbo].[proc_SuaToa] (@TenToa nvarchar(5), @SoPhong int, @MaNguoiQuanLy char(10))
 as update Toa
 set TenToa = @TenToa,
 	SoPhong = @SoPhong,
 	MaNguoiQuanLy = @MaNguoiQuanLy
 where TenToa = @TenToa;
-go
-
-create procedure [dbo].[pro_DanhSachSinhVienTrong1Phong] (@maphong char(10))
+GO
+--Procedure Xóa Tòa --
+create procedure [dbo].[proc_XoaToa] (@TenToa char(10))
+as delete Toa where TenToa = @TenToa;
+GO
+-- Trang thiết bị
+create procedure [dbo].[proc_DanhSachTatCaTrangThietBi]
 as 
-begin
-	SET NOCOUNT ON;
-	select SV.MaSinhVien as [Mã Sinh Viên],
-	   SV.HoTen as [Họ Tên],
-	   SV.SoDienThoai as [Số Điện Thoại],
-	   SV.GioiTinh as [Giới Tính],
-	   SV.NamHoc as [Năm Học],
-	   SV.TonGiao as [Tôn Giáo],
-	   SV.QuocTich as [Quốc Tịch],
-	   SV.CMND_CCCD as [CMND/CCCD]
-	   FROM SinhVien as SV
-	   Where SV.MaPhong=@maphong
-end 
-go
+select * from TrangThietBi
+GO
+--Hàm 
+-- Hóa đơn
+create function [dbo].[func_HoaDonQL] (@MaNQL char(10))
+	returns table
+		as
+			return select HD.MaHoaDon as [Mã Hóa Đơn],
+					HD.MaPhong as [Mã phòng],
+					HD.TrangThai as [Trạng thái],
+					HD.TienDien as [Tiền điện],
+					HD.TienNuoc as [Tiền nước],
+					HD.NgayTao as [Ngày tạo]
+				from 
+						Phong inner join Toa on Toa.TenToa = Phong.Toa
+							  inner join HoaDonDienNuoc as HD on Phong.MaPhong = HD.MaPhong
+				where Toa.MaNguoiQuanLy = @MaNQL
+GO
 
-create procedure [dbo].[pro_DanhSachPhongTheoToa] (@matoa nvarchar(5))
+create function [dbo].[func_PhongQuanLy] (@MaNQL char(10))
+returns table
+	as
+		return 
+			select Toa.TenToa ,Phong.MaPhong,Phong.SoLuongSinhVienHienTai from 
+				Phong inner join Toa on Toa.TenToa = Phong.Toa
+					  inner join SinhVien on Phong.MaPhong = SinhVien.MaPhong
+				where Toa.MaNguoiQuanLy = @MaNQL 
+				group by Phong.MaPhong , Phong.SoLuongSinhVienHienTai, Toa.TenToa
+GO
+
+create function [dbo].[func_HoaDonPhongQuanLy] (@MaNQL char(10) , @MaPhong char(10))
+returns table
+	as
+		return select HD.MaHoaDon as [Mã Hóa Đơn],
+					HD.MaPhong as [Mã phòng],
+					HD.TrangThai as [Trạng thái],
+					HD.TienDien as [Tiền điện],
+					HD.TienNuoc as [Tiền nước],
+					HD.NgayTao as [Ngày tạo]
+				from 
+						Phong inner join Toa on Toa.TenToa = Phong.Toa
+							  inner join HoaDonDienNuoc as HD on Phong.MaPhong = HD.MaPhong
+				where Toa.MaNguoiQuanLy = @MaNQL and HD.MaPhong = @MaPhong
+GO
+
+create function [dbo].[func_SoLuongHoaDonTheoMaPhong] (@MaNQL char(10), @MaPhong char(10))
+returns int
 as
 begin 
-	SET NOCOUNT ON;
-	select Phong.MaPhong
-	From Toa inner join Phong on Toa.TenToa=Phong.Toa
-	Where Toa.TenToa=@matoa
+	declare @soluong int
+	select @soluong = count(MaHoaDon)
+	from Phong inner join Toa on Toa.TenToa = Phong.Toa
+				inner join HoaDonDienNuoc as HD on Phong.MaPhong = HD.MaPhong
+	where Toa.MaNguoiQuanLy = @MaNQL and HD.MaPhong = @MaPhong
+	return @soluong
 end
-go
+GO
+create function [dbo].[func_HoaDonChuaThanhToanTheoPhong] (@MaNQL char(10))
+returns table
+	as
+		return select HD.MaHoaDon as [Mã Hóa Đơn],
+					HD.MaPhong as [Mã phòng],
+					HD.TrangThai as [Trạng thái],
+					HD.TienDien as [Tiền điện],
+					HD.TienNuoc as [Tiền nước],
+					HD.NgayTao as [Ngày tạo]
+				from Phong inner join Toa on Toa.TenToa = Phong.Toa
+							  inner join HoaDonDienNuoc as HD on Phong.MaPhong = HD.MaPhong
+				where Toa.MaNguoiQuanLy = @MaNQL and HD.TrangThai = N'Chưa thanh toán'
+GO
 
-create procedure [dbo].[pro_TrangThietBiTrongPhong]
-@matoa nvarchar(5),@maphong char(10)
-as 
-begin 
-	SET NOCOUNT ON;
-	select TrangThietBi.MaThietBi,TrangThietBi.TenThietBi,ThietBiTrongPhong.SoLuongHong,ThietBiTrongPhong.SoLuongTot
-	from Toa,Phong,ThietBiTrongPhong,TrangThietBi
-	Where Toa.TenToa=Phong.Toa and
-		Phong.MaPhong = ThietBiTrongPhong.MaPhong and
-		ThietBiTrongPhong.MaThietBiTrongPhong=TrangThietBi.MaThietBi and
-		Toa.TenToa=@matoa and Phong.MaPhong=@maphong
-end
-go
+-- Sinh viên
+create function [dbo].[func_SinhVienQuanLy] (@MaNQL char(10))
+	returns table
+		as
+			return 
+				select SV.MaSinhVien as [Mã Sinh Viên],
+						SV.HoTen as [Họ Tên],
+						SV.SoDienThoai as [Số Điện Thoại],
+						SV.GioiTinh as [Giới Tính],
+						SV.NamHoc as [Năm Học],
+						SV.TonGiao as [Tôn Giáo],
+						SV.QuocTich as [Quốc Tịch],
+						SV.CMND_CCCD as [CMND/CCCD],
+						SV.MaPhong as [Mã Phòng]
+				from 
+					   Phong inner join Toa on Toa.TenToa = Phong.Toa
+							 inner join SinhVien as SV on Phong.MaPhong = SV.MaPhong
+				where Toa.MaNguoiQuanLy = @MaNQL 
+GO
 
+create function [dbo].[func_GioiTinhSinhVienQuanLy] (@MaNQL char(10) , @gioitinh nvarchar(10))
+	returns table
+		as
+			return 
+				select SV.MaSinhVien as [Mã Sinh Viên],
+						SV.HoTen as [Họ Tên],
+						SV.SoDienThoai as [Số Điện Thoại],
+						SV.GioiTinh as [Giới Tính],
+						SV.NamHoc as [Năm Học],
+						SV.TonGiao as [Tôn Giáo],
+						SV.QuocTich as [Quốc Tịch],
+						SV.CMND_CCCD as [CMND/CCCD],
+						SV.MaPhong as [Mã Phòng]
+				from 
+					   Phong inner join Toa on Toa.TenToa = Phong.Toa
+							 inner join SinhVien as SV on Phong.MaPhong = SV.MaPhong
+				where Toa.MaNguoiQuanLy = @MaNQL and SV.GioiTinh = @gioitinh
+GO
 
-----							Hàm
---Danh sách Sinh Vien
-create function [dbo].[func_DanhSachSinhVien]()
+create function [dbo].[func_DanhSachSinhVienTheoMSSV](@MSSV char(10))
 returns table as
 return(select SV.MaSinhVien as [Mã Sinh Viên],
 	   SV.HoTen as [Họ Tên],
@@ -810,68 +953,42 @@ return(select SV.MaSinhVien as [Mã Sinh Viên],
 	   SV.NamHoc as [Năm Học],
 	   SV.TonGiao as [Tôn Giáo],
 	   SV.QuocTich as [Quốc Tịch],
-	   SV.CMND_CCCD as [CMND/CCCD]
-	   FROM SinhVien as SV);
-Go
---Danh sach Hóa đơn 
-create function [dbo].[func_DanhSachHoaDon]()
-returns table as
-return(select HD.MaHoaDon as [Mã Hóa Đơn],
-	   HD.MaPhong as [Mã phòng],
-	   HD.TrangThai as [Trạng thái],
-	   HD.TienDien as [Tiền điện],
-	   HD.TienNuoc as [Tiền nước],
-	   HD.NgayTao as [Ngày tạo]
-	   FROM HoaDonDienNuoc as HD);
-Go
-create function [dbo].[func_SoLuongSinhVienTheoGioiTinh] (@gioitinh nvarchar(5))
-returns int
-as
-begin 
-	declare @soluong int
-	select @soluong = count(MaSinhVien)
-	from SinhVien
-	where GioiTinh = @gioitinh
-	return @soluong
-end
-go
+	   SV.CMND_CCCD as [CMND/CCCD],
+	   SV.MaPhong as[Mã Phòng]
+	   FROM SinhVien as SV
+	   where SV.MaSinhVien = @MSSV);
+GO
+-- Thiết bị trong phòng
+create function [dbo].[func_ThietBiQuanLy] (@MaPhong char(10))
+returns table
+	as
+		return select	tb.MaThietBiTrongPhong as [Mã thiết bị],
+						tb.MaPhong as [Mã phòng],
+						tb.SoLuongHong as [Số lượng hỏng],
+						tb.SoLuongTot as [Số lượng tốt],
+						tb.SoLuongToiDa as [Số lượng tối đa]
+				from ThietBiTrongPhong as tb 
+				where tb.MaPhong = @MaPhong
+GO
 
-create function [dbo].[func_SoLuongNhanVienTheoGioiTinh] (@gioitinh nvarchar(5))
-returns int
-as
-begin 
-	declare @soluong int
-	select @soluong = count(MaNhanVien)
-	from NhanVien
-	where GioiTinh = @gioitinh
-	return @soluong
-end
-go
-
-create function [dbo].[func_SoLuongNhanVienTheoChucVu] (@cv nvarchar(20))
-returns int
-as
-begin 
-	declare @soluong int
-	select @soluong = count(MaNhanVien)
-	from NhanVien
-	where ChucVu = @cv
-	return @soluong
-end
-go
-
-create function [dbo].[func_SoLuongSinhVienTHeoNamHoc] (@namhoc int)
-returns int
-as
-begin 
-	declare @soluong int
-	select @soluong = count(MaSinhVien)
-	from SinhVien
-	where NamHoc = @namhoc
-	return @soluong
-end
-go
-
+create function [dbo].[func_TenThietBiTuMa] (@MaThietBi char(10))
+returns nvarchar(20)
+	AS 
+BEGIN 
+    DECLARE @TenThietBi nvarchar(20) 
+    SELECT @TenThietBi = tb.TenThietBi 
+	from TrangThietBi as tb
+	where tb.MaThietBi = @MaThietBi
+    RETURN @TenThietBi
+END 
+GO
+create function [dbo].[func_MaThietBi] ()
+returns table
+	as
+		return select	tb.MaThietBi 
+				from  TrangThietBi as tb
+GO
+-- Đăng nhập , mật khẩu
 create function [dbo].[func_KiemTraDangNhap] (@TenTK char(15), @MK char(20), @Vaitro nvarchar(10))
 returns int
 	as
@@ -885,33 +1002,218 @@ returns int
 					set @check=0
 			return @check
 		end
-go
+GO
+--Phòng
+--Function Đếm số phòng theo tòa--
+create function [dbo].[func_SoLuongPhong] (@TenToa nvarchar(5))
+returns int
+as
+begin 
+	declare @soluong int
+	select @soluong = count(MaPhong)
+	from Phong
+	where Toa = @TenToa
+	return @soluong
+end
+GO
+--Function Danh Sách Phòng Theo Nhân Viên--
+create function [dbo].[func_DanhSachPhongTheoNhanVien] (@MaNQL char(10))
+returns table
+	as
+	return 
+		select Phong.MaPhong,Phong.Toa,Phong.SoLuongSinhVienHienTai,Phong.SoLuongSinhVienToiDa
+		From Toa inner join Phong on Toa.TenToa=Phong.Toa
+		Where Toa.MaNguoiQuanLy=@MaNQL
+GO
+--Function Danh Sách Sinh Viên Theo Mã Phòng --
+create function [dbo].[func_DanhSachSinhVienTheoPhong] (@MaPhong char(10))
+returns table
+	as
+	return 
+		select  SV.MaSinhVien as [Mã Sinh Viên],
+			SV.HoTen as [Họ Tên],
+			SV.SoDienThoai as [Số Điện Thoại],
+			SV.GioiTinh as [Giới Tính],
+			SV.NamHoc as [Năm Học],
+			SV.TonGiao as [Tôn Giáo],
+			SV.QuocTich as [Quốc Tịch],
+			SV.CMND_CCCD as [CMND/CCCD]
+			FROM SinhVien as SV inner join Phong on SV.MaPhong=Phong.MaPhong
+			Where Phong.MaPhong=@MaPhong
+GO
 
-create function [dbo].[func_DanhSachHoaDonTheoThang] (@ThangTaoHoaDon date)
+
+-- Trang chủ
+create function [dbo].[func_SoLuongNhanVienTheoGioiTinh] (@gioitinh nvarchar(5))
+returns int
+as
+begin 
+	declare @soluong int
+	select @soluong = count(MaNhanVien)
+	from NhanVien
+	where GioiTinh = @gioitinh
+	return @soluong
+end
+GO
+
+create function [dbo].[func_SoLuongSinhVienTheoGioiTinh] (@MaNQL char(10), @gioitinh nvarchar(5))
+returns int
+as
+begin
+	declare @soluong int
+	if (@MaNQL = 'Admin')
+		select @soluong = count(MaSinhVien)
+		from SinhVien as SV 
+		where SV.GioiTinh = @gioitinh
+	else 
+		select @soluong = count(MaSinhVien)
+		from Phong inner join Toa on Toa.TenToa = Phong.Toa
+					inner join SinhVien as SV on Phong.MaPhong = SV.MaPhong
+		where Toa.MaNguoiQuanLy = @MaNQL and SV.GioiTinh = @gioitinh
+	return @soluong
+end
+GO
+-- Nhân viên
+create function [dbo].[func_Danhsachnhanvien] (@MaNQL char(10) , @gioitinh nvarchar(10))
 	returns table
-	as 
-		return 
-			select MaHoaDon as N'Mã Hóa Đơn', TienDien as N'Tiền Điện', TienNuoc as N'Tiền Nước',
-					NgayTao as N'Ngày tạo hóa đơn' , TrangThai as N'Tình trạng thanh toán',
-					MaPhong as N'Mã Phòng'
-			from HoaDonDienNuoc
-				where Month(@ThangTaoHoaDon) = Month(NgayTao) and YEAR(@ThangTaoHoaDon) = YEAR(NgayTao)
+		as
+			return 
+				select * from NhanVien
 
+GO
+create function [dbo].[func_TimNhanVien] (@MaNV char(10))
+	returns table
+		as
+			return 
+				select * from NhanVien where MaNhanVien = @MaNV
+GO
+
+
+create function [dbo].[func_LayMaNV]() 
+returns varchar(10)
+AS 
+BEGIN 
+    DECLARE @soNV varchar(10) 
+    SELECT @soNV = max(MaNhanVien)  
+	from NhanVien
+    RETURN @soNV
+END
+GO
+
+-- Trang chủ
+--Function Tổng số nhân viên --
+create function [dbo].[func_TongSoNhanVien]() 
+returns int
+AS 
+BEGIN 
+    DECLARE @soNV int 
+    SELECT @soNV=count(MaNhanVien)
+	from NhanVien
+    RETURN @soNV
+END
 go
-create function [dbo].[func_DanhSachNGQLQuanLyNhanVien] (@MaNQL char(10))
-returns table
-	as
-		return 
-			select nv1.MaNhanVien , nv1.TenNhanVien, nv1.SoDienThoai, nv1.GioiTinh, nv1.TonGiao, nv1.QuocTich, nv1.CMND_CCCD , nv1.ChucVu,
-					nv1.MaNQL
-				from NhanVien nv1 , NhanVien nv2
-				where nv1.MaNQL = nv2.MaNhanVien and nv1.MaNQL = @MaNQL
+--Function Tống số Sinh Viên--
+create function [dbo].[func_TongSoSinhVien]() 
+returns int
+AS 
+BEGIN 
+    DECLARE @soSV int 
+    SELECT @soSV=count(MaSinhVien)
+	from SinhVien
+    RETURN @soSV
+END
+go
+--Function Tổng số Tài khoản--
+create function [dbo].[func_TongSoTaiKhoan]() 
+returns int
+AS 
+BEGIN 
+    DECLARE @soTK int 
+    SELECT @soTK=count(TenTaiKhoan)
+	from TaiKhoan
+    RETURN @soTK
+END
+go
+--Function Tổng số tòa--
+create function [dbo].[func_TongSoToa]() 
+returns int
+AS 
+BEGIN 
+    DECLARE @soToa int 
+    SELECT @soToa=count(TenToa)
+	from Toa
+    RETURN @soToa
+END
+go
+--Function Số phòng Còn Chỗ--
+create function [dbo].[func_TongSoPhongConCho]() 
+returns int
+AS 
+BEGIN 
+    DECLARE @soPConCho int 
+    SELECT @soPConCho=count(MaPhong)
+	from Phong
+	Where SoLuongSinhVienHienTai < SoLuongSinhVienToiDa
+    RETURN @soPConCho
+END
+go
+--Function Số phòng đầy--
+create function [dbo].[func_TongSoPhongDay]() 
+returns int
+AS 
+BEGIN 
+    DECLARE @soPDay int 
+    SELECT @soPDay=count(MaPhong)
+	from Phong
+	Where SoLuongSinhVienHienTai = SoLuongSinhVienToiDa
+    RETURN @soPDay
+END
+go
+--Function Số Thiết Bị Hỏng--
+create function [dbo].[func_SoThietBiHong]() 
+returns int
+AS 
+BEGIN 
+    DECLARE @soTBHong int 
+    SELECT @soTBHong=sum(SoLuongHong)
+	from ThietBiTrongPhong
+    RETURN @soTBHong
+END
 go
 
-create function [dbo].[func_DanhSachTatCaTrangThietBi]()
-returns table
+--Function Tổng số Thiết bị--
+create function [dbo].[func_TongSoThietBi]() 
+returns int
+AS 
+BEGIN 
+    DECLARE @soTB int 
+    SELECT @soTB=sum(TongSoLuong)
+	from TrangThietBi
+    RETURN @soTB
+END
+
+GO
+
+
+--Lấy ra danh sách tất cả nhân viên	
+create procedure [dbo].[proc_Danhsachnhanvien]
 	as
-		return
-			select * from TrangThietBi
+	select * from NhanVien
+GO
 
+create function [dbo].[func_DanhSachSinhVien]()
+returns table as
+return(select SV.MaSinhVien as [Mã Sinh Viên],
+	   SV.HoTen as [Họ Tên],
+	   SV.SoDienThoai as [Số Điện Thoại],
+	   SV.GioiTinh as [Giới Tính],
+	   SV.NamHoc as [Năm Học],
+	   SV.TonGiao as [Tôn Giáo],
+	   SV.QuocTich as [Quốc Tịch],
+	   SV.CMND_CCCD as [CMND/CCCD],
+	   SV.MaPhong as[Mã Phòng]
+	   FROM SinhVien as SV
+	   );
 
+GO 
+-- Lấy ra danh sách mã người quản lý--
