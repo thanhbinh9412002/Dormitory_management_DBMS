@@ -38,12 +38,19 @@ namespace QuanLyKTX.Dao
             sqlParameters[0].Value = manv;
             return cnn.executeReader("SELECT * FROM dbo.func_SinhVienQuanLy(@MaNQL)", sqlParameters);
         }
+        public DataTable GetAllInformationAdmin(string manv)
+        {
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            //sqlParameters[0] = new SqlParameter("@MaNQL", System.Data.SqlDbType.Char);
+            //sqlParameters[0].Value = manv;
+            return cnn.executeReader("SELECT * FROM [dbo].[func_DanhSachSinhVien]", sqlParameters);
+        }
 
         public DataTable FillterStudent(string manv, string gioitinh)
         {
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaNQL", System.Data.SqlDbType.Char);
-            sqlParameters[0].Value = manv;
+            sqlParameters[0].Value = manv;  
             sqlParameters[1] = new SqlParameter("@gioitinh", System.Data.SqlDbType.NVarChar);
             sqlParameters[1].Value = gioitinh;
             return cnn.executeReader("SELECT * FROM dbo.func_GioiTinhSinhVienQuanLy(@MaNQL,@gioitinh)", sqlParameters);

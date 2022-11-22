@@ -158,7 +158,14 @@ namespace QuanLyKTX
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
+            txtSoLuong.Text = HdBUS.CountInvoiceRoom(nv, cbbMaPhong.Text).ToString();
+            dgvHoaDon.DataSource = HdBUS.FillterInvoice(nv, cbbMaPhong.Text);
 
+        }
+
+        private void frm_HoaDon_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

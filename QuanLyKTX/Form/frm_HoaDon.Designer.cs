@@ -64,10 +64,10 @@ namespace QuanLyKTX
             // 
             this.btnLocHDchuathanhtoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLocHDchuathanhtoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLocHDchuathanhtoan.Location = new System.Drawing.Point(298, 549);
-            this.btnLocHDchuathanhtoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLocHDchuathanhtoan.Location = new System.Drawing.Point(397, 676);
+            this.btnLocHDchuathanhtoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocHDchuathanhtoan.Name = "btnLocHDchuathanhtoan";
-            this.btnLocHDchuathanhtoan.Size = new System.Drawing.Size(158, 50);
+            this.btnLocHDchuathanhtoan.Size = new System.Drawing.Size(211, 62);
             this.btnLocHDchuathanhtoan.TabIndex = 99;
             this.btnLocHDchuathanhtoan.Text = "Hóa đơn chưa thanh toán";
             this.btnLocHDchuathanhtoan.UseVisualStyleBackColor = true;
@@ -77,10 +77,10 @@ namespace QuanLyKTX
             // 
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(418, 484);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Location = new System.Drawing.Point(557, 596);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(92, 44);
+            this.btnSua.Size = new System.Drawing.Size(123, 54);
             this.btnSua.TabIndex = 98;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -94,31 +94,30 @@ namespace QuanLyKTX
             this.gbbTImKiem.Controls.Add(this.btnLoc);
             this.gbbTImKiem.Controls.Add(this.cbbMaPhongTK);
             this.gbbTImKiem.Controls.Add(this.label7);
-            this.gbbTImKiem.Location = new System.Drawing.Point(549, 19);
-            this.gbbTImKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbbTImKiem.Location = new System.Drawing.Point(732, 23);
+            this.gbbTImKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbbTImKiem.Name = "gbbTImKiem";
-            this.gbbTImKiem.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbbTImKiem.Size = new System.Drawing.Size(245, 145);
+            this.gbbTImKiem.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbbTImKiem.Size = new System.Drawing.Size(327, 178);
             this.gbbTImKiem.TabIndex = 93;
             this.gbbTImKiem.TabStop = false;
             this.gbbTImKiem.Text = "Tìm kiếm";
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(110, 53);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoLuong.Location = new System.Drawing.Point(147, 65);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(113, 20);
+            this.txtSoLuong.Size = new System.Drawing.Size(149, 22);
             this.txtSoLuong.TabIndex = 67;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(5, 51);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(7, 63);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 19);
+            this.label11.Size = new System.Drawing.Size(84, 23);
             this.label11.TabIndex = 66;
             this.label11.Text = "Số lượng";
             // 
@@ -126,10 +125,10 @@ namespace QuanLyKTX
             // 
             this.btnLoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoc.Location = new System.Drawing.Point(70, 97);
-            this.btnLoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoc.Location = new System.Drawing.Point(93, 119);
+            this.btnLoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(83, 36);
+            this.btnLoc.Size = new System.Drawing.Size(111, 44);
             this.btnLoc.TabIndex = 65;
             this.btnLoc.Text = "Lọc";
             this.btnLoc.UseVisualStyleBackColor = true;
@@ -138,32 +137,31 @@ namespace QuanLyKTX
             // cbbMaPhongTK
             // 
             this.cbbMaPhongTK.FormattingEnabled = true;
-            this.cbbMaPhongTK.Location = new System.Drawing.Point(110, 28);
-            this.cbbMaPhongTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbMaPhongTK.Location = new System.Drawing.Point(147, 34);
+            this.cbbMaPhongTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbMaPhongTK.Name = "cbbMaPhongTK";
-            this.cbbMaPhongTK.Size = new System.Drawing.Size(113, 21);
+            this.cbbMaPhongTK.Size = new System.Drawing.Size(149, 24);
             this.cbbMaPhongTK.TabIndex = 36;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(4, 27);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(5, 33);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 19);
+            this.label7.Size = new System.Drawing.Size(95, 23);
             this.label7.TabIndex = 35;
             this.label7.Text = "Mã Phòng";
             // 
             // dgvHoaDon
             // 
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHoaDon.Location = new System.Drawing.Point(9, 168);
-            this.dgvHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvHoaDon.Location = new System.Drawing.Point(12, 207);
+            this.dgvHoaDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.RowHeadersWidth = 51;
             this.dgvHoaDon.RowTemplate.Height = 24;
-            this.dgvHoaDon.Size = new System.Drawing.Size(785, 303);
+            this.dgvHoaDon.Size = new System.Drawing.Size(1047, 373);
             this.dgvHoaDon.TabIndex = 92;
             // 
             // gbHoaDon
@@ -182,11 +180,11 @@ namespace QuanLyKTX
             this.gbHoaDon.Controls.Add(this.label6);
             this.gbHoaDon.Controls.Add(this.label4);
             this.gbHoaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbHoaDon.Location = new System.Drawing.Point(9, 19);
-            this.gbHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbHoaDon.Location = new System.Drawing.Point(12, 23);
+            this.gbHoaDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbHoaDon.Name = "gbHoaDon";
-            this.gbHoaDon.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbHoaDon.Size = new System.Drawing.Size(470, 145);
+            this.gbHoaDon.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbHoaDon.Size = new System.Drawing.Size(627, 178);
             this.gbHoaDon.TabIndex = 91;
             this.gbHoaDon.TabStop = false;
             this.gbHoaDon.Text = "Thông tin hóa đơn";
@@ -194,20 +192,19 @@ namespace QuanLyKTX
             // cbbMaPhong
             // 
             this.cbbMaPhong.FormattingEnabled = true;
-            this.cbbMaPhong.Location = new System.Drawing.Point(110, 70);
-            this.cbbMaPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbMaPhong.Location = new System.Drawing.Point(147, 86);
+            this.cbbMaPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbMaPhong.Name = "cbbMaPhong";
-            this.cbbMaPhong.Size = new System.Drawing.Size(113, 27);
+            this.cbbMaPhong.Size = new System.Drawing.Size(149, 30);
             this.cbbMaPhong.TabIndex = 29;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 72);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(8, 89);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 19);
+            this.label5.Size = new System.Drawing.Size(95, 23);
             this.label5.TabIndex = 28;
             this.label5.Text = "Mã Phòng";
             // 
@@ -217,19 +214,19 @@ namespace QuanLyKTX
             this.cbTrangThai.Items.AddRange(new object[] {
             "Đã Thanh toán",
             "Chưa thanh toán"});
-            this.cbTrangThai.Location = new System.Drawing.Point(110, 104);
-            this.cbTrangThai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbTrangThai.Location = new System.Drawing.Point(147, 128);
+            this.cbTrangThai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbTrangThai.Name = "cbTrangThai";
-            this.cbTrangThai.Size = new System.Drawing.Size(113, 27);
+            this.cbTrangThai.Size = new System.Drawing.Size(149, 30);
             this.cbTrangThai.TabIndex = 27;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(340, 106);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(453, 130);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(113, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(149, 30);
             this.dateTimePicker1.TabIndex = 1;
             this.dateTimePicker1.Value = new System.DateTime(2022, 11, 4, 13, 33, 3, 0);
             // 
@@ -237,56 +234,53 @@ namespace QuanLyKTX
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(241, 109);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(321, 134);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 19);
+            this.label3.Size = new System.Drawing.Size(86, 23);
             this.label3.TabIndex = 26;
             this.label3.Text = "Ngày tạo";
             // 
             // txtTienNuoc
             // 
-            this.txtTienNuoc.Location = new System.Drawing.Point(340, 66);
-            this.txtTienNuoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTienNuoc.Location = new System.Drawing.Point(453, 81);
+            this.txtTienNuoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTienNuoc.Name = "txtTienNuoc";
-            this.txtTienNuoc.Size = new System.Drawing.Size(113, 26);
+            this.txtTienNuoc.Size = new System.Drawing.Size(149, 30);
             this.txtTienNuoc.TabIndex = 25;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(245, 70);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(327, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 19);
+            this.label1.Size = new System.Drawing.Size(95, 23);
             this.label1.TabIndex = 24;
             this.label1.Text = "Tiền nước";
             // 
             // txtTienDien
             // 
-            this.txtTienDien.Location = new System.Drawing.Point(340, 25);
-            this.txtTienDien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTienDien.Location = new System.Drawing.Point(453, 31);
+            this.txtTienDien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTienDien.Name = "txtTienDien";
-            this.txtTienDien.Size = new System.Drawing.Size(113, 26);
+            this.txtTienDien.Size = new System.Drawing.Size(149, 30);
             this.txtTienDien.TabIndex = 23;
             // 
             // txtMaHD
             // 
-            this.txtMaHD.Location = new System.Drawing.Point(110, 31);
-            this.txtMaHD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaHD.Location = new System.Drawing.Point(147, 38);
+            this.txtMaHD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaHD.Name = "txtMaHD";
-            this.txtMaHD.Size = new System.Drawing.Size(113, 26);
+            this.txtMaHD.Size = new System.Drawing.Size(149, 30);
             this.txtMaHD.TabIndex = 20;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(245, 32);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(327, 39);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 19);
+            this.label8.Size = new System.Drawing.Size(88, 23);
             this.label8.TabIndex = 19;
             this.label8.Text = "Tiền điện";
             // 
@@ -294,10 +288,9 @@ namespace QuanLyKTX
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(4, 37);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(5, 46);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 19);
+            this.label6.Size = new System.Drawing.Size(109, 23);
             this.label6.TabIndex = 18;
             this.label6.Text = "Mã hóa đơn";
             // 
@@ -305,10 +298,9 @@ namespace QuanLyKTX
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(4, 106);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(5, 130);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 19);
+            this.label4.Size = new System.Drawing.Size(97, 23);
             this.label4.TabIndex = 17;
             this.label4.Text = "Trạng thái";
             // 
@@ -317,10 +309,10 @@ namespace QuanLyKTX
             this.btnLoad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoad.Image = global::QuanLyKTX.Properties.Resources.Restart_icon;
             this.btnLoad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoad.Location = new System.Drawing.Point(533, 484);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoad.Location = new System.Drawing.Point(711, 596);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(152, 44);
+            this.btnLoad.Size = new System.Drawing.Size(203, 54);
             this.btnLoad.TabIndex = 97;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
@@ -331,10 +323,10 @@ namespace QuanLyKTX
             this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Image = global::QuanLyKTX.Properties.Resources.remove_icon;
             this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHuy.Location = new System.Drawing.Point(298, 484);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHuy.Location = new System.Drawing.Point(397, 596);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(92, 44);
+            this.btnHuy.Size = new System.Drawing.Size(123, 54);
             this.btnHuy.TabIndex = 96;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -345,10 +337,10 @@ namespace QuanLyKTX
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = global::QuanLyKTX.Properties.Resources.Save_icon;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(168, 484);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLuu.Location = new System.Drawing.Point(224, 596);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(105, 44);
+            this.btnLuu.Size = new System.Drawing.Size(140, 54);
             this.btnLuu.TabIndex = 95;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -359,10 +351,10 @@ namespace QuanLyKTX
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = global::QuanLyKTX.Properties.Resources.add_icon;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(47, 484);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Location = new System.Drawing.Point(63, 596);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(103, 44);
+            this.btnThem.Size = new System.Drawing.Size(137, 54);
             this.btnThem.TabIndex = 94;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -370,9 +362,9 @@ namespace QuanLyKTX
             // 
             // frm_HoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 618);
+            this.ClientSize = new System.Drawing.Size(1088, 761);
             this.Controls.Add(this.btnLocHDchuathanhtoan);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnLoad);
@@ -382,9 +374,10 @@ namespace QuanLyKTX
             this.Controls.Add(this.gbbTImKiem);
             this.Controls.Add(this.dgvHoaDon);
             this.Controls.Add(this.gbHoaDon);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_HoaDon";
             this.Text = "Quản lý hóa đơn";
+            this.Load += new System.EventHandler(this.frm_HoaDon_Load);
             this.gbbTImKiem.ResumeLayout(false);
             this.gbbTImKiem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();

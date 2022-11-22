@@ -152,9 +152,18 @@ namespace QuanLyKTX
 
         private void btn_SinhVien_Click(object sender, EventArgs e)  // chuyển sang form sinh viên
         {
-            fmSinhVien = new frm_SinhVien();
-            fmSinhVien.nv = MNV;
-            fmSinhVien.ShowDialog();
+            if (role != "Admin")
+            {
+                fmSinhVien = new frm_SinhVien();
+                fmSinhVien.nv = MNV;
+                fmSinhVien.ShowDialog();
+            }
+            else
+            {
+                frm_SinhVienAdmin fmSinhVienAdmin = new frm_SinhVienAdmin();
+                fmSinhVienAdmin.ShowDialog();
+            }
+                
         }
 
         private void btn_NhanVien_Click(object sender, EventArgs e)  // chuyển sang form nhân viên

@@ -24,7 +24,13 @@ namespace QuanLyKTX.Bus
         {
             return SvDAO.GetAllInformation(manv);
         }
-        public DataTable FillterStudent(string manv, string gioitinh)
+        public DataTable GetAllInformationAdmin(string manv)
+        {
+            return SvDAO.GetAllInformationAdmin(manv);
+        }
+
+
+            public DataTable FillterStudent(string manv, string gioitinh)
         {
             return SvDAO.FillterStudent(manv, gioitinh);
         }

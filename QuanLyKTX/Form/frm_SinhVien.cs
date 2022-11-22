@@ -49,13 +49,11 @@ namespace QuanLyKTX
             dgvSinhVien.DataSource = SvBUS.GetAllInformation(nv);
 
         }
-
         private void frm_SinhVien_Load(object sender, EventArgs e)
         {
-            LoadData();
-            gbThongTinSinhVien.Enabled = false;
-            btnLuu.Enabled = false;
-            MessageBox.Show(nv);
+                LoadData();
+                gbThongTinSinhVien.Enabled = false;
+                btnLuu.Enabled = false;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -175,7 +173,8 @@ namespace QuanLyKTX
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
-
+            dgvSinhVien.DataSource = SvBUS.FillterStudent(nv, cbbGioiTinh.Text);
+            txtSoLuong.Text = SvBUS.CountStudentGender(nv, cbbGioiTinh.Text).ToString();
         }
     }
 }

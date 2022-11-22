@@ -65,6 +65,7 @@
     <Compile Include="Bus\DangNhap_BUS.cs" />
     <Compile Include="Bus\HoaDon_BUS.cs" />
     <Compile Include="Bus\Phong_BUS.cs" />
+    <Compile Include="Bus\SinhVienAdmin_BUS.cs" />
     <Compile Include="Bus\SinhVien_BUS.cs" />
     <Compile Include="Bus\ThietBiTrongPhong_BUS.cs" />
     <Compile Include="Bus\Toa_BUS.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Dao\ChiTietPhong_DAO.cs" />
     <Compile Include="Dao\HoaDon_DAO.cs" />
     <Compile Include="Dao\Phong_DAO.cs" />
+    <Compile Include="Dao\SinhVienAdmin_DAO.cs" />
     <Compile Include="Dao\SinhVien_DAO.cs" />
     <Compile Include="Dao\ThietBiTrongPhong_DAO.cs" />
     <Compile Include="Dao\Toa_DAO.cs" />
@@ -92,6 +94,12 @@
     </Compile>
     <Compile Include="Form\frm_DangNhap.Designer.cs">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_SinhVienAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_SinhVienAdmin.Designer.cs">
+      <DependentUpon>frm_SinhVienAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\frm_TrangChu.cs">
       <SubType>Form</SubType>
@@ -184,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_SinhVien.resx">
       <DependentUpon>frm_SinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_SinhVienAdmin.resx">
+      <DependentUpon>frm_SinhVienAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_TrangChu.resx">
       <DependentUpon>frm_TrangChu.cs</DependentUpon>
