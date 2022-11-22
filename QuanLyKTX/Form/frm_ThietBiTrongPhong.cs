@@ -173,5 +173,14 @@ namespace QuanLyKTX
             dgvThietBi.DataSource = TbBUS.GetAllInformation(cbbMaPhongTimKiem.Text);
             txtMaPhong.Text = cbbMaPhongTimKiem.Text;
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult h = MessageBox.Show("Bạn có chắc muốn thoát không?", "Error", MessageBoxButtons.OKCancel);
+            if (h == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

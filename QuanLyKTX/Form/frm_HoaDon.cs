@@ -158,14 +158,23 @@ namespace QuanLyKTX
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
-            txtSoLuong.Text = HdBUS.CountInvoiceRoom(nv, cbbMaPhong.Text).ToString();
-            dgvHoaDon.DataSource = HdBUS.FillterInvoice(nv, cbbMaPhong.Text);
+            txtSoLuong.Text = HdBUS.CountInvoiceRoom(nv, cbbMaPhongTK.Text).ToString();
+            dgvHoaDon.DataSource = HdBUS.FillterInvoice(nv, cbbMaPhongTK.Text);
 
         }
 
         private void frm_HoaDon_Load(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult h = MessageBox.Show("Bạn có chắc muốn thoát không?", "Error", MessageBoxButtons.OKCancel);
+            if (h == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
     }
 }

@@ -105,6 +105,7 @@ namespace QuanLyKTX
             this.btn_SinhVien = new System.Windows.Forms.Button();
             this.btn_HoaDon = new System.Windows.Forms.Button();
             this.btn_TrangChu = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -133,6 +134,7 @@ namespace QuanLyKTX
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel_caidat.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -176,9 +178,8 @@ namespace QuanLyKTX
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(160, 53);
+            this.panel1.Location = new System.Drawing.Point(160, 65);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(720, 394);
@@ -187,7 +188,7 @@ namespace QuanLyKTX
             // pictureBox3
             // 
             this.pictureBox3.Image = global::QuanLyKTX.Properties.Resources.ktx3;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 4);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(720, 394);
@@ -198,7 +199,7 @@ namespace QuanLyKTX
             // pictureBox2
             // 
             this.pictureBox2.Image = global::QuanLyKTX.Properties.Resources.ktx2;
-            this.pictureBox2.Location = new System.Drawing.Point(-4, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(113, 391);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(720, 394);
@@ -209,10 +210,10 @@ namespace QuanLyKTX
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QuanLyKTX.Properties.Resources.KTX;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-201, 3);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(720, 394);
+            this.pictureBox1.Size = new System.Drawing.Size(917, 394);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -227,10 +228,10 @@ namespace QuanLyKTX
             this.panel_thongke.Controls.Add(this.panel_phong);
             this.panel_thongke.Controls.Add(this.panel_nhanvien);
             this.panel_thongke.Controls.Add(this.panel_sinhvien);
-            this.panel_thongke.Location = new System.Drawing.Point(164, 46);
+            this.panel_thongke.Location = new System.Drawing.Point(164, 62);
             this.panel_thongke.Margin = new System.Windows.Forms.Padding(4);
             this.panel_thongke.Name = "panel_thongke";
-            this.panel_thongke.Size = new System.Drawing.Size(712, 393);
+            this.panel_thongke.Size = new System.Drawing.Size(719, 393);
             this.panel_thongke.TabIndex = 3;
             // 
             // panel_thietbi
@@ -617,6 +618,7 @@ namespace QuanLyKTX
             // 
             this.panel_nhanvien.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel_nhanvien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_nhanvien.Controls.Add(this.pictureBox2);
             this.panel_nhanvien.Controls.Add(this.pictureBox7);
             this.panel_nhanvien.Controls.Add(this.label2);
             this.panel_nhanvien.Controls.Add(this.pictureBox8);
@@ -881,7 +883,7 @@ namespace QuanLyKTX
             this.panel_caidat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel_caidat.Controls.Add(this.btn_logout);
             this.panel_caidat.Controls.Add(this.btn_resetpass);
-            this.panel_caidat.Location = new System.Drawing.Point(156, 311);
+            this.panel_caidat.Location = new System.Drawing.Point(161, 438);
             this.panel_caidat.Margin = new System.Windows.Forms.Padding(4);
             this.panel_caidat.Name = "panel_caidat";
             this.panel_caidat.Size = new System.Drawing.Size(151, 134);
@@ -910,7 +912,7 @@ namespace QuanLyKTX
             this.btn_resetpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_resetpass.Image = global::QuanLyKTX.Properties.Resources.password_reset;
             this.btn_resetpass.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_resetpass.Location = new System.Drawing.Point(5, 7);
+            this.btn_resetpass.Location = new System.Drawing.Point(3, 11);
             this.btn_resetpass.Margin = new System.Windows.Forms.Padding(4);
             this.btn_resetpass.Name = "btn_resetpass";
             this.btn_resetpass.Size = new System.Drawing.Size(135, 54);
@@ -922,17 +924,17 @@ namespace QuanLyKTX
             // 
             // btn_ThietBi
             // 
-            this.btn_ThietBi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_ThietBi.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_ThietBi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_ThietBi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ThietBi.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_ThietBi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ThietBi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThietBi.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThietBi.Image")));
-            this.btn_ThietBi.Location = new System.Drawing.Point(15, 260);
+            this.btn_ThietBi.Location = new System.Drawing.Point(0, 385);
             this.btn_ThietBi.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ThietBi.Name = "btn_ThietBi";
-            this.btn_ThietBi.Size = new System.Drawing.Size(136, 55);
+            this.btn_ThietBi.Size = new System.Drawing.Size(149, 58);
             this.btn_ThietBi.TabIndex = 5;
             this.btn_ThietBi.Text = "Thiết bị";
             this.btn_ThietBi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -942,17 +944,17 @@ namespace QuanLyKTX
             // 
             // btn_Phong
             // 
-            this.btn_Phong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Phong.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_Phong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Phong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Phong.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Phong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Phong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Phong.Image = global::QuanLyKTX.Properties.Resources.room_icon;
-            this.btn_Phong.Location = new System.Drawing.Point(15, 197);
+            this.btn_Phong.Location = new System.Drawing.Point(0, 220);
             this.btn_Phong.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Phong.Name = "btn_Phong";
-            this.btn_Phong.Size = new System.Drawing.Size(136, 55);
+            this.btn_Phong.Size = new System.Drawing.Size(149, 55);
             this.btn_Phong.TabIndex = 7;
             this.btn_Phong.Text = "Phòng";
             this.btn_Phong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -965,13 +967,14 @@ namespace QuanLyKTX
             this.btn_CaiDat.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_CaiDat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_CaiDat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_CaiDat.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_CaiDat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CaiDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CaiDat.Image = global::QuanLyKTX.Properties.Resources.setting;
-            this.btn_CaiDat.Location = new System.Drawing.Point(16, 391);
+            this.btn_CaiDat.Location = new System.Drawing.Point(0, 330);
             this.btn_CaiDat.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CaiDat.Name = "btn_CaiDat";
-            this.btn_CaiDat.Size = new System.Drawing.Size(136, 55);
+            this.btn_CaiDat.Size = new System.Drawing.Size(149, 55);
             this.btn_CaiDat.TabIndex = 6;
             this.btn_CaiDat.Text = "Cài đặt";
             this.btn_CaiDat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -981,17 +984,17 @@ namespace QuanLyKTX
             // 
             // btn_NhanVien
             // 
-            this.btn_NhanVien.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_NhanVien.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_NhanVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_NhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_NhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_NhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btn_NhanVien.Image")));
-            this.btn_NhanVien.Location = new System.Drawing.Point(15, 323);
+            this.btn_NhanVien.Location = new System.Drawing.Point(0, 275);
             this.btn_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_NhanVien.Name = "btn_NhanVien";
-            this.btn_NhanVien.Size = new System.Drawing.Size(136, 55);
+            this.btn_NhanVien.Size = new System.Drawing.Size(149, 55);
             this.btn_NhanVien.TabIndex = 4;
             this.btn_NhanVien.Text = "Nhân viên";
             this.btn_NhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1002,17 +1005,17 @@ namespace QuanLyKTX
             // 
             // btn_Toa
             // 
-            this.btn_Toa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Toa.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_Toa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Toa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Toa.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Toa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Toa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Toa.Image = global::QuanLyKTX.Properties.Resources.room_icon;
-            this.btn_Toa.Location = new System.Drawing.Point(15, 197);
+            this.btn_Toa.Location = new System.Drawing.Point(0, 165);
             this.btn_Toa.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Toa.Name = "btn_Toa";
-            this.btn_Toa.Size = new System.Drawing.Size(136, 55);
+            this.btn_Toa.Size = new System.Drawing.Size(149, 55);
             this.btn_Toa.TabIndex = 3;
             this.btn_Toa.Text = "Tòa";
             this.btn_Toa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1022,17 +1025,17 @@ namespace QuanLyKTX
             // 
             // btn_SinhVien
             // 
-            this.btn_SinhVien.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_SinhVien.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_SinhVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_SinhVien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_SinhVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_SinhVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SinhVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SinhVien.Image = global::QuanLyKTX.Properties.Resources.Student_icon;
-            this.btn_SinhVien.Location = new System.Drawing.Point(15, 134);
+            this.btn_SinhVien.Location = new System.Drawing.Point(0, 110);
             this.btn_SinhVien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SinhVien.Name = "btn_SinhVien";
-            this.btn_SinhVien.Size = new System.Drawing.Size(136, 55);
+            this.btn_SinhVien.Size = new System.Drawing.Size(149, 55);
             this.btn_SinhVien.TabIndex = 2;
             this.btn_SinhVien.Text = "Sinh viên";
             this.btn_SinhVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1042,18 +1045,18 @@ namespace QuanLyKTX
             // 
             // btn_HoaDon
             // 
-            this.btn_HoaDon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_HoaDon.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_HoaDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_HoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_HoaDon.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_HoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_HoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_HoaDon.Image = global::QuanLyKTX.Properties.Resources.document_icon;
             this.btn_HoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_HoaDon.Location = new System.Drawing.Point(15, 72);
+            this.btn_HoaDon.Location = new System.Drawing.Point(0, 55);
             this.btn_HoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.btn_HoaDon.Name = "btn_HoaDon";
-            this.btn_HoaDon.Size = new System.Drawing.Size(136, 55);
+            this.btn_HoaDon.Size = new System.Drawing.Size(149, 55);
             this.btn_HoaDon.TabIndex = 1;
             this.btn_HoaDon.Text = "Hóa đơn";
             this.btn_HoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1063,17 +1066,17 @@ namespace QuanLyKTX
             // 
             // btn_TrangChu
             // 
-            this.btn_TrangChu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_TrangChu.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_TrangChu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_TrangChu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_TrangChu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_TrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TrangChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TrangChu.Image = global::QuanLyKTX.Properties.Resources.home_icon_;
-            this.btn_TrangChu.Location = new System.Drawing.Point(15, 9);
+            this.btn_TrangChu.Location = new System.Drawing.Point(0, 0);
             this.btn_TrangChu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_TrangChu.Name = "btn_TrangChu";
-            this.btn_TrangChu.Size = new System.Drawing.Size(136, 55);
+            this.btn_TrangChu.Size = new System.Drawing.Size(149, 55);
             this.btn_TrangChu.TabIndex = 0;
             this.btn_TrangChu.Text = "Trang chủ";
             this.btn_TrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1081,24 +1084,32 @@ namespace QuanLyKTX
             this.btn_TrangChu.UseVisualStyleBackColor = false;
             this.btn_TrangChu.Click += new System.EventHandler(this.btn_TrangChu_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_ThietBi);
+            this.panel2.Controls.Add(this.btn_CaiDat);
+            this.panel2.Controls.Add(this.btn_NhanVien);
+            this.panel2.Controls.Add(this.btn_Phong);
+            this.panel2.Controls.Add(this.btn_Toa);
+            this.panel2.Controls.Add(this.btn_SinhVien);
+            this.panel2.Controls.Add(this.btn_HoaDon);
+            this.panel2.Controls.Add(this.btn_TrangChu);
+            this.panel2.Location = new System.Drawing.Point(4, 53);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(149, 443);
+            this.panel2.TabIndex = 10;
+            // 
             // frm_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(887, 458);
+            this.ClientSize = new System.Drawing.Size(923, 589);
             this.Controls.Add(this.panel_thongke);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.txt_day);
             this.Controls.Add(this.panel_caidat);
             this.Controls.Add(this.txt_time);
-            this.Controls.Add(this.btn_ThietBi);
-            this.Controls.Add(this.btn_Phong);
-            this.Controls.Add(this.btn_CaiDat);
-            this.Controls.Add(this.btn_NhanVien);
-            this.Controls.Add(this.btn_Toa);
-            this.Controls.Add(this.btn_SinhVien);
-            this.Controls.Add(this.btn_HoaDon);
-            this.Controls.Add(this.btn_TrangChu);
             this.Controls.Add(this.panel1);
             this.HelpButton = true;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -1138,6 +1149,7 @@ namespace QuanLyKTX
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel_caidat.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1218,5 +1230,6 @@ namespace QuanLyKTX
         private System.Windows.Forms.Label lb_tbhong;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -176,5 +176,14 @@ namespace QuanLyKTX
             dgvSinhVien.DataSource = SvBUS.FillterStudent(nv, cbbGioiTinh.Text);
             txtSoLuong.Text = SvBUS.CountStudentGender(nv, cbbGioiTinh.Text).ToString();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult h = MessageBox.Show("Bạn có chắc muốn thoát không?", "Error", MessageBoxButtons.OKCancel);
+            if (h == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

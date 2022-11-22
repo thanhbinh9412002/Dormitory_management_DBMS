@@ -16,12 +16,28 @@ namespace QuanLyKTX.Dao
         {
             cnn = new DBConnection();
         }
+        public DataTable Transfer(DataTable dt)
+        {
+            dt.Columns.Add("Tổng tiền", typeof(float));
+            float x = 0;
+            float y = 0;
+            foreach (DataRow dr in dt.Rows)
+            {
+                x = float.Parse(dr["Tiền Điện"].ToString());
+                y = float.Parse(dr["Tiền Nước"].ToString());
+                dr["Tổng tiền"] = x + y;
+            }
+            return dt;
+        }
         public DataTable GetAllInformation(string manv)
         {
+            DataTable dt;
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaNQL", System.Data.SqlDbType.Char);
             sqlParameters[0].Value = manv;
-            return cnn.executeReader("select * from func_HoaDonQL(@MaNQL)", sqlParameters);
+            dt  =  cnn.executeReader("select * from func_HoaDonQL(@MaNQL)", sqlParameters);
+            return Transfer(dt);
+            
         }
         public DataTable GetRoom(string manv)
         {
@@ -29,16 +45,20 @@ namespace QuanLyKTX.Dao
             sqlParameters[0] = new SqlParameter("@MaNQL", System.Data.SqlDbType.Char);
             sqlParameters[0].Value = manv;
             return cnn.executeReader("SELECT * FROM dbo.func_PhongQuanLy(@MaNQL)", sqlParameters);
+
+            
         }
 
         public DataTable FillterInvoice(string manv, string maphong)
         {
+            DataTable dt;
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaNQL", System.Data.SqlDbType.Char);
             sqlParameters[0].Value = manv;
             sqlParameters[1] = new SqlParameter("@MaPhong", System.Data.SqlDbType.NVarChar);
             sqlParameters[1].Value = maphong;
-            return cnn.executeReader("SELECT * FROM dbo.func_HoaDonPhongQuanLy(@MaNQL,@MaPhong)", sqlParameters);
+            dt = cnn.executeReader("SELECT * FROM dbo.func_HoaDonPhongQuanLy(@MaNQL,@MaPhong)", sqlParameters);
+            return Transfer(dt);
         }
 
         public int CountInvoiceRoom(string manv, string maphong)
@@ -59,10 +79,12 @@ namespace QuanLyKTX.Dao
         }
         public DataTable UnpaidInvoice(string manv)
         {
+            DataTable dt;
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaNQL", System.Data.SqlDbType.Char);
             sqlParameters[0].Value = manv;
-            return cnn.executeReader("select * from func_HoaDonChuaThanhToanTheoPhong(@MaNQL)", sqlParameters);
+            dt = cnn.executeReader("select * from func_HoaDonChuaThanhToanTheoPhong(@MaNQL)", sqlParameters);
+            return Transfer(dt);
         }
 
         public void UpdateInvoice(string mahd, string maphong, string trangthai, float tiendien, float tiennuoc, DateTime ngaytao)

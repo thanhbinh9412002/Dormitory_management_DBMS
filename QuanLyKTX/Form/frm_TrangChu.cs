@@ -63,19 +63,21 @@ namespace QuanLyKTX
         {
             btn_Toa.Enabled = true;
             btn_NhanVien.Enabled = true;
-            btn_Phong.Visible = false;
+           // btn_Phong.Visible = false;
             btn_Phong.Enabled = false;
-            panel_caidat.Visible = false;
+            //panel_caidat.Visible = false;
+            btn_HoaDon.Enabled = false;
+            //btn_HoaDon.Visible = false;
         }
         private void MainNoEnabled()  // quyền quản lý sẽ ẩn một số button
         {
             btn_NhanVien.Enabled = false;
-            btn_NhanVien.Visible = false;
-            btn_Toa.Visible = false;
+           // btn_NhanVien.Visible = false;
+            //btn_Toa.Visible = false;
             btn_Toa.Enabled = false;
-            btn_ThietBi.Visible = false;
+            //btn_ThietBi.Visible = false;
             btn_ThietBi.Enabled = false;
-            panel_caidat.Visible = false;
+           // panel_caidat.Visible = false;
             btn_CaiDat.Location = new Point(12, 216);
             TrangChu_BUS tcBUS = new TrangChu_BUS();
             CMND_CCCD = user;
