@@ -69,6 +69,12 @@ namespace QuanLyKTX.DAO
             return count;
         }
 
+        public DataTable Lay_Chuc_Vu_Nhan_Vien()
+        {
+            string spName = "[dbo].[proc_LayChucVu]";
+            return conn.ExecuteProcedureDatatableNoPara(spName);
+        }
+
         public DataTable NhanVien_Chucvu(string chucvu)
         {
             string sql = "";
@@ -76,6 +82,18 @@ namespace QuanLyKTX.DAO
             if (chucvu == "Bảo vệ")
             {
                 sql = "SELECT * FROM [dbo].[view_NhanVienBaoVe]";
+            }
+            else if(chucvu == "Quản lý")
+            {
+                sql = "SELECT * FROM [dbo].[view_NhanVienQuanLy]";
+            }  
+            else if(chucvu == "Lao công")
+            {
+                sql = "SELECT * FROM [dbo].[view_NhanVienLaoCong]";
+            }
+            else if (chucvu == "Giữ xe")
+            {
+                sql = "SELECT * FROM [dbo].[view_NhanVienGiuXe]";
             }
             return conn.executeReader(sql, sqlParameters);
         }

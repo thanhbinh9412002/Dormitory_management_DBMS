@@ -538,6 +538,14 @@ as
 	where ChucVu = N'Bảo vệ'
 go
 
+CREATE VIEW view_NhanVienQuanLy
+as
+	select MaNhanVien as N'Mã nhân viên', TenNhanVien as N'Tên nhân viên', SoDienThoai as N'Số điện thoại', GioiTinh as N'Giới tính',
+			TonGiao as N'Tôn giáo', QuocTich as N'Quốc tịch', CMND_CCCD as N'Số CMND/ CCCD', ChucVu as N'Chức vụ'
+	from NhanVien 
+	where ChucVu = N'Quản lý'
+go
+
 -- Done
 -- Sử dụng view lọc ra tổng các phòng còn trống của các tòa cho admin xem
 CREATE VIEW view_PhongTrong

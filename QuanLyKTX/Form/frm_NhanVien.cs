@@ -115,6 +115,9 @@ namespace QuanLyKTX
             var nvBUS = new NhanVien_BUS();
             DataTable nv = nvBUS.DanhSachNhanVien();
             this.dgvNhanVien.DataSource = nv;
+            cbbChucVu.DataSource = nvBUS.Lay_Chuc_Vu_Nhan_Vien();
+            cbbChucVu.DisplayMember = "ChucVu";
+            cbbChucVu.ValueMember = "ChucVu";
         }
 
         private void dgvNhanVien_CellClick(object senderGrid, DataGridViewCellEventArgs f)
@@ -140,6 +143,11 @@ namespace QuanLyKTX
             var nvBUS = new NhanVien_BUS();
             DataTable nv = nvBUS.NhanVien_Chucvu(chucvu);
             this.dgvNhanVien.DataSource = nv;
+        }
+
+        private void btn_resest_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

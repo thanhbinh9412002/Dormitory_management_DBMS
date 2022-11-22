@@ -51,7 +51,7 @@ namespace QuanLyKTX
             {
                 MainEnabled();
                 LoadPicture();
-                MessageBox.Show("admin");
+                //MessageBox.Show("admin");
             }
             else
             {
