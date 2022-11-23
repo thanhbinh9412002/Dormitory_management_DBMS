@@ -188,3 +188,4 @@ C:\QUANLYKTX_DBMS\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.CoreCompileInpu
 C:\QUANLYKTX_DBMS\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Ver9.exe
 C:\QUANLYKTX_DBMS\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Ver9.pdb
 C:\QUANLYKTX_DBMS\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.frm_SinhVienAdmin.resources
+E:\GitHub\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.frm_SinhVienAdmin.resources

@@ -41,7 +41,6 @@ namespace QuanLyKTX
             this.label6 = new System.Windows.Forms.Label();
             this.txt_QuocTich = new System.Windows.Forms.TextBox();
             this.txt_CMND = new System.Windows.Forms.TextBox();
-            this.txt_ChucVu = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@ namespace QuanLyKTX
             this.btn_huy = new System.Windows.Forms.Button();
             this.btn_luu = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.cbb_chucvu = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -171,14 +171,6 @@ namespace QuanLyKTX
             this.txt_CMND.Size = new System.Drawing.Size(161, 29);
             this.txt_CMND.TabIndex = 13;
             // 
-            // txt_ChucVu
-            // 
-            this.txt_ChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ChucVu.Location = new System.Drawing.Point(401, 326);
-            this.txt_ChucVu.Name = "txt_ChucVu";
-            this.txt_ChucVu.Size = new System.Drawing.Size(161, 29);
-            this.txt_ChucVu.TabIndex = 14;
-            // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -227,7 +219,7 @@ namespace QuanLyKTX
             // 
             this.cbb_MaNQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_MaNQL.FormattingEnabled = true;
-            this.cbb_MaNQL.Location = new System.Drawing.Point(401, 361);
+            this.cbb_MaNQL.Location = new System.Drawing.Point(401, 364);
             this.cbb_MaNQL.Name = "cbb_MaNQL";
             this.cbb_MaNQL.Size = new System.Drawing.Size(161, 32);
             this.cbb_MaNQL.TabIndex = 19;
@@ -289,6 +281,16 @@ namespace QuanLyKTX
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // cbb_chucvu
+            // 
+            this.cbb_chucvu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_chucvu.FormattingEnabled = true;
+            this.cbb_chucvu.Location = new System.Drawing.Point(401, 326);
+            this.cbb_chucvu.Name = "cbb_chucvu";
+            this.cbb_chucvu.Size = new System.Drawing.Size(161, 32);
+            this.cbb_chucvu.TabIndex = 23;
+            this.cbb_chucvu.SelectedIndexChanged += new System.EventHandler(this.cbb_chucvu_SelectedIndexChanged);
+            // 
             // frm_CapNhatNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,6 +298,7 @@ namespace QuanLyKTX
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(594, 515);
             this.ControlBox = false;
+            this.Controls.Add(this.cbb_chucvu);
             this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.btn_luu);
             this.Controls.Add(this.cbb_GioiTinh);
@@ -304,7 +307,6 @@ namespace QuanLyKTX
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txt_ChucVu);
             this.Controls.Add(this.txt_CMND);
             this.Controls.Add(this.txt_QuocTich);
             this.Controls.Add(this.label6);
@@ -345,7 +347,6 @@ namespace QuanLyKTX
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_QuocTich;
         private System.Windows.Forms.TextBox txt_CMND;
-        private System.Windows.Forms.TextBox txt_ChucVu;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -354,5 +355,6 @@ namespace QuanLyKTX
         private System.Windows.Forms.ComboBox cbb_GioiTinh;
         private System.Windows.Forms.Button btn_luu;
         private System.Windows.Forms.Button btn_huy;
+        private System.Windows.Forms.ComboBox cbb_chucvu;
     }
 }

@@ -26,10 +26,22 @@ namespace QuanLyKTX.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-MB5F72F2\\SQLEXPRESS;Initial Catalog=QuanLyKTX;Integrated Security=True")]
-        public string cnnStr {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=THANHBINH\\SQLEXPRESS;Initial Catalog=QuanLyKTX123;User ID=Manage;Pass" +
+            "word=0123456789")]
+        public string cnnStr_manage {
             get {
-                return ((string)(this["cnnStr"]));
+                return ((string)(this["cnnStr_manage"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=THANHBINH\\SQLEXPRESS;Initial Catalog=QuanLyKTX123;User ID=Admin;Passw" +
+            "ord=123456789")]
+        public string cnnStr_admin {
+            get {
+                return ((string)(this["cnnStr_admin"]));
             }
         }
     }

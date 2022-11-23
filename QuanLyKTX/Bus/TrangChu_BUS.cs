@@ -60,5 +60,9 @@ namespace QuanLyKTX.BUS
         {
             return tcDAO.TongSoLuongThietBi();
         }
+        public int SoPhongQuanLy(string manv, string trangthai)
+        {
+            return tcDAO.SoPhongQuanLy(manv, trangthai);
+        }
     }
 }
