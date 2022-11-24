@@ -818,10 +818,10 @@ namespace QuanLyKTX
             // btn_ThietBi
             // 
             this.btn_ThietBi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_ThietBi.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_ThietBi.BackColor = System.Drawing.Color.LightCoral;
             this.btn_ThietBi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_ThietBi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ThietBi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThietBi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_ThietBi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThietBi.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThietBi.Image")));
             this.btn_ThietBi.Location = new System.Drawing.Point(12, 227);
@@ -837,13 +837,13 @@ namespace QuanLyKTX
             // btn_Phong
             // 
             this.btn_Phong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Phong.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Phong.BackColor = System.Drawing.Color.LightCoral;
             this.btn_Phong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Phong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Phong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Phong.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Phong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Phong.Image = global::QuanLyKTX.Properties.Resources.room_icon;
-            this.btn_Phong.Location = new System.Drawing.Point(12, 122);
+            this.btn_Phong.Location = new System.Drawing.Point(12, 123);
             this.btn_Phong.Name = "btn_Phong";
             this.btn_Phong.Size = new System.Drawing.Size(102, 45);
             this.btn_Phong.TabIndex = 17;
@@ -855,10 +855,10 @@ namespace QuanLyKTX
             // 
             // btn_CaiDat
             // 
-            this.btn_CaiDat.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_CaiDat.BackColor = System.Drawing.Color.LightCoral;
             this.btn_CaiDat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_CaiDat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_CaiDat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CaiDat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_CaiDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CaiDat.Image = global::QuanLyKTX.Properties.Resources.setting;
             this.btn_CaiDat.Location = new System.Drawing.Point(12, 326);
@@ -874,7 +874,7 @@ namespace QuanLyKTX
             // btn_NhanVien
             // 
             this.btn_NhanVien.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_NhanVien.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_NhanVien.BackColor = System.Drawing.Color.LightCoral;
             this.btn_NhanVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_NhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_NhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -894,12 +894,12 @@ namespace QuanLyKTX
             // btn_Toa
             // 
             this.btn_Toa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Toa.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Toa.BackColor = System.Drawing.Color.LightCoral;
             this.btn_Toa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Toa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Toa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Toa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Toa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Toa.Image = global::QuanLyKTX.Properties.Resources.room_icon;
+            this.btn_Toa.Image = global::QuanLyKTX.Properties.Resources.company;
             this.btn_Toa.Location = new System.Drawing.Point(12, 123);
             this.btn_Toa.Name = "btn_Toa";
             this.btn_Toa.Size = new System.Drawing.Size(102, 45);
@@ -913,10 +913,10 @@ namespace QuanLyKTX
             // btn_SinhVien
             // 
             this.btn_SinhVien.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_SinhVien.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_SinhVien.BackColor = System.Drawing.Color.LightCoral;
             this.btn_SinhVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_SinhVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_SinhVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SinhVien.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_SinhVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SinhVien.Image = global::QuanLyKTX.Properties.Resources.Student_icon;
             this.btn_SinhVien.Location = new System.Drawing.Point(12, 71);
@@ -932,10 +932,10 @@ namespace QuanLyKTX
             // btn_HoaDon
             // 
             this.btn_HoaDon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_HoaDon.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_HoaDon.BackColor = System.Drawing.Color.LightCoral;
             this.btn_HoaDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_HoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_HoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_HoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_HoaDon.Image = global::QuanLyKTX.Properties.Resources.document_icon;
             this.btn_HoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -952,10 +952,10 @@ namespace QuanLyKTX
             // btn_TrangChu
             // 
             this.btn_TrangChu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_TrangChu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_TrangChu.BackColor = System.Drawing.Color.LightCoral;
             this.btn_TrangChu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_TrangChu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_TrangChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TrangChu.Image = global::QuanLyKTX.Properties.Resources.home_icon_;
             this.btn_TrangChu.Location = new System.Drawing.Point(12, 20);
@@ -970,7 +970,7 @@ namespace QuanLyKTX
             // 
             // panel_caidat
             // 
-            this.panel_caidat.BackColor = System.Drawing.Color.LightCyan;
+            this.panel_caidat.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel_caidat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel_caidat.Controls.Add(this.btn_logout);
             this.panel_caidat.Controls.Add(this.btn_resetpass);
@@ -981,13 +981,13 @@ namespace QuanLyKTX
             // 
             // btn_logout
             // 
-            this.btn_logout.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_logout.BackColor = System.Drawing.Color.LightCoral;
             this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logout.Image = global::QuanLyKTX.Properties.Resources.logout_icon;
             this.btn_logout.Location = new System.Drawing.Point(4, 58);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(101, 46);
+            this.btn_logout.Size = new System.Drawing.Size(103, 46);
             this.btn_logout.TabIndex = 1;
             this.btn_logout.Text = "Đăng xuất";
             this.btn_logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -996,14 +996,14 @@ namespace QuanLyKTX
             // 
             // btn_resetpass
             // 
-            this.btn_resetpass.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_resetpass.BackColor = System.Drawing.Color.LightCoral;
             this.btn_resetpass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_resetpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_resetpass.Image = global::QuanLyKTX.Properties.Resources.password_reset;
             this.btn_resetpass.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_resetpass.Location = new System.Drawing.Point(4, 6);
             this.btn_resetpass.Name = "btn_resetpass";
-            this.btn_resetpass.Size = new System.Drawing.Size(101, 44);
+            this.btn_resetpass.Size = new System.Drawing.Size(103, 44);
             this.btn_resetpass.TabIndex = 0;
             this.btn_resetpass.Text = "Đổi mật khẩu";
             this.btn_resetpass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1028,7 +1028,9 @@ namespace QuanLyKTX
             this.Controls.Add(this.txt_day);
             this.Controls.Add(this.txt_time);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.HelpButton = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TrangChu";

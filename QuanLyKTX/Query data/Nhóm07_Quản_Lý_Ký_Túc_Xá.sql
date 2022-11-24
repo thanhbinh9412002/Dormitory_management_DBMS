@@ -1,8 +1,9 @@
-﻿create database QuanLyKTX123
+﻿--Tạo cơ sở dữ liệu
+create database QuanLyKTX
 GO
-use QuanLyKTX123
+use QuanLyKTX
 GO
---Done
+--Tạo bảng tài khoản
 create table TaiKhoan (
 	TenTaiKhoan char(15) ,
 	MatKhau char(20) NOT NULL,
@@ -10,7 +11,7 @@ create table TaiKhoan (
 	Constraint PK_TaiKhoan Primary Key (TenTaiKhoan)
 )
 GO
---Done
+--Tạo bảng nhân viên
 create table NhanVien
 (
     MaNhanVien char(10) NOT NULL,
@@ -25,16 +26,16 @@ create table NhanVien
     CONSTRAINT Pk_NhanVien PRIMARY KEY (MaNhanVien)
 )
 GO 
--- Done
+-- Tạo bảng tòa
 create table Toa
 (
     TenToa nvarchar(5)  NOT NULL,
     SoPhong int NOT NULL,
-    MaNguoiQuanLy char(10) NOT NULL
+    MaNguoiQuanLy char(10) NOT NULL																																																																																			,
     CONSTRAINT Pk_Toa PRIMARY KEY (TenToa)
 )
 GO
--- Done
+-- Tạo bảng phòng
 CREATE TABLE Phong(
 	MaPhong char(10) NOT NULL,
 	Toa nvarchar(5) NOT NULL,
@@ -43,7 +44,7 @@ CREATE TABLE Phong(
 	Constraint PK_Phong Primary Key (MaPhong)
 )
 GO
---Done
+--Tạo bảng sinh viên
 CREATE TABLE SinhVien(
     MaSinhVien char(10) NOT NULL,
     HoTen nvarchar(50) NOT NULL,
@@ -57,7 +58,7 @@ CREATE TABLE SinhVien(
     Constraint PK_SinhVien Primary Key (MaSinhVien)
 )
 GO
--- Done
+-- Tạo bảng hóa đơn điện nước
 create table HoaDonDienNuoc (
 	MaHoaDon char(10),
 	MaPhong char(10) NOT NULL,
@@ -68,7 +69,7 @@ create table HoaDonDienNuoc (
 	Constraint PK_HoaDonDienNuoc Primary Key (MaHoaDon)
 )
 GO
--- Done
+-- Tạo bảng trang thiết bị
 create table TrangThietBi (
 	MaThietBi char(10),
 	TenThietBi nvarchar(20) NOT NULL,
@@ -76,7 +77,7 @@ create table TrangThietBi (
 	Constraint PK_TrangThietBi Primary Key (MaThietBi)
 )
 GO
--- Done 
+-- Tạo bảng thiết bị trong phòng
 create table ThietBiTrongPhong (
 	MaThietBiTrongPhong char(10),
 	MaPhong char(10),
@@ -237,6 +238,24 @@ begin
 				ROLLBACK TRANSACTION
 end
 GO
+
+CREATE TRIGGER [dbo].[tg_ThemPhong] 
+on [dbo].[Phong]
+after insert
+as
+begin
+	declare @slphong int, @sophongtoa int
+	select @slphong = COUNT(inserted.MaPhong),@sophongtoa = Toa.SoPhong
+	from inserted,Toa
+	where inserted.Toa=Toa.TenToa
+	group by Toa.SoPhong
+	if(@slphong > @sophongtoa)
+	BEGIN
+		RAISERROR(N'Số lượng phòng quá quy định ', 16,1)
+		ROLLBACK TRANSACTION
+	END
+end
+GO
 -- Done
 -- Mỗi người quản lý chỉ được quản lý 1 tòa duy nhất 
 -- Trigger: Khi thêm 1 tòa mới hoặc cập nhật Mã ng quản lý của tòa , phải thỏa điều kiện là người quản lý đó 
@@ -343,17 +362,22 @@ BEGIN
 	END
 END
 GO
--- Done
---admin xóa nhân viên ra khỏi cơ sở dữ liệu.
-CREATE TRIGGER dbo.XoaNhanVien 
-ON NhanVien
-FOR DELETE
-AS 
+-- Thêm nhân viên để quản lý tòa
+CREATE TRIGGER [dbo].[tg_ThemNhanVienQuanLyToa]
+ON [dbo].[Toa]
+AFTER INSERT,UPDATE
+AS
 BEGIN
 	SET NOCOUNT ON;
-	update Toa
-	set MaNguoiQuanLy = N'Trống'
-	where MaNguoiQuanLy is null
+	declare @ChucVu nchar(10)
+	select @ChucVu = NhanVien.ChucVu
+	from inserted, NhanVien
+	where inserted.MaNguoiQuanLy = NhanVien.MaNhanVien
+	if(@ChucVu != N'Quản lý')
+	begin
+		raiserror(N'Nhân viên không hợp lệ!',16,1)
+		rollback transaction
+	end
 END
 GO
 												--Thêm dữ liệu
@@ -368,15 +392,12 @@ insert into NhanVien Values('NV08',N'Nguyễn Thị Hoài','0367053413', N'Nữ'
 insert into NhanVien Values('NV09',N'Nguyễn Tuyến','0322275423', N'Nam',N'Không',N'Việt Nam','221591249',N'Bảo vệ','NV07')
 insert into NhanVien Values('NV10',N'Nguyễn Thị Duyên','0367842103', N'Nữ',N'Không',N'Việt Nam','221531558',N'Giữ xe','NV07')
 insert into NhanVien Values('NV11',N'Nguyễn Thị Tuyến','0322864192', N'Nữ',N'Không',N'Việt Nam','221537249',N'Giữ xe','NV07')
-insert into NhanVien Values('NV012',N'Huỳnh Hạo Nhị','0367987562', N'Nam',N'Không',N'Việt Nam','221574778',N'Quản lý','NV012')
+insert into NhanVien Values('NV12',N'Huỳnh Hạo Nhị','0367987562', N'Nam',N'Không',N'Việt Nam','221574778',N'Quản lý','NV12')
 GO
 
 insert into Toa Values('A', 21, 'NV01')
 insert into Toa Values('B', 22 ,'NV07')
-insert into Toa Values('C', 22 ,'NV012')
-/*insert into Toa Values('C', 23 ,'NV10')
-insert into Toa Values('D', 24 ,'NV08')
-insert into Toa Values('E', 25, 'NV09')*/
+insert into Toa Values('C', 22 ,'NV12')
 GO
 
 insert into Phong Values('A101','A', 0 , 8)
@@ -387,8 +408,6 @@ insert into Phong Values('C102','C', 0 , 4)
 insert into Phong Values('A102','A', 0 , 4)
 insert into Phong Values('B103','B', 0 , 4)
 GO
-
--- Tòa B, C là nữ, còn A, D, E là nam
 
 insert into SinhVien Values('20133104',N'Nguyễn Văn Thanh','0367064834', N'Nam',3,N'Không',N'Việt Nam','221502781','A101')
 insert into SinhVien Values('22133102',N'Lương Sĩ Hoàng','0312452123', N'Nam',1,N'Không',N'Việt Nam','221531232','A101')
@@ -419,27 +438,6 @@ insert into SinhVien Values('21241415',N'Lê Thị Vân','0367784872', N'Nữ',2
 insert into SinhVien Values('20197413',N'Nguyễn Thy','0367842138', N'Nữ',3,N'Không',N'Việt Nam','221554219','C101')
 
 insert into SinhVien Values('20112563',N'Hứa Tấn Đạt','0362853234', N'Nam',3,N'Không',N'Việt Nam','221590876','C101')
-
-/*insert into SinhVien Values('22112311',N'Nguyễn Hải Đăng','0917243432', N'Nam',1,N'Không',N'Việt Nam','221541995','P602')
-insert into SinhVien Values('21124133',N'Trần Tiến Dũng','0397294885', N'Nam',2,N'Không',N'Việt Nam','221517453','P602')
-insert into SinhVien Values('20087612',N'Phan Anh Dũng','0309764789', N'Nam',3,N'Không',N'Việt Nam','221568477','P602')
-insert into SinhVien Values('20567821',N'Nguyễn Bảo Đức','0336579432', N'Nam',3,N'Không',N'Việt Nam','221588133','P602')
-insert into SinhVien Values('21241412',N'Trần Huy Hoàng','0374088270', N'Nam',2,N'Không',N'Việt Nam','221536646','P602')
-insert into SinhVien Values('22214412',N'Phan Gia Hưng','0373133725', N'Nam',1,N'Không',N'Việt Nam','221549877','P602')
-insert into SinhVien Values('21241223',N'Nguyễn Phúc Hưng','0333467946', N'Nam',2,N'Không',N'Việt Nam','221534038','P602')
-insert into SinhVien Values('20234123',N'Phan Tuấn Hưng','0343739289', N'Nam',3,N'Không',N'Việt Nam','221536132','P602')
-
-insert into SinhVien Values('20412351',N'Phạm Huyền Anh','0386605348', N'Nữ',3,N'Không',N'Việt Nam','221516004','P802')
-insert into SinhVien Values('21526322',N'Nguyễn Trúc Khuê','0390327281', N'Nữ',2,N'Không',N'Việt Nam','221566002','P802')
-insert into SinhVien Values('22542151',N'Trần Cẩm Liên','0394335770', N'Nữ',1,N'Không',N'Việt Nam','221544574','P802')
-insert into SinhVien Values('21232142',N'Nguyễn Bảo Ngọc','0316329877', N'Nữ',2,N'Không',N'Việt Nam','221526296','P802')
-insert into SinhVien Values('20141123',N'Phạm Diễm Ngọc','0377941169', N'Nữ',3,N'Không',N'Việt Nam','221537257','P802')
-
-insert into SinhVien Values('19573222',N'Nguyễn Phúc Lâm','0366873638', N'Nam',4,N'Không',N'Việt Nam','221513571','P508')
-insert into SinhVien Values('20124631',N'Lê Quang Lộc','0312545295', N'Nam',3,N'Không',N'Việt Nam','221516358','P508')
-insert into SinhVien Values('21242412',N'Nguyễn Duy Luận','0367725757', N'Nam',2,N'Không',N'Việt Nam','221585483','P508')
-insert into SinhVien Values('22151512',N'Trần Gia Long','0385174102', N'Nam',1,N'Không',N'Việt Nam','221562595','P508')
-insert into SinhVien Values('21168595',N'Lê Hoàng Nam','0326767932', N'Nam',2,N'Không',N'Việt Nam','221537782','P508')*/
 GO
 
 insert into HoaDonDienNuoc Values('HD1','A101', N'Đã thanh toán',150 , 300, '2020-07-31')
@@ -475,7 +473,7 @@ insert into ThietBiTrongPhong Values('TB5','C101', 0 , 1, 1)
 insert into ThietBiTrongPhong Values('TB2','C101', 1 , 1, 2)
 GO
 
-insert into TaiKhoan Values ('111111111','111111111','Admin')
+insert into TaiKhoan Values ('123456789','123456789','Admin')
 GO
 --															 View 
 -- Done
@@ -485,17 +483,6 @@ as
 	select a.Toa as N'Tên tòa', a.MaPhong as N'Số phòng', c.TenThietBi as N'Tên thiết bị', b.SoLuongHong as N'Số lượng hỏng', b.SoLuongTot as N'Số lượng còn sử dụng'
 	from Phong as a, ThietBiTrongPhong as b, TrangThietBi as c
 	where a.MaPhong = b.MaPhong and b.MaThietBiTrongPhong = c.MaThietBi and b.SoLuongHong > 0
-go
-
--- Done
---Sử dụng View lọc ra thông tin nhân viên kèm thông tin đăng nhập (chỉ cho admin xem)
-CREATE VIEW view_ThongTinDangNhap
-as
-	select a.MaNhanVien as N'Mã nhân viên', a.TenNhanVien as N'Tên nhân viên', a.SoDienThoai as N'Số điện thoại', a.GioiTinh as N'Giới tính',
-			a.TonGiao as N'Tôn giáo', a.QuocTich as N'Quốc tịch', a.CMND_CCCD as N'Số CMND/ CCCD', a.ChucVu as N'Chức vụ', b.TenTaiKhoan as N'Tên đăng nhập', 
-			b.MatKhau as N'Mật khẩu', b.VaiTro as 'Quyền'
-	from NhanVien as a, TaiKhoan as b
-	where a.CMND_CCCD = b.TenTaiKhoan and b.VaiTro = N'Quản Lý'
 go
 
 CREATE VIEW view_NhanVienLaoCong
@@ -684,14 +671,12 @@ GO
 
 -- Đăng nhập , mật khẩu
 create procedure [dbo].[proc_DoiMatKhau] (@tentk char(15), @mk char(20) )
-as begin
-	set nocount on;
-	update TaiKhoan
+as update TaiKhoan
 	set MatKhau = @mk
 	where TenTaiKhoan = @tentk
-end
 GO
--- Nhân viên
+--					Nhân viên
+-- sửa bảng nhân viên
 create procedure [dbo].[proc_SuaNhanVien] (@manv char(10), @tennv nvarchar(50), @sdtnv char(15), @gioitinhnv nvarchar(10),
 @tongiaonv nvarchar(10), @quoctichnv nvarchar(10), @cmnd_cccd_nv char(20), @cv nvarchar(20), @manql char(10))
 as update NhanVien
@@ -706,7 +691,7 @@ set MaNhanVien = @manv,
 	MaNQL = @manql
 where MaNhanVien = @manv
 GO
-
+-- thêm nhân viên
 create procedure [dbo].[proc_ThemNhanVien]
 (	@manv char(10),
 	@tennv nvarchar(50),
@@ -720,33 +705,21 @@ create procedure [dbo].[proc_ThemNhanVien]
 )
 as insert into NhanVien Values(@manv, @tennv, @sdtnv, @gioitinhnv, @tongiaonv, @quoctichnv, @cmnd_cccd_nv, @cv, @manql);
 GO
-
+-- xóa nhân viên
 create procedure [dbo].[proc_XoaNhanVien] (@manv char(10))
 as delete NhanVien where MaNhanVien = @manv;
 GO
-
-create function [dbo].[func_TimKiemNhanVien_CMND] (@CMND_CCCD char(20))
-returns varchar(10)
-AS 
-BEGIN 
-    DECLARE @soNV varchar(10) 
-    SELECT @soNV = MaNhanVien
-	from NhanVien
-	Where CMND_CCCD=@CMND_CCCD
-    RETURN @soNV
-END
-GO
-
+-- lấy mã nhân viên có chức vụ là quản lý trong bảng nhân viên
 create procedure [dbo].[proc_LayMaNGQL]
 as
 	select MaNhanVien from NhanVien where ChucVu = N'Quản lý'
 GO
-
+-- lấy danh sách tất cả các chức vụ của tất cả nhân viên có trong bảng nhân viên
 create procedure [dbo].[proc_LayChucVu]
 as
 	select distinct ChucVu from NhanVien
 GO
---Phòng
+--							Phòng
 --Procedure Danh sách phòng theo tòa--
 create procedure [dbo].[pro_DanhSachPhongTheoToa] (@matoa nvarchar(5))
 as
@@ -793,7 +766,8 @@ begin
 	where Toa=@matoa
 end
 GO
--- Tòa
+--						Tòa
+-- Lấy danh sách các tòa có trong bảng tòa
 create procedure [dbo].[pro_DanhSachToa]
 as
 SELECT * FROM Toa
@@ -814,13 +788,15 @@ GO
 create procedure [dbo].[proc_XoaToa] (@TenToa char(10))
 as delete Toa where TenToa = @TenToa;
 GO
--- Trang thiết bị
+--					Trang thiết bị
+-- Danh sách tất cả tráng thiết bị có trong bảng Trang thiết bị
 create procedure [dbo].[proc_DanhSachTatCaTrangThietBi]
 as 
 select * from TrangThietBi
 GO
---Hàm 
--- Hóa đơn
+--						Hàm 
+--					Hóa đơn
+-- Lấy ra danh sách tất cả hóa đơn có trong bảng hóa đơn
 create function [dbo].[func_HoaDonQL] (@MaNQL char(10))
 	returns table
 		as
@@ -1042,7 +1018,7 @@ returns table
 GO
 
 
--- Trang chủ
+-- Tính tổng số lượng nhân viên theo giới tính
 create function [dbo].[func_SoLuongNhanVienTheoGioiTinh] (@gioitinh nvarchar(5))
 returns int
 as
@@ -1054,7 +1030,7 @@ begin
 	return @soluong
 end
 GO
-
+-- Tính tổng số lượng sinh viên theo giới tính
 create function [dbo].[func_SoLuongSinhVienTheoGioiTinh] (@MaNQL char(10), @gioitinh nvarchar(5))
 returns int
 as
@@ -1073,7 +1049,7 @@ begin
 end
 GO
 -- Nhân viên
-
+-- Lấy ra mã nhân viên cuối cùng của bảng ( có ID lớn nhất)
 create function [dbo].[func_LayMaNV]() 
 returns varchar(10)
 AS 
@@ -1084,19 +1060,6 @@ BEGIN
     RETURN @soNV
 END
 GO
--- Lấy mật khẩu của user đó ra
-create function [dbo].[func_LayMatKhau](@tentaikhoan char(15)) 
-returns char(20)
-AS 
-BEGIN 
-    DECLARE @mk char(20) 
-    SELECT @mk = MatKhau 
-	from TaiKhoan
-	where TenTaiKhoan = @tentaikhoan
-    RETURN @mk
-END
-GO
--- Trang chủ
 --Function Tổng số nhân viên --
 create function [dbo].[func_TongSoNhanVien]() 
 returns int
@@ -1187,16 +1150,22 @@ BEGIN
 	from TrangThietBi
     RETURN @soTB
 END
-
 GO
-
-
 --Lấy ra danh sách tất cả nhân viên	
 create procedure [dbo].[proc_Danhsachnhanvien]
 	as
-	select * from NhanVien
+	select  NV.MaNhanVien AS [Mã nhân viên],
+			NV.TenNhanVien AS [Tên nhân viên],
+			NV.SoDienThoai AS [Số điện thoại],
+			NV.GioiTinh AS [Giới tính], 
+			NV.TonGiao AS [Tôn giáo],
+			NV.QuocTich AS [Quốc tịch],
+			NV.CMND_CCCD AS [CMND/CCCD],
+			NV.ChucVu AS [Chức vụ],
+			NV.MaNQL AS [Mã người quản lý]
+	from NhanVien as NV
 GO
-
+-- Lấy ra danh sách tất cả sinh viên
 create function [dbo].[func_DanhSachSinhVien]()
 returns table as
 return(select SV.MaSinhVien as [Mã Sinh Viên],
@@ -1210,9 +1179,19 @@ return(select SV.MaSinhVien as [Mã Sinh Viên],
 	   SV.MaPhong as[Mã Phòng]
 	   FROM SinhVien as SV
 	   );
-
 GO 
--- Lấy ra danh sách mã người quản lý--
+-- Lấy ra mã nhân viên khi truyền tên đăng nhập vào
+create function [dbo].[func_TimKiemNhanVien_CMND] (@CMND_CCCD char(20))
+returns varchar(10)
+AS 
+BEGIN 
+    DECLARE @soNV varchar(10) 
+    SELECT @soNV = MaNhanVien
+	from NhanVien
+	Where CMND_CCCD=@CMND_CCCD
+    RETURN @soNV
+END
+GO
 
 /*Admin*/
 CREATE LOGIN [Admin] WITH PASSWORD = '123456789'
@@ -1228,8 +1207,9 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON HoaDonDienNuoc TO [Admin]
 GRANT SELECT, INSERT, UPDATE, DELETE ON Phong TO [Admin]
 GRANT SELECT, INSERT, UPDATE, DELETE ON TrangThietBi TO [Admin]
 GRANT SELECT, INSERT, UPDATE, DELETE ON ThietBiTrongPhong TO [Admin]
+GO
 --Proceduce
-GRANT EXECUTE ON [dbo].[proc_DoiMatKhau] TO Admin
+GRANT EXECUTE ON [dbo].[proc_DoiMatKhau] TO [Admin]
 GRANT EXECUTE ON [dbo].[proc_LayChucVu] TO [Admin]
 GRANT EXECUTE ON [dbo].[proc_LayMaNGQL] TO [Admin]
 GRANT EXECUTE ON [dbo].[pro_DanhSachPhongTheoToa] TO [Admin]
@@ -1247,13 +1227,12 @@ GRANT EXECUTE ON [dbo].[pro_DanhSachPhongConCho] TO [Admin]
 GRANT EXECUTE ON [dbo].[pro_DanhSachPhongTheoToa_MaPhong] TO [Admin]
 GO
 --Function
-GRANT EXECUTE ON [dbo].[func_KiemTraDangNhap] TO Admin
+GRANT EXECUTE ON [dbo].[func_KiemTraDangNhap] TO [Admin]
 GRANT EXECUTE ON [dbo].[func_SoLuongPhong] TO [Admin]
-GRANT EXECUTE ON func_DanhSachSinhVienTheoPhong TO [Admin] --ddoiwj
+GRANT SELECT ON [dbo].[func_DanhSachSinhVienTheoPhong] TO [Admin] 
 GRANT EXECUTE ON [dbo].[func_LayMaNV] TO [Admin]
-GRANT EXECUTE ON [dbo].[func_DanhSachSinhVien] TO [Admin] -- ddoiwj
+GRANT SELECT  ON [dbo].[func_DanhSachSinhVien] TO [Admin] 
 GRANT EXECUTE ON [dbo].[func_SoLuongSinhVienTheoGioiTinh] TO [Admin]
-GRANT EXECUTE ON [dbo].[func_LayMatKhau] TO [Admin]
 GRANT EXECUTE ON [dbo].[func_TongSoNhanVien] TO [Admin]
 GRANT EXECUTE ON [dbo].[func_SoLuongNhanVienTheoGioiTinh] TO [Admin]
 GRANT EXECUTE ON [dbo].[func_TongSoSinhVien] TO [Admin]
@@ -1268,7 +1247,7 @@ GO
 --View
 GRANT SELECT ON [dbo].[view_PhongConCho] TO [Admin]  
 GRANT SELECT ON [dbo].[view_PhongDay] TO [Admin] 
-GRANT SELECT ON view_NhanVienBaoVe TO [Admin]
+GRANT SELECT ON [dbo].[view_NhanVienBaoVe] TO [Admin]
 GRANT SELECT ON [dbo].[view_NhanVienQuanLy] TO [Admin]
 GRANT SELECT ON [dbo].[view_NhanVienLaoCong] TO [Admin]
 GRANT SELECT ON [dbo].[view_NhanVienGiuXe] TO [Admin]
@@ -1282,14 +1261,14 @@ GO
 CREATE USER [Manage] FOR LOGIN [Manage]
 GO
 -- Table
-GRANT UPDATE ON TaiKhoan TO [Manage]
+GRANT SELECT, INSERT, UPDATE, DELETE ON TaiKhoan TO [Manage]
 GRANT SELECT, INSERT, UPDATE, DELETE ON SinhVien TO [Manage]
 GRANT SELECT, INSERT, UPDATE, DELETE ON HoaDonDienNuoc TO [Manage]
 GRANT SELECT, INSERT, UPDATE, DELETE ON Phong TO [Manage]
 GRANT SELECT, INSERT, UPDATE, DELETE ON ThietBiTrongPhong TO [Manage]
 GO
 --Procedure
-GRANT EXECUTE ON [dbo].[proc_DoiMatKhau] TO Manage
+GRANT EXECUTE ON [dbo].[proc_DoiMatKhau] TO [Manage]
 GRANT EXECUTE ON [dbo].[pro_DanhSachPhongDay] TO Manage
 GRANT EXECUTE ON [dbo].[pro_DanhSachPhongConCho] TO Manage
 GRANT EXECUTE ON [dbo].[proc_XoaPhong] TO Manage
@@ -1307,8 +1286,7 @@ GRANT EXECUTE ON [dbo].[proc_XoaThietBiTrongPhong] TO Manage
 GRANT EXECUTE ON [dbo].[proc_SuaThietBiTrongPhong] TO Manage
 GO
 --Function
-GRANT EXECUTE ON [dbo].[func_KiemTraDangNhap] TO Manage
-GRANT EXECUTE ON [dbo].[func_LayMatKhau] TO Manage
+GRANT EXECUTE ON func_KiemTraDangNhap TO [Manage]
 GRANT EXECUTE ON [dbo].[func_TimKiemNhanVien_CMND] TO Manage
 GRANT EXECUTE ON [dbo].[func_DanhSachSoPhongTheoNhanVien] TO Manage 
 GRANT EXECUTE ON [dbo].[func_DanhSachSoPhongTheoNhanVien] TO Manage

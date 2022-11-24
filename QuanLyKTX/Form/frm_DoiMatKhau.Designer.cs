@@ -31,7 +31,6 @@ namespace QuanLyKTX
         {
             this.components = new System.ComponentModel.Container();
             this.txt_user = new System.Windows.Forms.TextBox();
-            this.txt_oldpassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_hienpass = new System.Windows.Forms.Button();
             this.lb_trangthai = new System.Windows.Forms.Label();
@@ -51,6 +50,8 @@ namespace QuanLyKTX
             // 
             // txt_user
             // 
+            this.txt_user.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txt_user.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_user.Location = new System.Drawing.Point(160, 47);
             this.txt_user.Name = "txt_user";
@@ -58,21 +59,9 @@ namespace QuanLyKTX
             this.txt_user.TabIndex = 16;
             this.txt_user.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_user_KeyDown);
             // 
-            // txt_oldpassword
-            // 
-            this.txt_oldpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_oldpassword.Location = new System.Drawing.Point(160, 79);
-            this.txt_oldpassword.Name = "txt_oldpassword";
-            this.txt_oldpassword.Size = new System.Drawing.Size(158, 26);
-            this.txt_oldpassword.TabIndex = 17;
-            this.txt_oldpassword.UseSystemPasswordChar = true;
-            this.txt_oldpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_oldpassword_KeyDown);
-            // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.btn_hienpass);
             this.panel1.Controls.Add(this.lb_trangthai);
             this.panel1.Controls.Add(this.btn_huy);
@@ -85,10 +74,9 @@ namespace QuanLyKTX
             this.panel1.Controls.Add(this.txt_newpass);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txt_user);
-            this.panel1.Controls.Add(this.txt_oldpassword);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(348, 268);
+            this.panel1.Size = new System.Drawing.Size(350, 275);
             this.panel1.TabIndex = 20;
             // 
             // btn_hienpass
@@ -109,11 +97,11 @@ namespace QuanLyKTX
             // 
             // lb_trangthai
             // 
-            this.lb_trangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_trangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_trangthai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_trangthai.Location = new System.Drawing.Point(5, 175);
+            this.lb_trangthai.Location = new System.Drawing.Point(5, 140);
             this.lb_trangthai.Name = "lb_trangthai";
-            this.lb_trangthai.Size = new System.Drawing.Size(340, 23);
+            this.lb_trangthai.Size = new System.Drawing.Size(339, 67);
             this.lb_trangthai.TabIndex = 31;
             this.lb_trangthai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -153,7 +141,7 @@ namespace QuanLyKTX
             // 
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(68, 143);
+            this.label5.Location = new System.Drawing.Point(68, 111);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 26);
             this.label5.TabIndex = 28;
@@ -164,7 +152,7 @@ namespace QuanLyKTX
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(36, 111);
+            this.label4.Location = new System.Drawing.Point(36, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 26);
             this.label4.TabIndex = 27;
@@ -177,9 +165,8 @@ namespace QuanLyKTX
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(40, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 26);
+            this.label3.Size = new System.Drawing.Size(78, 15);
             this.label3.TabIndex = 26;
-            this.label3.Text = "Mật khẩu cũ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -195,8 +182,10 @@ namespace QuanLyKTX
             // 
             // txt_confirmnewpass
             // 
+            this.txt_confirmnewpass.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txt_confirmnewpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_confirmnewpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_confirmnewpass.Location = new System.Drawing.Point(160, 143);
+            this.txt_confirmnewpass.Location = new System.Drawing.Point(160, 111);
             this.txt_confirmnewpass.Name = "txt_confirmnewpass";
             this.txt_confirmnewpass.Size = new System.Drawing.Size(158, 26);
             this.txt_confirmnewpass.TabIndex = 23;
@@ -205,8 +194,10 @@ namespace QuanLyKTX
             // 
             // txt_newpass
             // 
+            this.txt_newpass.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txt_newpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_newpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_newpass.Location = new System.Drawing.Point(160, 111);
+            this.txt_newpass.Location = new System.Drawing.Point(160, 79);
             this.txt_newpass.Name = "txt_newpass";
             this.txt_newpass.Size = new System.Drawing.Size(158, 26);
             this.txt_newpass.TabIndex = 21;
@@ -215,14 +206,15 @@ namespace QuanLyKTX
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Cyan;
+            this.label1.BackColor = System.Drawing.Color.Aquamarine;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 32);
+            this.label1.Size = new System.Drawing.Size(350, 32);
             this.label1.TabIndex = 20;
             this.label1.Text = "ĐỔI MẬT KHẨU";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -236,7 +228,7 @@ namespace QuanLyKTX
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(364, 284);
+            this.ClientSize = new System.Drawing.Size(352, 276);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -257,7 +249,6 @@ namespace QuanLyKTX
 
         #endregion
         private System.Windows.Forms.TextBox txt_user;
-        private System.Windows.Forms.TextBox txt_oldpassword;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_newpass;

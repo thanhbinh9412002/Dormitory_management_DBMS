@@ -76,21 +76,28 @@ namespace QuanLyKTX
         {
             if(sukien == 1)
             {
-                NhanVien_BUS nvBUS = new NhanVien_BUS();
-                DialogResult dr;
-                dr = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên tên '" + TenNhanVien1 + "' không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (dr == DialogResult.Yes)
+                if(ChucVu1 == "Quản lý")
                 {
-                    if (nvBUS.XoaNhanVien(MaNhanVien1) > 0)
-                    {
-                        MessageBox.Show("Xóa nhân viên thành công!");
-                        LoadData();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Đã có lỗi xảy ra!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Người có chức vụ quản lý này không thể xóa, vui lòng chỉnh sửa thông tin nếu cần thiết!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                {
+                    NhanVien_BUS nvBUS = new NhanVien_BUS();
+                    DialogResult dr;
+                    dr = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên tên '" + TenNhanVien1 + "' không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dr == DialogResult.Yes)
+                    {
+                        if (nvBUS.XoaNhanVien(MaNhanVien1) > 0)
+                        {
+                            MessageBox.Show("Xóa nhân viên thành công!");
+                            LoadData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Đã có lỗi xảy ra!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }     
             }
             else
             {
@@ -124,15 +131,15 @@ namespace QuanLyKTX
         {
             if (f.RowIndex >= 0 && f.ColumnIndex >= 0)
             {
-                MaNhanVien1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["MaNhanVien"].Value);
-                TenNhanVien1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["TenNhanVien"].Value);
-                SoDienThoai1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["SoDienThoai"].Value);
-                GioiTinh1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["GioiTinh"].Value);
-                TonGiao1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["TonGiao"].Value);
-                QuocTich1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["QuocTich"].Value);
-                CMND_CCCD1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["CMND_CCCD"].Value);
-                ChucVu1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["ChucVu"].Value);
-                MaNQL1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["MaNQL"].Value);
+                MaNhanVien1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["Mã nhân viên"].Value);
+                TenNhanVien1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["Tên nhân viên"].Value);
+                SoDienThoai1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["Số điện thoại"].Value);
+                GioiTinh1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["Giới tính"].Value);
+                TonGiao1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["Tôn giáo"].Value);
+                QuocTich1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["Quốc tịch"].Value);
+                CMND_CCCD1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["CMND/CCCD"].Value);
+                ChucVu1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["Chức vụ"].Value);
+                MaNQL1 = Convert.ToString(dgvNhanVien.CurrentRow.Cells["Mã người quản lý"].Value);
                 sukien = 1;
             }
         }

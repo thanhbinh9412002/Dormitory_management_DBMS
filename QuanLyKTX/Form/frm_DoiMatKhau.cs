@@ -34,26 +34,18 @@ namespace QuanLyKTX
                     if (txt_newpass.Text == txt_confirmnewpass.Text)
                     {
                         DoiMatKhau_BUS dmkBUS = new DoiMatKhau_BUS();
-                        if (txt_oldpassword.Text == dmkBUS.KiemTraMatKhauCu(user))
+                        if (dmkBUS.DoiMatKhau(user, txt_newpass.Text) == 1)
                         {
-                            if (dmkBUS.DoiMatKhau(user, txt_newpass.Text) > 0)
+                            if (MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                             {
-                                if (MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
-                                {
-                                    this.Close();
-                                }
-                            }
-                            else
-                            {
-                                lb_trangthai.Text = "Đã có lỗi xảy ra! Vui lòng kiểm tra lại!";
+                                this.Close();
                             }
                         }
                         else
                         {
-                            lb_trangthai.Text = "Mật khẩu cũ bạn vừa nhập không chính xác! Vui lòng nhập lại!";
-                            txt_newpass.ResetText();
+                            lb_trangthai.Text = "Đã có lỗi xảy ra! Vui lòng kiểm tra lại!";
                             txt_confirmnewpass.ResetText();
-                            txt_oldpassword.Focus();
+                            txt_confirmnewpass.Focus();
                         }
                     }
                     else
@@ -82,20 +74,12 @@ namespace QuanLyKTX
         {
             txt_user.Text = user;
             txt_user.Enabled = false;
-            txt_oldpassword.Focus();
+            txt_newpass.Focus();
         }
 
         private void txt_user_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
-            {
-                txt_oldpassword.Focus();
-            }
-        }
-
-        private void txt_oldpassword_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
             {
                 txt_newpass.Focus();
             }
@@ -121,7 +105,6 @@ namespace QuanLyKTX
         {
             if (showpass1)
             {
-                txt_oldpassword.UseSystemPasswordChar = false;
                 txt_newpass.UseSystemPasswordChar = false;
                 txt_confirmnewpass.UseSystemPasswordChar = false;
                 btn_hienpass.Text = "Ẩn mật khẩu";
@@ -130,7 +113,6 @@ namespace QuanLyKTX
             }
             else
             {
-                txt_oldpassword.UseSystemPasswordChar = true;
                 txt_newpass.UseSystemPasswordChar = true;
                 txt_confirmnewpass.UseSystemPasswordChar = true;
                 btn_hienpass.Text = "Hiện mật khẩu";

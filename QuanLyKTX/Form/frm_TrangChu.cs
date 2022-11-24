@@ -92,6 +92,8 @@ namespace QuanLyKTX
             pictureBox3.Visible = false;
             timer1.Start();
             panel_thongke.Visible = false;
+            txt_day.Enabled = false;
+            txt_time.Enabled = false;
         }
 
         private void btn_TrangChu_Click(object sender, EventArgs e)  // sự kiện khi nhấn nút trang chủ

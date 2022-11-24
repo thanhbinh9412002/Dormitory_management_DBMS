@@ -15,10 +15,6 @@ namespace QuanLyKTX.BUS
         {
             dmkDAO = new DoiMatKhau_DAO();
         }
-        public string KiemTraMatKhauCu(string TenTaiKhoan)
-        {
-            return dmkDAO.KiemTraMatKhauCu(TenTaiKhoan);
-        }
         public int DoiMatKhau(string tentaikhoan, string newpass)
         {
             return dmkDAO.DoiMatKhau(tentaikhoan, newpass);

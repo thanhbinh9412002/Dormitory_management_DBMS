@@ -23,6 +23,7 @@ namespace QuanLyKTX
         private void frm_SinhVienAdmin_Load(object sender, EventArgs e)
         {
             dgvSinhVien.DataSource = SvAdminBUS.GetAllInformationSV();
+            txtSoLuong.Enabled = false;
         }
 
         private void btnLoc_Click(object sender, EventArgs e)

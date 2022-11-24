@@ -30,15 +30,6 @@ namespace QuanLyKTX
         private void InitializeComponent()
         {
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.MaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TonGiao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuocTich = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CMND_CCCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNQL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.cbbChucVu = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,120 +48,39 @@ namespace QuanLyKTX
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvNhanVien.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaNhanVien,
-            this.TenNhanVien,
-            this.SoDienThoai,
-            this.GioiTinh,
-            this.TonGiao,
-            this.QuocTich,
-            this.CMND_CCCD,
-            this.ChucVu,
-            this.MaNQL});
             this.dgvNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvNhanVien.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvNhanVien.Location = new System.Drawing.Point(12, 50);
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.RowHeadersWidth = 51;
-            this.dgvNhanVien.Size = new System.Drawing.Size(928, 266);
+            this.dgvNhanVien.Size = new System.Drawing.Size(801, 288);
             this.dgvNhanVien.TabIndex = 0;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
-            // MaNhanVien
-            // 
-            this.MaNhanVien.DataPropertyName = "MaNhanVien";
-            this.MaNhanVien.HeaderText = "Mã nhân viên";
-            this.MaNhanVien.MinimumWidth = 6;
-            this.MaNhanVien.Name = "MaNhanVien";
-            this.MaNhanVien.Width = 90;
-            // 
-            // TenNhanVien
-            // 
-            this.TenNhanVien.DataPropertyName = "TenNhanVien";
-            this.TenNhanVien.HeaderText = "Tên nhân viên";
-            this.TenNhanVien.MinimumWidth = 6;
-            this.TenNhanVien.Name = "TenNhanVien";
-            this.TenNhanVien.Width = 120;
-            // 
-            // SoDienThoai
-            // 
-            this.SoDienThoai.DataPropertyName = "SoDienThoai";
-            this.SoDienThoai.HeaderText = "Số điện thoại";
-            this.SoDienThoai.MinimumWidth = 6;
-            this.SoDienThoai.Name = "SoDienThoai";
-            this.SoDienThoai.Width = 125;
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.DataPropertyName = "GioiTinh";
-            this.GioiTinh.HeaderText = "Giới tính";
-            this.GioiTinh.MinimumWidth = 6;
-            this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.Width = 125;
-            // 
-            // TonGiao
-            // 
-            this.TonGiao.DataPropertyName = "TonGiao";
-            this.TonGiao.HeaderText = "Tôn giáo";
-            this.TonGiao.MinimumWidth = 6;
-            this.TonGiao.Name = "TonGiao";
-            this.TonGiao.Width = 125;
-            // 
-            // QuocTich
-            // 
-            this.QuocTich.DataPropertyName = "QuocTich";
-            this.QuocTich.HeaderText = "Quốc tịch";
-            this.QuocTich.MinimumWidth = 6;
-            this.QuocTich.Name = "QuocTich";
-            this.QuocTich.Width = 125;
-            // 
-            // CMND_CCCD
-            // 
-            this.CMND_CCCD.DataPropertyName = "CMND_CCCD";
-            this.CMND_CCCD.HeaderText = "Số CMND/CCCD";
-            this.CMND_CCCD.MinimumWidth = 6;
-            this.CMND_CCCD.Name = "CMND_CCCD";
-            this.CMND_CCCD.Width = 125;
-            // 
-            // ChucVu
-            // 
-            this.ChucVu.DataPropertyName = "ChucVu";
-            this.ChucVu.HeaderText = "Chức vụ";
-            this.ChucVu.MinimumWidth = 6;
-            this.ChucVu.Name = "ChucVu";
-            this.ChucVu.Width = 125;
-            // 
-            // MaNQL
-            // 
-            this.MaNQL.DataPropertyName = "MaNQL";
-            this.MaNQL.HeaderText = "Mã người quản lý";
-            this.MaNQL.MinimumWidth = 6;
-            this.MaNQL.Name = "MaNQL";
-            this.MaNQL.Width = 125;
-            // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Cyan;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.BackColor = System.Drawing.Color.Aquamarine;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(952, 38);
+            this.label1.Size = new System.Drawing.Size(825, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "NHÂN VIÊN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbbChucVu
             // 
+            this.cbbChucVu.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.cbbChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbChucVu.FormattingEnabled = true;
             this.cbbChucVu.Items.AddRange(new object[] {
             "Tất cả"});
-            this.cbbChucVu.Location = new System.Drawing.Point(30, 376);
-            this.cbbChucVu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbChucVu.Location = new System.Drawing.Point(30, 366);
+            this.cbbChucVu.Margin = new System.Windows.Forms.Padding(2);
             this.cbbChucVu.Name = "cbbChucVu";
             this.cbbChucVu.Size = new System.Drawing.Size(127, 28);
             this.cbbChucVu.TabIndex = 7;
@@ -178,7 +88,7 @@ namespace QuanLyKTX
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 351);
+            this.label2.Location = new System.Drawing.Point(27, 341);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 23);
             this.label2.TabIndex = 9;
@@ -187,12 +97,12 @@ namespace QuanLyKTX
             // 
             // btnLoc
             // 
-            this.btnLoc.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLoc.BackColor = System.Drawing.Color.LightCoral;
             this.btnLoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoc.Image = global::QuanLyKTX.Properties.Resources.Filter_icon;
-            this.btnLoc.Location = new System.Drawing.Point(179, 352);
+            this.btnLoc.Location = new System.Drawing.Point(172, 351);
             this.btnLoc.Name = "btnLoc";
             this.btnLoc.Size = new System.Drawing.Size(90, 52);
             this.btnLoc.TabIndex = 8;
@@ -204,11 +114,11 @@ namespace QuanLyKTX
             // 
             // btn_quaylai
             // 
-            this.btn_quaylai.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_quaylai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_quaylai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_quaylai.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_quaylai.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_quaylai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_quaylai.Image = global::QuanLyKTX.Properties.Resources.back_icon;
-            this.btn_quaylai.Location = new System.Drawing.Point(850, 352);
+            this.btn_quaylai.Location = new System.Drawing.Point(719, 351);
             this.btn_quaylai.Name = "btn_quaylai";
             this.btn_quaylai.Size = new System.Drawing.Size(90, 52);
             this.btn_quaylai.TabIndex = 5;
@@ -219,11 +129,11 @@ namespace QuanLyKTX
             // 
             // btn_xoa
             // 
-            this.btn_xoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoa.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xoa.Image = global::QuanLyKTX.Properties.Resources.remove_icon;
-            this.btn_xoa.Location = new System.Drawing.Point(601, 351);
+            this.btn_xoa.Location = new System.Drawing.Point(491, 351);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(90, 52);
             this.btn_xoa.TabIndex = 4;
@@ -234,11 +144,11 @@ namespace QuanLyKTX
             // 
             // btn_sua
             // 
-            this.btn_sua.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sua.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sua.Image = global::QuanLyKTX.Properties.Resources.setting;
-            this.btn_sua.Location = new System.Drawing.Point(461, 351);
+            this.btn_sua.Location = new System.Drawing.Point(385, 351);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(90, 52);
             this.btn_sua.TabIndex = 3;
@@ -249,12 +159,12 @@ namespace QuanLyKTX
             // 
             // btn_them
             // 
-            this.btn_them.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_them.BackColor = System.Drawing.Color.LightCoral;
             this.btn_them.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_them.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_them.Image = global::QuanLyKTX.Properties.Resources.add_icon;
-            this.btn_them.Location = new System.Drawing.Point(318, 351);
+            this.btn_them.Location = new System.Drawing.Point(278, 351);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(90, 52);
             this.btn_them.TabIndex = 2;
@@ -266,11 +176,11 @@ namespace QuanLyKTX
             // 
             // btn_resest
             // 
-            this.btn_resest.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_resest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_resest.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_resest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_resest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_resest.Image = global::QuanLyKTX.Properties.Resources.Restart_icon;
-            this.btn_resest.Location = new System.Drawing.Point(729, 351);
+            this.btn_resest.Location = new System.Drawing.Point(602, 352);
             this.btn_resest.Name = "btn_resest";
             this.btn_resest.Size = new System.Drawing.Size(90, 52);
             this.btn_resest.TabIndex = 10;
@@ -283,8 +193,8 @@ namespace QuanLyKTX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(952, 416);
+            this.BackColor = System.Drawing.Color.LightCyan;
+            this.ClientSize = new System.Drawing.Size(825, 416);
             this.ControlBox = false;
             this.Controls.Add(this.btn_resest);
             this.Controls.Add(this.label2);
@@ -316,15 +226,6 @@ namespace QuanLyKTX
         private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Button btn_quaylai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenNhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TonGiao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QuocTich;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CMND_CCCD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ChucVu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNQL;
         private System.Windows.Forms.ComboBox cbbChucVu;
         private System.Windows.Forms.Button btnLoc;
         private System.Windows.Forms.Label label2;

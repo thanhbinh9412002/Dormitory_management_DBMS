@@ -38,17 +38,19 @@ namespace QuanLyKTX
             this.label1 = new System.Windows.Forms.Label();
             this.lb_trangthai = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_hienpass = new System.Windows.Forms.Button();
             this.btn_dangnhap = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_user
             // 
+            this.txt_user.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txt_user.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_user.Location = new System.Drawing.Point(134, 69);
             this.txt_user.Name = "txt_user";
@@ -58,6 +60,8 @@ namespace QuanLyKTX
             // 
             // txt_password
             // 
+            this.txt_password.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.Location = new System.Drawing.Point(134, 112);
             this.txt_password.Name = "txt_password";
@@ -95,12 +99,13 @@ namespace QuanLyKTX
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Aquamarine;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(395, 40);
+            this.label1.Size = new System.Drawing.Size(383, 32);
             this.label1.TabIndex = 11;
             this.label1.Text = "HỆ THỐNG QUẢN LÝ KÝ TÚC XÁ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,7 +116,7 @@ namespace QuanLyKTX
             this.lb_trangthai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lb_trangthai.Location = new System.Drawing.Point(11, 240);
             this.lb_trangthai.Name = "lb_trangthai";
-            this.lb_trangthai.Size = new System.Drawing.Size(363, 47);
+            this.lb_trangthai.Size = new System.Drawing.Size(363, 62);
             this.lb_trangthai.TabIndex = 12;
             this.lb_trangthai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -128,15 +133,10 @@ namespace QuanLyKTX
             this.panel1.Controls.Add(this.lb_trangthai);
             this.panel1.Controls.Add(this.txt_password);
             this.panel1.Controls.Add(this.btn_dangnhap);
-            this.panel1.Location = new System.Drawing.Point(12, 5);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(395, 305);
+            this.panel1.Size = new System.Drawing.Size(383, 311);
             this.panel1.TabIndex = 14;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 200;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // button2
             // 
@@ -208,13 +208,18 @@ namespace QuanLyKTX
             this.btn_dangnhap.UseVisualStyleBackColor = false;
             this.btn_dangnhap.Click += new System.EventHandler(this.btn_dangnhap_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frm_DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(426, 322);
+            this.ClientSize = new System.Drawing.Size(384, 310);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

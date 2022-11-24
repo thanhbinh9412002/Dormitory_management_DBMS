@@ -2,20 +2,19 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="QuanLyKTX.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="cnnStr_manage" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=THANHBINH\SQLEXPRESS;Initial Catalog=QuanLyKTX123;User ID=Manage;Password=0123456789&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=THANHBINH\SQLEXPRESS;Initial Catalog=QuanLyKTX123;User ID=Manage;Password=0123456789</Value>
-    </Setting>
     <Setting Name="cnnStr_admin" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=THANHBINH\SQLEXPRESS;Initial Catalog=QuanLyKTX123;User ID=Admin;Password=123456789&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=THANHBINH\SQLEXPRESS;Initial Catalog=QuanLyKTX;User ID=Admin;Password=123456789&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=THANHBINH\SQLEXPRESS;Initial Catalog=QuanLyKTX123;User ID=Admin;Password=123456789</Value>
+      <Value Profile="(Default)">Data Source=THANHBINH\SQLEXPRESS;Initial Catalog=QuanLyKTX;User ID=Admin;Password=123456789</Value>
+    </Setting>
+    <Setting Name="cnnStr_manage" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=THANHBINH\SQLEXPRESS;Initial Catalog=QuanLyKTX;User ID=Manage;Password=0123456789&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=THANHBINH\SQLEXPRESS;Initial Catalog=QuanLyKTX;User ID=Manage;Password=0123456789</Value>
     </Setting>
   </Settings>
 </SettingsFile>

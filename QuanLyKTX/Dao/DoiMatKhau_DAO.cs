@@ -15,14 +15,6 @@ namespace QuanLyKTX.DAO
         {
             cnn = new DBConnection();
         }
-        public string KiemTraMatKhauCu(string TenTaiKhoan)
-        {
-            string spName = "[dbo].[func_LayMatKhau]";
-            string[] pNames = { "@tentk"};
-            object[] pValues = { TenTaiKhoan };
-            string count = cnn.ExecuteStoredProcedureString(spName, pNames, pValues);
-            return count;
-        }
         public int DoiMatKhau(string tentaikhoan, string newpass)
         {
             string spName = "[dbo].[proc_DoiMatKhau]";
