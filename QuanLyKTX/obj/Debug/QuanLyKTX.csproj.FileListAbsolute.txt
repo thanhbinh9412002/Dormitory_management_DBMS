@@ -119,14 +119,10 @@ C:\KTX1\QUANLYKTX_DBMS\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.frm_ThietBiTrongP
 C:\KTX1\QUANLYKTX_DBMS\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.frm_TrangThietBi.resources
 C:\KTX1\QUANLYKTX_DBMS\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Ver2.exe
 C:\KTX1\QUANLYKTX_DBMS\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Ver2.pdb
-F:\Quan_Ly_KTX_DBMS\QuanLyKTX\bin\Debug\QuanLyKTX.Ver2.exe.config
-F:\Quan_Ly_KTX_DBMS\QuanLyKTX\bin\Debug\QuanLyKTX.Ver2.exe
-F:\Quan_Ly_KTX_DBMS\QuanLyKTX\bin\Debug\QuanLyKTX.Ver2.pdb
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.AssemblyReference.cache
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.SuggestedBindingRedirects.cache
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.frm_CapNhatNhanVien.resources
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.frm_DangNhap.resources
-F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.Form_ThongTinSinhVien.resources
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.frm_DoiMatKhau.resources
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.frm_NhanVien.resources
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.frm_SinhVien.resources
@@ -140,8 +136,6 @@ F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.frm_TrangThietBi.resources
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.Properties.Resources.resources
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.GenerateResource.cache
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.CoreCompileInputs.cache
-F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.Ver2.exe
-F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.Ver2.pdb
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.frm_XemPhong.resources
 E:\GitHub\Quan_Ly_KTX_DBMS\QuanLyKTX\bin\Debug\QuanLyKTX.Ver9.exe.config
 E:\GitHub\Quan_Ly_KTX_DBMS\QuanLyKTX\bin\Debug\QuanLyKTX.Ver9.exe
@@ -188,3 +182,9 @@ C:\QUANLYKTX_DBMS\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.csproj.CoreCompileInpu
 C:\QUANLYKTX_DBMS\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Ver9.exe
 C:\QUANLYKTX_DBMS\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.Ver9.pdb
 C:\QUANLYKTX_DBMS\QuanLyKTX\QuanLyKTX\obj\Debug\QuanLyKTX.frm_SinhVienAdmin.resources
+F:\Quan_Ly_KTX_DBMS\QuanLyKTX\bin\Debug\QuanLyKTX.Ver9.exe.config
+F:\Quan_Ly_KTX_DBMS\QuanLyKTX\bin\Debug\QuanLyKTX.Ver9.exe
+F:\Quan_Ly_KTX_DBMS\QuanLyKTX\bin\Debug\QuanLyKTX.Ver9.pdb
+F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.frm_SinhVienAdmin.resources
+F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.Ver9.exe
+F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.Ver9.pdb

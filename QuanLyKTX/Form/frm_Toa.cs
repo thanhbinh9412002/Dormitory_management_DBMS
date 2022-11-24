@@ -47,6 +47,8 @@ namespace QuanLyKTX
             btnLuu.Enabled = true;
             btnThem.Enabled = false;
             btnHuy.Enabled = true;
+            txtTenToa.Enabled = true;
+            txtSoPhong.Enabled = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -114,6 +116,7 @@ namespace QuanLyKTX
             txtSoPhong.Clear();
             txtMaNQL.Clear();
             btnThem.Enabled = true;
+            dgvToa.Enabled = true;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
