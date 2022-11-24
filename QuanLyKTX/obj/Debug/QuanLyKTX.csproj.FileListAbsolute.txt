@@ -188,3 +188,4 @@ F:\Quan_Ly_KTX_DBMS\QuanLyKTX\bin\Debug\QuanLyKTX.Ver9.pdb
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.frm_SinhVienAdmin.resources
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.Ver9.exe
 F:\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.Ver9.pdb
+E:\GitHub\Quan_Ly_KTX_DBMS\QuanLyKTX\obj\Debug\QuanLyKTX.frm_SinhVienAdmin.resources

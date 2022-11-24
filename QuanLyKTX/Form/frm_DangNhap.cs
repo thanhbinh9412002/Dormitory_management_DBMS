@@ -15,7 +15,7 @@ namespace QuanLyKTX
     public partial class frm_DangNhap : Form
     {
         public frm_TrangChu fmTrangChu;
-
+        public string role;
         // HIỆU ỨNG//
         private int counter = 0;
         private int len = 0;
@@ -32,7 +32,7 @@ namespace QuanLyKTX
         {
             string user = txt_user.Text;
             string password = txt_password.Text;
-            string role;
+            //string role;
             if (rdbtn_admin.Checked == true)
             {
                 role = "Admin";

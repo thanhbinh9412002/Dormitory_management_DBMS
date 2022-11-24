@@ -17,12 +17,11 @@ namespace QuanLyKTX.DAO
         }
         public string KiemTraMatKhauCu(string TenTaiKhoan)
         {
-            const string sql = "select MatKhau from TaiKhoan where TenTaiKhoan = @TenTaiKhoan";
-            SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@TenTaiKhoan", System.Data.SqlDbType.VarChar);
-            sqlParameters[0].Value = Convert.ToString(TenTaiKhoan);
-            object a = cnn.executeScalar(sql, sqlParameters);
-            return Convert.ToString(a);
+            string spName = "[dbo].[func_LayMatKhau]";
+            string[] pNames = { "@tentk"};
+            object[] pValues = { TenTaiKhoan };
+            string count = cnn.ExecuteStoredProcedureString(spName, pNames, pValues);
+            return count;
         }
         public int DoiMatKhau(string tentaikhoan, string newpass)
         {

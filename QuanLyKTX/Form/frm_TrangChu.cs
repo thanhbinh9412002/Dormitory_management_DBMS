@@ -51,7 +51,6 @@ namespace QuanLyKTX
             {
                 MainEnabled();
                 LoadPicture();
-                //MessageBox.Show("admin");
             }
             else
             {
@@ -63,22 +62,24 @@ namespace QuanLyKTX
         {
             btn_Toa.Enabled = true;
             btn_NhanVien.Enabled = true;
-           // btn_Phong.Visible = false;
+            btn_Phong.Visible = false;
             btn_Phong.Enabled = false;
-            //panel_caidat.Visible = false;
+            panel_caidat.Visible = false;
             btn_HoaDon.Enabled = false;
-            //btn_HoaDon.Visible = false;
+            btn_HoaDon.Visible = false;
+            btn_CaiDat.Location = new Point(12, 275);
         }
         private void MainNoEnabled()  // quyền quản lý sẽ ẩn một số button
         {
             btn_NhanVien.Enabled = false;
-           // btn_NhanVien.Visible = false;
-            //btn_Toa.Visible = false;
+            btn_NhanVien.Visible = false;
+            btn_Toa.Visible = false;
             btn_Toa.Enabled = false;
-            //btn_ThietBi.Visible = false;
+            btn_ThietBi.Visible = false;
             btn_ThietBi.Enabled = false;
-           // panel_caidat.Visible = false;
-            btn_CaiDat.Location = new Point(12, 216);
+            panel_caidat.Visible = false;
+            btn_HoaDon.Location = new Point(12, 176);
+            btn_CaiDat.Location = new Point(12, 227);
             TrangChu_BUS tcBUS = new TrangChu_BUS();
             CMND_CCCD = user;
             MNV = tcBUS.TimMaNhanVien(CMND_CCCD);
@@ -87,7 +88,7 @@ namespace QuanLyKTX
         private void LoadPicture()  // hiệu ungws tự động chuyển hình trên form trang chủ
         {
             pictureBox1.Visible = true;
-            pictureBox2.Visible = false;
+            pictureBox20.Visible = false;
             pictureBox3.Visible = false;
             timer1.Start();
             panel_thongke.Visible = false;
@@ -99,7 +100,7 @@ namespace QuanLyKTX
             if (kt_trangchu)
             {
                 pictureBox1.Visible = false;
-                pictureBox2.Visible = false;
+                pictureBox20.Visible = false;
                 pictureBox3.Visible = false;
                 panel_caidat.Visible = false;
                 panel_thongke.Visible = true;
@@ -107,7 +108,14 @@ namespace QuanLyKTX
                 {
                     panel_taikhoan.Visible = false;
                     panel_toa.Visible = false;
-                    
+                    panel_nhanvien.Visible = false;
+                    panel_thietbi.Visible = false;
+                    lb_svnam.Text = tcBUS.TimSoLuongSinhVienTheoGioiTinh(MNV, "Nam").ToString();
+                    lb_svnu.Text = tcBUS.TimSoLuongSinhVienTheoGioiTinh(MNV, "Nữ").ToString();
+                    lb_svtong.Text = (int.Parse(lb_svnam.Text) + (int.Parse(lb_svnu.Text))).ToString();
+                    lb_phongtrong.Text = tcBUS.SoPhongQuanLy(MNV, "Trống").ToString();
+                    lb_phongdu.Text = tcBUS.SoPhongQuanLy(MNV, "Đủ").ToString();
+                    lb_phongtong.Text = (int.Parse(lb_phongtrong.Text) + (int.Parse(lb_phongdu.Text))).ToString();
                 }
                 else
                 {
@@ -156,14 +164,18 @@ namespace QuanLyKTX
         {
             if (role != "Admin")
             {
+                this.Hide();
                 fmSinhVien = new frm_SinhVien();
                 fmSinhVien.nv = MNV;
                 fmSinhVien.ShowDialog();
+                this.Show();
             }
             else
             {
+                this.Hide();
                 frm_SinhVienAdmin fmSinhVienAdmin = new frm_SinhVienAdmin();
                 fmSinhVienAdmin.ShowDialog();
+                this.Show();
             }
                 
         }
@@ -224,22 +236,22 @@ namespace QuanLyKTX
 
         private void timer1_Tick(object sender, EventArgs e)  // hiệu ứng chuyển ảnh trong trang chủ
         {
-            if(pictureBox1.Visible == true && (DateTime.Now.Second == 0 || DateTime.Now.Second % 30 == 1))
+            if(pictureBox1.Visible == true )
             {
                 pictureBox1.Visible = false;
-                pictureBox2.Visible = true;
+                pictureBox20.Visible = true;
                 pictureBox3.Visible = false;
             }
-            else if (pictureBox2.Visible == true && (DateTime.Now.Second % 10 == 1 || DateTime.Now.Second % 40 == 1))
+            else if (pictureBox20.Visible == true )
             {
                 pictureBox1.Visible = false;
-                pictureBox2.Visible = false;
+                pictureBox20.Visible = false;
                 pictureBox3.Visible = true;
             }
-            else if (pictureBox3.Visible == true && (DateTime.Now.Second % 20 == 1 || DateTime.Now.Second % 50 == 1))
+            else if (pictureBox3.Visible == true )
             {
                 pictureBox1.Visible = true;
-                pictureBox2.Visible = false;
+                pictureBox20.Visible = false;
                 pictureBox3.Visible = false;
             }
         }

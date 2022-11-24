@@ -39,15 +39,17 @@ namespace QuanLyKTX
             cbb_MaNQL.DataSource = nvBUS.Lay_Ma_Nguoi_Quan_Ly();
             cbb_MaNQL.DisplayMember = "MaNhanVien";
             cbb_MaNQL.ValueMember = "MaNhanVien";
+            cbb_chucvu.DataSource = nvBUS.Lay_Chuc_Vu_Nhan_Vien();
+            cbb_chucvu.DisplayMember = "ChucVu";
+            cbb_chucvu.ValueMember = "ChucVu";
             if (tmp == 0)
             {
                 txt_TenNhanVien.Focus();
                 txt_MaNhanVien.Text = Tao_Ma_Nhan_Vien("NV");
-                txt_MaNhanVien.ReadOnly = true;
+                txt_MaNhanVien.ReadOnly = true; 
             }
             else
             {
-
                 txt_MaNhanVien.Text = MaNhanVien;
                 txt_TenNhanVien.Text = TenNhanVien;
                 txt_SoDienThoai.Text = SoDienThoai;
@@ -55,7 +57,7 @@ namespace QuanLyKTX
                 txt_TonGiao.Text = TonGiao;
                 txt_QuocTich.Text = QuocTich;
                 txt_CMND.Text = CMND_CCCD;
-                txt_ChucVu.Text = ChucVu;
+                cbb_chucvu.Text = ChucVu;
                 cbb_MaNQL.Text = MaNQL;
                 txt_MaNhanVien.Focus();
             }    
@@ -82,7 +84,7 @@ namespace QuanLyKTX
             if(tmp == 0)
             {
                 NhanVien nv = new NhanVien(txt_MaNhanVien.Text, txt_TenNhanVien.Text, txt_SoDienThoai.Text, cbb_GioiTinh.Text,
-                    txt_TonGiao.Text, txt_QuocTich.Text, txt_CMND.Text, txt_ChucVu.Text, cbb_MaNQL.Text);
+                    txt_TonGiao.Text, txt_QuocTich.Text, txt_CMND.Text, cbb_chucvu.Text, cbb_MaNQL.Text);
                 NhanVien_BUS nvBUS = new NhanVien_BUS();
                 if (nvBUS.ThemNhanVien(nv) > 0)
                 {
@@ -94,7 +96,7 @@ namespace QuanLyKTX
             else
             {
                 NhanVien nv = new NhanVien(txt_MaNhanVien.Text, txt_TenNhanVien.Text, txt_SoDienThoai.Text, cbb_GioiTinh.Text,
-                    txt_TonGiao.Text, txt_QuocTich.Text, txt_CMND.Text, txt_ChucVu.Text, cbb_MaNQL.Text);
+                    txt_TonGiao.Text, txt_QuocTich.Text, txt_CMND.Text, cbb_chucvu.Text, cbb_MaNQL.Text);
                 NhanVien_BUS nvBUS = new NhanVien_BUS();
                 if (nvBUS.SuaNhanVien(nv) > 0)
                 {
@@ -120,6 +122,15 @@ namespace QuanLyKTX
         private void btn_huy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbb_chucvu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbb_chucvu.Text == "Quản lý")
+            {
+                cbb_MaNQL.Text = txt_MaNhanVien.Text;
+                cbb_MaNQL.Enabled = false;
+            }
         }
     }
 }

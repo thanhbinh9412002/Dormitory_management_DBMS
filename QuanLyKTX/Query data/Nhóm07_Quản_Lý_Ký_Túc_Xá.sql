@@ -1,6 +1,6 @@
-﻿create database QuanLyKTX
+﻿create database QuanLyKTX123
 GO
-use QuanLyKTX
+use QuanLyKTX123
 GO
 --Done
 create table TaiKhoan (
@@ -25,7 +25,6 @@ create table NhanVien
     CONSTRAINT Pk_NhanVien PRIMARY KEY (MaNhanVien)
 )
 GO 
-
 -- Done
 create table Toa
 (
@@ -35,7 +34,6 @@ create table Toa
     CONSTRAINT Pk_Toa PRIMARY KEY (TenToa)
 )
 GO
-
 -- Done
 CREATE TABLE Phong(
 	MaPhong char(10) NOT NULL,
@@ -70,7 +68,6 @@ create table HoaDonDienNuoc (
 	Constraint PK_HoaDonDienNuoc Primary Key (MaHoaDon)
 )
 GO
-
 -- Done
 create table TrangThietBi (
 	MaThietBi char(10),
@@ -79,7 +76,6 @@ create table TrangThietBi (
 	Constraint PK_TrangThietBi Primary Key (MaThietBi)
 )
 GO
-
 -- Done 
 create table ThietBiTrongPhong (
 	MaThietBiTrongPhong char(10),
@@ -90,8 +86,6 @@ create table ThietBiTrongPhong (
 	Constraint PK_PhongThietBi Primary Key (MaThietBiTrongPhong,MaPhong)
 )
 GO
-
-
 --														Ràng buộc khóa ngoại
 --Done
 ALTER TABLE Toa  ADD CONSTRAINT 
@@ -101,7 +95,6 @@ ON UPDATE CASCADE
 GO
 ALTER TABLE Toa CHECK CONSTRAINT FK_Toa_QuanLy
 GO
-
 --Done
 ALTER TABLE Phong WITH CHECK ADD CONSTRAINT 
 FK_Phong_Toa
@@ -118,6 +111,7 @@ FOREIGN KEY (MaPhong) REFERENCES Phong(MaPhong)
 ON UPDATE CASCADE
 ON DELETE CASCADE
 GO
+--Done
 ALTER TABLE SinhVien CHECK CONSTRAINT FK_SinhVien_Phong
 GO
 --Done
@@ -126,6 +120,7 @@ FK_HoaDonDienNuoc_Phong
 FOREIGN KEY (MaPhong) REFERENCES Phong(MaPhong)
 ON DELETE CASCADE;
 GO
+--Done
 ALTER TABLE HoaDonDienNuoc CHECK CONSTRAINT FK_HoaDonDienNuoc_Phong
 GO
 --Done
@@ -134,6 +129,7 @@ WITH CHECK ADD CONSTRAINT FK_TrangThietBi_ThietBi
 FOREIGN KEY (MaThietBiTrongPhong) REFERENCES TrangThietBi(MaThietBi)
 ON DELETE CASCADE;
 GO
+--Done
 ALTER TABLE ThietBiTrongPhong CHECK CONSTRAINT FK_TrangThietBi_ThietBi
 GO
 --Done
@@ -142,10 +138,9 @@ ADD CONSTRAINT FK_ThietBiTrongPhong_Phong
 FOREIGN KEY (MaPhong) REFERENCES Phong(MaPhong)
 ON DELETE CASCADE;
 GO
+--Done
 ALTER TABLE ThietBiTrongPhong CHECK CONSTRAINT FK_ThietBiTrongPhong_Phong
 GO
-
-
 --													 Ràng buộc điều kiện 
 --Done
 ALTER TABLE SinhVien WITH CHECK ADD CONSTRAINT 
@@ -175,8 +170,6 @@ GO
 ALTER TABLE HoaDonDienNuoc WITH CHECK ADD CONSTRAINT 
 CHECK_SoTien_HoaDonDienNuoc CHECK (TienDien > 0 and TienNuoc > 0)
 GO
-
---Alter table HoaDonDienNuoc drop constraint CHECK_SoTien_HoaDonDienNuoc
 --Done
 ALTER TABLE TaiKhoan WITH CHECK ADD CONSTRAINT 
 CHECK_MatKhau_TaiKhoan CHECK ((len(MatKhau)>=(8)))
@@ -194,8 +187,6 @@ GO
 ALTER TABLE ThietBiTrongPhong WITH CHECK ADD CONSTRAINT 
 CHECK_SoThietBiTrongPhong CHECK (SoLuongHong >= (0) and SoLuongTot >= (0) and SoLuongHong + SoLuongTot = SoLuongToiDa)
 GO
-
-
 --															 Trigger 
 -- Done
 CREATE TRIGGER Tg_ThemTaiKhoan
@@ -329,7 +320,6 @@ BEGIN
 	SELECT @SoLuongSinhVien = Phong.SoLuongSinhVienHienTai
 	FROM deleted , Phong
 	WHERE deleted.MaPhong = Phong.MaPhong
-
 	UPDATE Phong SET SoLuongSinhVienHienTai = SoLuongSinhVienHienTai - 1
 	FROM deleted, Phong
 	WHERE Phong.MaPhong = deleted.MaPhong
@@ -354,10 +344,6 @@ BEGIN
 END
 GO
 -- Done
---Kiểm tra chức vụ nhân viên khi thêm người quản lý phòng
-
-GO
--- Done
 --admin xóa nhân viên ra khỏi cơ sở dữ liệu.
 CREATE TRIGGER dbo.XoaNhanVien 
 ON NhanVien
@@ -370,9 +356,7 @@ BEGIN
 	where MaNguoiQuanLy is null
 END
 GO
-
 												--Thêm dữ liệu
-
 insert into NhanVien Values('NV01',N'Nguyễn Thị Thương','0367064835', N'Nữ',N'Không',N'Việt Nam','221502791',N'Quản lý','NV01')
 insert into NhanVien Values('NV02',N'Lương Hoàng','0312452124', N'Nam',N'Không',N'Việt Nam','221531242',N'Bảo vệ','NV01')
 insert into NhanVien Values('NV03',N'Trần Tú','0364412342', N'Nam',N'Không',N'Việt Nam','221512463',N'Lao công','NV01')
@@ -386,7 +370,6 @@ insert into NhanVien Values('NV10',N'Nguyễn Thị Duyên','0367842103', N'Nữ
 insert into NhanVien Values('NV11',N'Nguyễn Thị Tuyến','0322864192', N'Nữ',N'Không',N'Việt Nam','221537249',N'Giữ xe','NV07')
 insert into NhanVien Values('NV012',N'Huỳnh Hạo Nhị','0367987562', N'Nam',N'Không',N'Việt Nam','221574778',N'Quản lý','NV012')
 GO
-
 
 insert into Toa Values('A', 21, 'NV01')
 insert into Toa Values('B', 22 ,'NV07')
@@ -1025,6 +1008,22 @@ returns table
 		From Toa inner join Phong on Toa.TenToa=Phong.Toa
 		Where Toa.MaNguoiQuanLy=@MaNQL
 GO
+create function [dbo].[func_DanhSachSoPhongTheoNhanVien] (@MaNQL char(10), @trangthai nvarchar(20))
+returns int
+	as
+	begin
+		declare @soluong int
+		if(@trangthai = N'Trống')
+			select @soluong = count(Phong.MaPhong)
+			From Toa inner join Phong on Toa.TenToa=Phong.Toa
+			Where Toa.MaNguoiQuanLy=@MaNQL and Phong.SoLuongSinhVienHienTai < Phong.SoLuongSinhVienToiDa
+		else
+			select @soluong = count(Phong.MaPhong)
+			From Toa inner join Phong on Toa.TenToa=Phong.Toa
+			Where Toa.MaNguoiQuanLy=@MaNQL and Phong.SoLuongSinhVienHienTai = Phong.SoLuongSinhVienToiDa
+		return @soluong
+	end
+GO
 --Function Danh Sách Sinh Viên Theo Mã Phòng --
 create function [dbo].[func_DanhSachSinhVienTheoPhong] (@MaPhong char(10))
 returns table
@@ -1074,20 +1073,6 @@ begin
 end
 GO
 -- Nhân viên
-create function [dbo].[func_Danhsachnhanvien] (@MaNQL char(10) , @gioitinh nvarchar(10))
-	returns table
-		as
-			return 
-				select * from NhanVien
-
-GO
-create function [dbo].[func_TimNhanVien] (@MaNV char(10))
-	returns table
-		as
-			return 
-				select * from NhanVien where MaNhanVien = @MaNV
-GO
-
 
 create function [dbo].[func_LayMaNV]() 
 returns varchar(10)
@@ -1099,7 +1084,18 @@ BEGIN
     RETURN @soNV
 END
 GO
-
+-- Lấy mật khẩu của user đó ra
+create function [dbo].[func_LayMatKhau](@tentaikhoan char(15)) 
+returns char(20)
+AS 
+BEGIN 
+    DECLARE @mk char(20) 
+    SELECT @mk = MatKhau 
+	from TaiKhoan
+	where TenTaiKhoan = @tentaikhoan
+    RETURN @mk
+END
+GO
 -- Trang chủ
 --Function Tổng số nhân viên --
 create function [dbo].[func_TongSoNhanVien]() 
@@ -1217,3 +1213,117 @@ return(select SV.MaSinhVien as [Mã Sinh Viên],
 
 GO 
 -- Lấy ra danh sách mã người quản lý--
+
+/*Admin*/
+CREATE LOGIN [Admin] WITH PASSWORD = '123456789'
+GO
+CREATE USER [Admin] FOR LOGIN [Admin]
+GO
+-- Table
+GRANT SELECT, INSERT, UPDATE, DELETE ON NhanVien TO [Admin]
+GRANT SELECT, INSERT, UPDATE, DELETE ON TaiKhoan TO [Admin]
+GRANT SELECT, INSERT, UPDATE, DELETE ON Toa TO [Admin]
+GRANT SELECT, INSERT, UPDATE, DELETE ON SinhVien TO [Admin]
+GRANT SELECT, INSERT, UPDATE, DELETE ON HoaDonDienNuoc TO [Admin]
+GRANT SELECT, INSERT, UPDATE, DELETE ON Phong TO [Admin]
+GRANT SELECT, INSERT, UPDATE, DELETE ON TrangThietBi TO [Admin]
+GRANT SELECT, INSERT, UPDATE, DELETE ON ThietBiTrongPhong TO [Admin]
+--Proceduce
+GRANT EXECUTE ON [dbo].[proc_DoiMatKhau] TO Admin
+GRANT EXECUTE ON [dbo].[proc_LayChucVu] TO [Admin]
+GRANT EXECUTE ON [dbo].[proc_LayMaNGQL] TO [Admin]
+GRANT EXECUTE ON [dbo].[pro_DanhSachPhongTheoToa] TO [Admin]
+GRANT EXECUTE ON [dbo].[proc_Danhsachnhanvien] TO [Admin]
+GRANT EXECUTE ON [dbo].[proc_SuaNhanVien] TO [Admin]
+GRANT EXECUTE ON [dbo].[proc_XoaNhanVien] TO [Admin]
+GRANT EXECUTE ON [dbo].[proc_ThemNhanVien] TO [Admin]
+GRANT EXECUTE ON [dbo].[pro_DanhSachToa] TO [Admin]
+GRANT EXECUTE ON [dbo].[proc_DanhSachTatCaTrangThietBi] TO [Admin]
+GRANT EXECUTE ON [dbo].[proc_XoaToa] TO [Admin]
+GRANT EXECUTE ON [dbo].[proc_XoaToa] TO [Admin]
+GRANT EXECUTE ON [dbo].[proc_ThemToa] TO [Admin]
+GRANT EXECUTE ON [dbo].[pro_DanhSachPhongDay] TO [Admin]
+GRANT EXECUTE ON [dbo].[pro_DanhSachPhongConCho] TO [Admin]
+GRANT EXECUTE ON [dbo].[pro_DanhSachPhongTheoToa_MaPhong] TO [Admin]
+GO
+--Function
+GRANT EXECUTE ON [dbo].[func_KiemTraDangNhap] TO Admin
+GRANT EXECUTE ON [dbo].[func_SoLuongPhong] TO [Admin]
+GRANT EXECUTE ON func_DanhSachSinhVienTheoPhong TO [Admin] --ddoiwj
+GRANT EXECUTE ON [dbo].[func_LayMaNV] TO [Admin]
+GRANT EXECUTE ON [dbo].[func_DanhSachSinhVien] TO [Admin] -- ddoiwj
+GRANT EXECUTE ON [dbo].[func_SoLuongSinhVienTheoGioiTinh] TO [Admin]
+GRANT EXECUTE ON [dbo].[func_LayMatKhau] TO [Admin]
+GRANT EXECUTE ON [dbo].[func_TongSoNhanVien] TO [Admin]
+GRANT EXECUTE ON [dbo].[func_SoLuongNhanVienTheoGioiTinh] TO [Admin]
+GRANT EXECUTE ON [dbo].[func_TongSoSinhVien] TO [Admin]
+GRANT EXECUTE ON [dbo].[func_TongSoTaiKhoan] TO [Admin]
+GRANT EXECUTE ON [dbo].[func_TongSoToa] TO [Admin]
+GRANT EXECUTE ON [dbo].[func_TongSoPhongConCho] TO [Admin]
+GRANT EXECUTE ON [dbo].[func_TongSoPhongDay] TO [Admin]
+GRANT EXECUTE ON [dbo].[func_SoThietBiHong] TO [Admin]
+GRANT EXECUTE ON [dbo].[func_TongSoThietBi] TO [Admin]
+GRANT EXECUTE ON [dbo].[func_DanhSachSoPhongTheoNhanVien] TO [Admin]
+GO
+--View
+GRANT SELECT ON [dbo].[view_PhongConCho] TO [Admin]  
+GRANT SELECT ON [dbo].[view_PhongDay] TO [Admin] 
+GRANT SELECT ON view_NhanVienBaoVe TO [Admin]
+GRANT SELECT ON [dbo].[view_NhanVienQuanLy] TO [Admin]
+GRANT SELECT ON [dbo].[view_NhanVienLaoCong] TO [Admin]
+GRANT SELECT ON [dbo].[view_NhanVienGiuXe] TO [Admin]
+GRANT SELECT ON [dbo].[view_SinhVienNam] TO [Admin]
+GRANT SELECT ON [dbo].[view_SinhVienNu] TO [Admin]
+GO
+
+/*User*/
+CREATE LOGIN [Manage] WITH PASSWORD = '0123456789'
+GO
+CREATE USER [Manage] FOR LOGIN [Manage]
+GO
+-- Table
+GRANT UPDATE ON TaiKhoan TO [Manage]
+GRANT SELECT, INSERT, UPDATE, DELETE ON SinhVien TO [Manage]
+GRANT SELECT, INSERT, UPDATE, DELETE ON HoaDonDienNuoc TO [Manage]
+GRANT SELECT, INSERT, UPDATE, DELETE ON Phong TO [Manage]
+GRANT SELECT, INSERT, UPDATE, DELETE ON ThietBiTrongPhong TO [Manage]
+GO
+--Procedure
+GRANT EXECUTE ON [dbo].[proc_DoiMatKhau] TO Manage
+GRANT EXECUTE ON [dbo].[pro_DanhSachPhongDay] TO Manage
+GRANT EXECUTE ON [dbo].[pro_DanhSachPhongConCho] TO Manage
+GRANT EXECUTE ON [dbo].[proc_XoaPhong] TO Manage
+GRANT EXECUTE ON [dbo].[proc_ThemPhong1Toa] TO Manage
+GRANT EXECUTE ON [dbo].[pro_DanhSachPhongTheoToa] TO Manage
+GRANT EXECUTE ON [dbo].[pro_DanhSachPhongTheoToa_MaPhong] TO Manage
+GRANT EXECUTE ON [dbo].[proc_ThemHoaDonDienNuoc] TO Manage
+GRANT EXECUTE ON [dbo].[proc_SuaHoaDonDienNuoc] TO Manage
+GRANT EXECUTE ON [dbo].[proc_ThemSinhVien] TO Manage
+GRANT EXECUTE ON [dbo].[proc_XoaSinhVien] TO Manage
+GRANT EXECUTE ON [dbo].[proc_SuaSinhVien] TO Manage
+GRANT EXECUTE ON [dbo].[proc_ThemThietBiTrongPhong] TO Manage
+GRANT EXECUTE ON [dbo].[proc_SuaThietBiTrongPhong] TO Manage
+GRANT EXECUTE ON [dbo].[proc_XoaThietBiTrongPhong] TO Manage
+GRANT EXECUTE ON [dbo].[proc_SuaThietBiTrongPhong] TO Manage
+GO
+--Function
+GRANT EXECUTE ON [dbo].[func_KiemTraDangNhap] TO Manage
+GRANT EXECUTE ON [dbo].[func_LayMatKhau] TO Manage
+GRANT EXECUTE ON [dbo].[func_TimKiemNhanVien_CMND] TO Manage
+GRANT EXECUTE ON [dbo].[func_DanhSachSoPhongTheoNhanVien] TO Manage 
+GRANT EXECUTE ON [dbo].[func_DanhSachSoPhongTheoNhanVien] TO Manage
+GRANT SELECT ON [dbo].[func_HoaDonQL] TO Manage
+GRANT SELECT ON [dbo].[func_PhongQuanLy] TO Manage 
+GRANT SELECT ON [dbo].[func_HoaDonPhongQuanLy] TO Manage 
+GRANT EXECUTE ON [dbo].[func_SoLuongHoaDonTheoMaPhong] TO Manage
+GRANT SELECT ON [dbo].[func_HoaDonChuaThanhToanTheoPhong] TO Manage
+GRANT SELECT ON [dbo].[func_PhongQuanLy] TO Manage
+GRANT SELECT ON [dbo].[func_SinhVienQuanLy] TO Manage
+GRANT SELECT ON [dbo].[func_DanhSachSinhVien] TO Manage
+GRANT SELECT ON [dbo].[func_GioiTinhSinhVienQuanLy] TO Manage
+GRANT EXECUTE ON [dbo].[func_SoLuongSinhVienTheoGioiTinh] TO Manage
+GRANT SELECT ON [dbo].[func_DanhSachSinhVienTheoMSSV] TO Manage
+GRANT SELECT ON [dbo].[func_ThietBiQuanLy] TO Manage
+GRANT SELECT ON [dbo].[func_MaThietBi] TO Manage
+GRANT EXECUTE ON [dbo].[func_TenThietBiTuMa] TO Manage
+GO

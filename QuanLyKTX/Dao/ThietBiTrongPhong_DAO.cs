@@ -60,9 +60,5 @@ namespace QuanLyKTX.Dao
             newProdID = cnn.ExecuteStoredProcedureString(sql, pNames, pvalues);
             return newProdID;
         }
-/*        public DataTable GetComboBox (string matoa)
-        {
-            return ChiTietPhong.GetComboBox(matoa);
-        }*/
     }
 }

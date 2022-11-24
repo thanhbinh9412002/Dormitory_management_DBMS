@@ -9,19 +9,28 @@ using System.Windows.Forms;
 
 namespace QuanLyKTX.DataProvider
 {
-
-    public class DBConnection
+    public class DBConnection 
     {
         //SqlConnection cnnStr = new SqlConnection(@"Data Source=THANHBINH\SQLEXPRESS;Initial Catalog=QuanLyKTX;Integrated Security=True");
         //SqlConnection cnnStr = new SqlConnection(@"Data Source=LAPTOP-MB5F72F2\SQLEXPRESS;Initial Catalog=QuanLyKTX_3;Integrated Security=True");
         //SqlConnection cnnStr = new SqlConnection(@"Data Source=LAPTOP-MB5F72F2\SQLEXPRESS;Initial Catalog=QuanLyKTX_3;Integrated Security=True");
         SqlConnection cnnStr = new SqlConnection(@"Data Source=DESKTOP-JBR423G;Initial Catalog=QuanLyKTX_3;Integrated Security=True");
+        public frm_DangNhap fmDangNhap;
         private SqlDataAdapter adapter;
         private SqlConnection connection;
+        private string role = null;
         public DBConnection()
         {
+            fmDangNhap = new frm_DangNhap();
+            role = fmDangNhap.role;
             adapter = new SqlDataAdapter();
-            connection = new SqlConnection(Properties.Settings.Default.cnnStr);
+            if(role == "Admin")
+            { connection = new SqlConnection(Properties.Settings.Default.cnnStr_admin); }
+            else
+            {
+                connection = new SqlConnection(Properties.Settings.Default.cnnStr_manage);
+            }
+            
         }
         private SqlConnection openConnection()
         {

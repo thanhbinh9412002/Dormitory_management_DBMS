@@ -23,14 +23,6 @@ namespace QuanLyKTX.DAO
             string spName = "[dbo].[proc_Danhsachnhanvien]";
             return conn.ExecuteProcedureDatatableNoPara(spName);
         }
-        /*public DataTable TimNhanVien(string MaNV)
-        {
-            const string sql = "select * from NhanVien where MaNhanVien = @MaNV";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            DataTable dt = new DataTable();
-            dt = conn.executeReader(sql, sqlParameters);
-            return dt;
-        }*/
         public int SuaNhanVien(NhanVien nv)
         {
             string spName = "[dbo].[proc_SuaNhanVien]";

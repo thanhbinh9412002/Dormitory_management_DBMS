@@ -25,9 +25,10 @@ namespace QuanLyKTX.DAO
             MaNV = cnn.ExecuteStoredProcedureString(sql, pNames, pvalues);
             return MaNV;
         }
+        // cho admin
         public int TimSoLuongNhanVienTheoGioiTinh(string gioitinh)
         {
-            string spName = "[dbo].[func_SoLuongNhanVienTheoGioiTinh]"; // Tên hàm
+            string spName = "[dbo].[func_SoLuongNhanVienTheoGioiTinh]"; 
             string[] pNames = { "@gioitinh"};
             object[] pValues = {gioitinh};
             int count = cnn.ExecuteStoredProcedure(spName, pNames, pValues);
@@ -103,6 +104,14 @@ namespace QuanLyKTX.DAO
             string spName = "[dbo].[func_TongSoThietBi]";
             string[] pNames = { };
             object[] pValues = { };
+            int count = cnn.ExecuteStoredProcedure(spName, pNames, pValues);
+            return count;
+        }
+        public int SoPhongQuanLy(string manv, string trangthai)  // Tính số phòng mà nhân viên đó quản lý ( quản lý)
+        {
+            string spName = "[dbo].[func_DanhSachSoPhongTheoNhanVien]";
+            string[] pNames = { "@MaNQL" , "@trangthai"};
+            object[] pValues = { manv, trangthai};
             int count = cnn.ExecuteStoredProcedure(spName, pNames, pValues);
             return count;
         }
