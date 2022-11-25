@@ -16,12 +16,16 @@ namespace QuanLyKTX
         private SinhVien_BUS SvBUS;
         public frm_TrangChu fmtrangch;
         public string nv;
-        public frm_SinhVien()
+        private string user;
+        private string role;
+        public frm_SinhVien(string user = "", string role = "")
         {
             InitializeComponent();
             fmtrangch = new frm_TrangChu();
             nv = fmtrangch.MNV;
             SvBUS = new SinhVien_BUS();
+            this.user = user;
+            this.role = role;
         }
         public static bool them = true;
         private void ClearTextBoxes()

@@ -22,8 +22,6 @@ namespace QuanLyKTX
         public frm_SinhVien fmSinhVien;
         public frm_DoiMatKhau fmDoiMatKhau;
         public frm_TrangThietBi fmTrangThietBi;
-        //public frm_ThietBi fmThietBi;
-        //public frm_Phong fmPhong;
         public string MNV = null;                   // Mã của người quản lý, dùng cho các form sau, gọi MNV là sẽ ra;
         public string CMND_CCCD = null;
         private string user;
@@ -149,7 +147,8 @@ namespace QuanLyKTX
 
         private void btn_HoaDon_Click(object sender, EventArgs e)  // chuyển sang form hóa đơn
         {
-            fmHoaDon = new frm_HoaDon();
+            this.Hide();
+            fmHoaDon = new frm_HoaDon(user, role);
             fmHoaDon.nv = MNV;
             fmHoaDon.ShowDialog();
         }
@@ -167,7 +166,7 @@ namespace QuanLyKTX
             if (role != "Admin")
             {
                 this.Hide();
-                fmSinhVien = new frm_SinhVien();
+                fmSinhVien = new frm_SinhVien(user, role);
                 fmSinhVien.nv = MNV;
                 fmSinhVien.ShowDialog();
                 this.Show();
@@ -175,7 +174,7 @@ namespace QuanLyKTX
             else
             {
                 this.Hide();
-                frm_SinhVienAdmin fmSinhVienAdmin = new frm_SinhVienAdmin();
+                frm_SinhVienAdmin fmSinhVienAdmin = new frm_SinhVienAdmin(user, role);
                 fmSinhVienAdmin.ShowDialog();
                 this.Show();
             }

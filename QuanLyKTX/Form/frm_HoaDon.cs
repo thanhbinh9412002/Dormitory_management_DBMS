@@ -16,12 +16,16 @@ namespace QuanLyKTX
         private HoaDon_BUS HdBUS;
         public frm_TrangChu fmtrangch;
         public string nv;
-        public frm_HoaDon()
+        private string user;
+        private string role;
+        public frm_HoaDon(string user = "", string role = "")
         {
             InitializeComponent();
             fmtrangch = new frm_TrangChu();
             nv = fmtrangch.MNV;
             HdBUS = new HoaDon_BUS();
+            this.user = user;
+            this.role = role;
         }
         public static bool them = true;
         public void LoadData()

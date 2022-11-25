@@ -14,10 +14,14 @@ namespace QuanLyKTX
     public partial class frm_SinhVienAdmin : Form
     {
         private SinhVienAdmin_BUS SvAdminBUS;
-        public frm_SinhVienAdmin()
+        private string user;
+        private string role;
+        public frm_SinhVienAdmin(string user = "", string role = "")
         {
             InitializeComponent();
             SvAdminBUS = new SinhVienAdmin_BUS();
+            this.user = user;
+            this.role = role;
         }
 
         private void frm_SinhVienAdmin_Load(object sender, EventArgs e)
