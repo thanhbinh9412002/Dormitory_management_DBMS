@@ -719,6 +719,23 @@ create procedure [dbo].[proc_LayChucVu]
 as
 	select distinct ChucVu from NhanVien
 GO
+--- Thiết bị
+-- Thêm trang thiết bị trong bảng trang thiết bị
+create procedure [dbo].[proc_ThemThietBi] (@matb char(10), @tentb nvarchar(20), @tongsl int)
+as insert into TrangThietBi values(@matb, @tentb, @tongsl );
+go
+-- Xóa trang thiết bị
+create procedure [dbo].[proc_XoaThietBi] (@matb char(10) )
+as delete TrangThietBi where MaThietBi = @matb;
+go
+-- Sửa trang thiết bị
+create procedure [dbo].[proc_SuaThietBi] (@matb char(10), @tentb nvarchar(50), @tongsl int)
+as update TrangThietBi
+set MaThietBi = @matb,
+	TenThietBi = @tentb,
+	TongSoLuong = @tongsl
+where MaThietBi = @matb;
+go
 --							Phòng
 --Procedure Danh sách phòng theo tòa--
 create procedure [dbo].[pro_DanhSachPhongTheoToa] (@matoa nvarchar(5))
@@ -1225,6 +1242,10 @@ GRANT EXECUTE ON [dbo].[proc_ThemToa] TO [Admin]
 GRANT EXECUTE ON [dbo].[pro_DanhSachPhongDay] TO [Admin]
 GRANT EXECUTE ON [dbo].[pro_DanhSachPhongConCho] TO [Admin]
 GRANT EXECUTE ON [dbo].[pro_DanhSachPhongTheoToa_MaPhong] TO [Admin]
+GRANT EXECUTE ON [dbo].[proc_SuaThietBi] TO [Admin]
+GRANT EXECUTE ON [dbo].[proc_ThemThietBi] TO [Admin]
+GRANT EXECUTE ON [dbo].[proc_XoaThietBi] TO [Admin]
+
 GO
 --Function
 GRANT EXECUTE ON [dbo].[func_KiemTraDangNhap] TO [Admin]
