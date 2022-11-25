@@ -29,6 +29,7 @@ namespace QuanLyKTX
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_NhanVien));
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.cbbChucVu = new System.Windows.Forms.ComboBox();
@@ -44,9 +45,6 @@ namespace QuanLyKTX
             // 
             // dgvNhanVien
             // 
-            this.dgvNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvNhanVien.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -207,6 +205,7 @@ namespace QuanLyKTX
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvNhanVien);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_NhanVien";

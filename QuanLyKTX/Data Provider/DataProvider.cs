@@ -118,26 +118,6 @@ namespace QuanLyKTX.DataProvider
             return dt;
 
         }
-       /* public string executeCount(string query)           // trả về số lượng 
-        {
-            string cout = null ;
-            using (SqlCommand sqlCommand = new SqlCommand(query, openConnection()))
-            {
-                try
-                {
-                    cout = (string)sqlCommand.ExecuteScalar();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
-                }
-                return cout;
-            }
-        }*/
 
         public DataTable executeLoadData(string query)      // trả về bảng dữ liệu
         {
@@ -164,7 +144,7 @@ namespace QuanLyKTX.DataProvider
             }
         }
 
-        public int ExecuteStoredProcedure(string spName, string[] pNames, object[] pValues) //trả về 1 giá trị khi gọi procedure bên sql
+        public int ExecuteStoredProcedure(string spName, string[] pNames, object[] pValues) //trả về 1 giá trị kiểu int khi gọi procedure/function bên sql
 
         {
             int kq = 0;
@@ -189,7 +169,7 @@ namespace QuanLyKTX.DataProvider
             connection.Close();
             return kq;
         }
-        public string ExecuteStoredProcedureString(string spName, string[] pNames, object[] pValues) //trả về 1 giá trị khi gọi procedure bên sql
+        public string ExecuteStoredProcedureString(string spName, string[] pNames, object[] pValues) //trả về 1 giá trị kiểu string khi gọi procedure/function bên sql
 
         {
             string kq = "";

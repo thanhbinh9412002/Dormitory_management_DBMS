@@ -143,7 +143,7 @@ namespace QuanLyKTX
         private void btnPhongConCho_Click(object sender, EventArgs e)
         {
             this.Hide();
-            fmXemPhong = new frm_XemPhong();
+            fmXemPhong = new frm_XemPhong(user, role);
             fmXemPhong.sukien = 0;
             fmXemPhong.ShowDialog();
             this.Show();
@@ -152,7 +152,7 @@ namespace QuanLyKTX
         private void btnPhongDay_Click(object sender, EventArgs e)
         {
             this.Hide();
-            fmXemPhong = new frm_XemPhong();
+            fmXemPhong = new frm_XemPhong(user, role);
             fmXemPhong.sukien1 = 1;
             fmXemPhong.ShowDialog();
             this.Show();

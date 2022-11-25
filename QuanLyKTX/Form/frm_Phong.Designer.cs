@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Phong));
             this.dgvPhong = new System.Windows.Forms.DataGridView();
             this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Toa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -421,6 +422,7 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Phong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý phòng";

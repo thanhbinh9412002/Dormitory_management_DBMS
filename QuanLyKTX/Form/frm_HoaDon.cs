@@ -72,7 +72,6 @@ namespace QuanLyKTX
             btnThem.Enabled = false;
             btnHuy.Enabled = true;
             btnLoad.Enabled = true;
-            //btnXoa.Enabled = false;
             btnSua.Enabled = false;
             txtMaHD.Enabled = false;
         }

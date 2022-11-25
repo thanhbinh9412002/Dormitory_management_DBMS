@@ -29,6 +29,7 @@ namespace QuanLyKTX
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TrangThietBi));
             this.dtgv_trangthietbi = new System.Windows.Forms.DataGridView();
             this.MaThietBi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenThietBi = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -251,6 +252,7 @@ namespace QuanLyKTX
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgv_trangthietbi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TrangThietBi";

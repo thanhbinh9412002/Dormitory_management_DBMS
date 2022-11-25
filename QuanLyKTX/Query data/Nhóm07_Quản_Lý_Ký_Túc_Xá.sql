@@ -964,6 +964,17 @@ returns table
 		return select	tb.MaThietBi 
 				from  TrangThietBi as tb
 GO
+--Function Lấy mã thiết bị
+create function [dbo].[func_LayMaTB]() 
+returns varchar(10)
+AS 
+BEGIN 
+    DECLARE @maTb varchar(10) 
+    SELECT @maTb = max(MaThietBi)  
+	from TrangThietBi
+    RETURN @maTb
+END
+GO
 -- Đăng nhập , mật khẩu
 create function [dbo].[func_KiemTraDangNhap] (@TenTK char(15), @MK char(20), @Vaitro nvarchar(10))
 returns int
@@ -1242,9 +1253,7 @@ GRANT EXECUTE ON [dbo].[proc_ThemToa] TO [Admin]
 GRANT EXECUTE ON [dbo].[pro_DanhSachPhongDay] TO [Admin]
 GRANT EXECUTE ON [dbo].[pro_DanhSachPhongConCho] TO [Admin]
 GRANT EXECUTE ON [dbo].[pro_DanhSachPhongTheoToa_MaPhong] TO [Admin]
-GRANT EXECUTE ON [dbo].[proc_SuaThietBi] TO [Admin]
-GRANT EXECUTE ON [dbo].[proc_ThemThietBi] TO [Admin]
-GRANT EXECUTE ON [dbo].[proc_XoaThietBi] TO [Admin]
+GRANT EXECUTE ON [dbo].[func_LayMaTB] TO [Admin]
 
 GO
 --Function

@@ -126,6 +126,7 @@ namespace QuanLyKTX
                             txt_mathietbi.ResetText();
                             txt_tenthietbi.ResetText();
                             txt_soluong.ResetText();
+                            btn_luu.Enabled = false;
                             LoadData();
                         }
                         else
@@ -141,6 +142,7 @@ namespace QuanLyKTX
                             txt_mathietbi.ResetText();
                             txt_tenthietbi.ResetText();
                             txt_soluong.ResetText();
+                            btn_luu.Enabled = false;
                             LoadData();
                         }
                         else

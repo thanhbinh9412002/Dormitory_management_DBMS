@@ -18,12 +18,15 @@ namespace QuanLyKTX
         public string maphong = null;
         public string toa;
         public string manql;
-        public frm_ThietBiTrongPhong()
+        private string user;
+        private string role;
+        public frm_ThietBiTrongPhong(string user = "", string role = "")
         {
             InitializeComponent();
             frmPhong = new frm_Phong(); 
-            //maphong = frmPhong.mp;
             TbBUS = new ThietBiTrongPhong_BUS();
+            this.user = user;
+            this.role = role;
         }
         public void LoadData()
         {

@@ -46,7 +46,7 @@ namespace QuanLyKTX
             {
                 txt_TenNhanVien.Focus();
                 txt_MaNhanVien.Text = Tao_Ma_Nhan_Vien("NV");
-                txt_MaNhanVien.ReadOnly = true; 
+                txt_MaNhanVien.Enabled = false;
             }
             else
             {
@@ -59,7 +59,8 @@ namespace QuanLyKTX
                 txt_CMND.Text = CMND_CCCD;
                 cbb_chucvu.Text = ChucVu;
                 cbb_MaNQL.Text = MaNQL;
-                txt_MaNhanVien.Focus();
+                txt_MaNhanVien.Enabled = false;
+                txt_TenNhanVien.Focus();
             }    
         }
 

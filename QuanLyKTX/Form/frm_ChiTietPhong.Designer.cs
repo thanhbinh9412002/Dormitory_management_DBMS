@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ChiTietPhong));
             this.cbbPhong = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvDSSV = new System.Windows.Forms.DataGridView();
@@ -40,7 +41,7 @@
             // 
             this.cbbPhong.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.cbbPhong.FormattingEnabled = true;
-            this.cbbPhong.Location = new System.Drawing.Point(12, 258);
+            this.cbbPhong.Location = new System.Drawing.Point(116, 223);
             this.cbbPhong.Name = "cbbPhong";
             this.cbbPhong.Size = new System.Drawing.Size(88, 21);
             this.cbbPhong.TabIndex = 46;
@@ -50,7 +51,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 231);
+            this.label3.Location = new System.Drawing.Point(116, 196);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 24);
             this.label3.TabIndex = 45;
@@ -62,7 +63,7 @@
             this.dgvDSSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSSV.Location = new System.Drawing.Point(12, 35);
             this.dgvDSSV.Name = "dgvDSSV";
-            this.dgvDSSV.Size = new System.Drawing.Size(454, 193);
+            this.dgvDSSV.Size = new System.Drawing.Size(824, 158);
             this.dgvDSSV.TabIndex = 44;
             // 
             // btnExit
@@ -72,7 +73,7 @@
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = global::QuanLyKTX.Properties.Resources.back_icon;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(207, 234);
+            this.btnExit.Location = new System.Drawing.Point(381, 199);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(96, 43);
             this.btnExit.TabIndex = 47;
@@ -91,7 +92,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(477, 32);
+            this.label2.Size = new System.Drawing.Size(846, 32);
             this.label2.TabIndex = 48;
             this.label2.Text = "DANH SÁCH SINH VIÊN";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(477, 292);
+            this.ClientSize = new System.Drawing.Size(846, 254);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnExit);
@@ -109,6 +110,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvDSSV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_ChiTietPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết phòng";

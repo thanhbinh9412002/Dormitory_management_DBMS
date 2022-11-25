@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_XemPhong));
             this.btnExit = new System.Windows.Forms.Button();
             this.dgvXemToa = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
@@ -84,6 +85,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.dgvXemToa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_XemPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách phòng";

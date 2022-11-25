@@ -13,13 +13,17 @@ namespace QuanLyKTX
 {
     public partial class frm_XemPhong : Form
     {
+        private string user;
+        private string role;
         private XemPhong_BUS XemPhongBus;
         public int sukien;
         public int sukien1;
-        public frm_XemPhong()
+        public frm_XemPhong(string user = "", string role = "")
         {
             InitializeComponent();
             XemPhongBus = new XemPhong_BUS();
+            this.user = user;
+            this.role = role;
         }
         public void LoadDataPhongDay()
         {

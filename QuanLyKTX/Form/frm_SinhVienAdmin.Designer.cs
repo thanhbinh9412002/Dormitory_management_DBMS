@@ -29,13 +29,14 @@ namespace QuanLyKTX
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_SinhVienAdmin));
             this.dgvSinhVien = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLoc = new System.Windows.Forms.Button();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.btnLoc = new System.Windows.Forms.Button();
             this.btnTroVe = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).BeginInit();
@@ -71,22 +72,6 @@ namespace QuanLyKTX
             this.groupBox1.TabIndex = 91;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lọc sinh viên";
-            // 
-            // btnLoc
-            // 
-            this.btnLoc.BackColor = System.Drawing.Color.LightCoral;
-            this.btnLoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoc.Image = global::QuanLyKTX.Properties.Resources.Filter_icon;
-            this.btnLoc.Location = new System.Drawing.Point(300, 43);
-            this.btnLoc.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(96, 36);
-            this.btnLoc.TabIndex = 64;
-            this.btnLoc.Text = "Lọc";
-            this.btnLoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLoc.UseVisualStyleBackColor = false;
-            this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
             // 
             // txtSoLuong
             // 
@@ -132,6 +117,22 @@ namespace QuanLyKTX
             this.cbbGioiTinh.Size = new System.Drawing.Size(92, 24);
             this.cbbGioiTinh.TabIndex = 0;
             // 
+            // btnLoc
+            // 
+            this.btnLoc.BackColor = System.Drawing.Color.LightCoral;
+            this.btnLoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoc.Image = global::QuanLyKTX.Properties.Resources.Filter_icon;
+            this.btnLoc.Location = new System.Drawing.Point(300, 43);
+            this.btnLoc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoc.Name = "btnLoc";
+            this.btnLoc.Size = new System.Drawing.Size(96, 36);
+            this.btnLoc.TabIndex = 64;
+            this.btnLoc.Text = "Lọc";
+            this.btnLoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLoc.UseVisualStyleBackColor = false;
+            this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
+            // 
             // btnTroVe
             // 
             this.btnTroVe.BackColor = System.Drawing.Color.LightCoral;
@@ -175,6 +176,7 @@ namespace QuanLyKTX
             this.Controls.Add(this.btnTroVe);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvSinhVien);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_SinhVienAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

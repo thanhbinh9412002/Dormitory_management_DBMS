@@ -199,7 +199,7 @@ namespace QuanLyKTX
             if (sk == 1)
             {
                 this.Hide();
-                fmThietBiTrongPhong = new frm_ThietBiTrongPhong();
+                fmThietBiTrongPhong = new frm_ThietBiTrongPhong(user, role);
                 fmThietBiTrongPhong.maphong = mp;
                 fmThietBiTrongPhong.manql = manv;
                 fmThietBiTrongPhong.toa = matoa;

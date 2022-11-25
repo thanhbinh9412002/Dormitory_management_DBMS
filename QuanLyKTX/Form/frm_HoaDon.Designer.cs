@@ -29,6 +29,7 @@ namespace QuanLyKTX
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_HoaDon));
             this.btnLocHDchuathanhtoan = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.gbbTImKiem = new System.Windows.Forms.GroupBox();
@@ -69,7 +70,7 @@ namespace QuanLyKTX
             this.btnLocHDchuathanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLocHDchuathanhtoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLocHDchuathanhtoan.Location = new System.Drawing.Point(489, 469);
-            this.btnLocHDchuathanhtoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLocHDchuathanhtoan.Margin = new System.Windows.Forms.Padding(2);
             this.btnLocHDchuathanhtoan.Name = "btnLocHDchuathanhtoan";
             this.btnLocHDchuathanhtoan.Size = new System.Drawing.Size(149, 47);
             this.btnLocHDchuathanhtoan.TabIndex = 99;
@@ -84,7 +85,7 @@ namespace QuanLyKTX
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Image = global::QuanLyKTX.Properties.Resources.setting;
             this.btnSua.Location = new System.Drawing.Point(296, 468);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(92, 48);
             this.btnSua.TabIndex = 98;
@@ -104,9 +105,9 @@ namespace QuanLyKTX
             this.gbbTImKiem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gbbTImKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbbTImKiem.Location = new System.Drawing.Point(489, 46);
-            this.gbbTImKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbbTImKiem.Margin = new System.Windows.Forms.Padding(2);
             this.gbbTImKiem.Name = "gbbTImKiem";
-            this.gbbTImKiem.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbbTImKiem.Padding = new System.Windows.Forms.Padding(2);
             this.gbbTImKiem.Size = new System.Drawing.Size(245, 145);
             this.gbbTImKiem.TabIndex = 93;
             this.gbbTImKiem.TabStop = false;
@@ -117,7 +118,7 @@ namespace QuanLyKTX
             this.txtSoLuong.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtSoLuong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSoLuong.Location = new System.Drawing.Point(110, 60);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(113, 26);
             this.txtSoLuong.TabIndex = 67;
@@ -140,7 +141,7 @@ namespace QuanLyKTX
             this.btnLoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoc.Image = global::QuanLyKTX.Properties.Resources.Filter_icon;
             this.btnLoc.Location = new System.Drawing.Point(110, 96);
-            this.btnLoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoc.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoc.Name = "btnLoc";
             this.btnLoc.Size = new System.Drawing.Size(77, 35);
             this.btnLoc.TabIndex = 65;
@@ -154,7 +155,7 @@ namespace QuanLyKTX
             this.cbbMaPhongTK.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.cbbMaPhongTK.FormattingEnabled = true;
             this.cbbMaPhongTK.Location = new System.Drawing.Point(110, 28);
-            this.cbbMaPhongTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbMaPhongTK.Margin = new System.Windows.Forms.Padding(2);
             this.cbbMaPhongTK.Name = "cbbMaPhongTK";
             this.cbbMaPhongTK.Size = new System.Drawing.Size(113, 28);
             this.cbbMaPhongTK.TabIndex = 36;
@@ -175,7 +176,7 @@ namespace QuanLyKTX
             this.dgvHoaDon.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHoaDon.Location = new System.Drawing.Point(9, 209);
-            this.dgvHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.RowHeadersWidth = 51;
             this.dgvHoaDon.RowTemplate.Height = 24;
@@ -200,9 +201,9 @@ namespace QuanLyKTX
             this.gbHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gbHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.gbHoaDon.Location = new System.Drawing.Point(9, 46);
-            this.gbHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.gbHoaDon.Name = "gbHoaDon";
-            this.gbHoaDon.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbHoaDon.Padding = new System.Windows.Forms.Padding(2);
             this.gbHoaDon.Size = new System.Drawing.Size(457, 145);
             this.gbHoaDon.TabIndex = 91;
             this.gbHoaDon.TabStop = false;
@@ -213,7 +214,7 @@ namespace QuanLyKTX
             this.cbbMaPhong.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.cbbMaPhong.FormattingEnabled = true;
             this.cbbMaPhong.Location = new System.Drawing.Point(110, 63);
-            this.cbbMaPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbMaPhong.Margin = new System.Windows.Forms.Padding(2);
             this.cbbMaPhong.Name = "cbbMaPhong";
             this.cbbMaPhong.Size = new System.Drawing.Size(113, 28);
             this.cbbMaPhong.TabIndex = 29;
@@ -237,7 +238,7 @@ namespace QuanLyKTX
             "Đã Thanh toán",
             "Chưa thanh toán"});
             this.cbTrangThai.Location = new System.Drawing.Point(110, 98);
-            this.cbTrangThai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbTrangThai.Margin = new System.Windows.Forms.Padding(2);
             this.cbTrangThai.Name = "cbTrangThai";
             this.cbTrangThai.Size = new System.Drawing.Size(113, 28);
             this.cbTrangThai.TabIndex = 27;
@@ -246,7 +247,7 @@ namespace QuanLyKTX
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(333, 96);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(113, 26);
             this.dateTimePicker1.TabIndex = 1;
@@ -268,7 +269,7 @@ namespace QuanLyKTX
             this.txtTienNuoc.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtTienNuoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTienNuoc.Location = new System.Drawing.Point(333, 63);
-            this.txtTienNuoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTienNuoc.Margin = new System.Windows.Forms.Padding(2);
             this.txtTienNuoc.Name = "txtTienNuoc";
             this.txtTienNuoc.Size = new System.Drawing.Size(113, 26);
             this.txtTienNuoc.TabIndex = 25;
@@ -289,7 +290,7 @@ namespace QuanLyKTX
             this.txtTienDien.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtTienDien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTienDien.Location = new System.Drawing.Point(333, 31);
-            this.txtTienDien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTienDien.Margin = new System.Windows.Forms.Padding(2);
             this.txtTienDien.Name = "txtTienDien";
             this.txtTienDien.Size = new System.Drawing.Size(113, 26);
             this.txtTienDien.TabIndex = 23;
@@ -299,7 +300,7 @@ namespace QuanLyKTX
             this.txtMaHD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtMaHD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaHD.Location = new System.Drawing.Point(110, 31);
-            this.txtMaHD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaHD.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(113, 26);
             this.txtMaHD.TabIndex = 20;
@@ -344,7 +345,7 @@ namespace QuanLyKTX
             this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoad.Image = global::QuanLyKTX.Properties.Resources.Restart_icon;
             this.btnLoad.Location = new System.Drawing.Point(392, 469);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(92, 47);
             this.btnLoad.TabIndex = 97;
@@ -360,7 +361,7 @@ namespace QuanLyKTX
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Image = global::QuanLyKTX.Properties.Resources.remove_icon;
             this.btnHuy.Location = new System.Drawing.Point(200, 469);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(92, 47);
             this.btnHuy.TabIndex = 96;
@@ -376,7 +377,7 @@ namespace QuanLyKTX
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = global::QuanLyKTX.Properties.Resources.Save_icon;
             this.btnLuu.Location = new System.Drawing.Point(105, 469);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(92, 47);
             this.btnLuu.TabIndex = 95;
@@ -392,7 +393,7 @@ namespace QuanLyKTX
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = global::QuanLyKTX.Properties.Resources.add_icon;
             this.btnThem.Location = new System.Drawing.Point(9, 469);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(92, 47);
             this.btnThem.TabIndex = 94;
@@ -409,7 +410,7 @@ namespace QuanLyKTX
             this.btnThoat.Image = global::QuanLyKTX.Properties.Resources.back_icon;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.Location = new System.Drawing.Point(642, 469);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(92, 47);
             this.btnThoat.TabIndex = 100;
@@ -453,7 +454,8 @@ namespace QuanLyKTX
             this.Controls.Add(this.dgvHoaDon);
             this.Controls.Add(this.gbHoaDon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_HoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý hóa đơn";
