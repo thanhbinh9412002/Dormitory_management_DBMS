@@ -41,7 +41,7 @@ namespace QuanLyKTX
             cbbMaPhongTK.DisplayMember = "MaPhong";
             cbbMaPhongTK.ValueMember = "MaPhong";
         }
-        string maHD = RandomString(7);
+        
 
         public static String RandomString(int length)
         {
@@ -62,6 +62,7 @@ namespace QuanLyKTX
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            string maHD = RandomString(7);
             txtMaHD.Text = maHD;
             cbTrangThai.Text = "Chưa thanh toán";
             cbTrangThai.Enabled = false;
@@ -73,13 +74,14 @@ namespace QuanLyKTX
             btnLoad.Enabled = true;
             //btnXoa.Enabled = false;
             btnSua.Enabled = false;
+            txtMaHD.Enabled = false;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (them == true)
             {
-                HdBUS.AddInvoice(maHD, cbbMaPhong.Text, cbTrangThai.Text, float.Parse(txtTienDien.Text),
+                HdBUS.AddInvoice(txtMaHD.Text, cbbMaPhong.Text, cbTrangThai.Text, float.Parse(txtTienDien.Text),
                                                    float.Parse(txtTienNuoc.Text), dateTimePicker1.Value);
                 gbHoaDon.Enabled = false;
             }
@@ -91,7 +93,6 @@ namespace QuanLyKTX
             LoadData();
             btnLuu.Enabled = false;
             btnThem.Enabled = true;
-            //btnXoa.Enabled = true;
             btnSua.Enabled = true;
             btnHuy.Enabled = false;
             btnLoad.Enabled = true;
@@ -144,8 +145,6 @@ namespace QuanLyKTX
             btnLuu.Enabled = true;
             btnThem.Enabled = false;
             btnLoad.Enabled = false;
-            //vbBtnSua.Enabled = false;
-            //btnXoa.Enabled = false;
             btnLoad.Enabled = true;
         }
 
